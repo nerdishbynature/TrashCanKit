@@ -94,10 +94,9 @@
 		236364661BE22F1000AA7104 = {
 			isa = PBXGroup;
 			children = (
-				2363649C1BE230F900AA7104 /* Nocilla.framework */,
-				2363649A1BE230B500AA7104 /* RequestKit.framework */,
 				236364721BE22F1000AA7104 /* TrashCanKit */,
 				2363647E1BE22F1000AA7104 /* TrashCanKitTests */,
+				236364A81BE2319200AA7104 /* Frameworks */,
 				236364711BE22F1000AA7104 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -127,8 +126,8 @@
 		2363647E1BE22F1000AA7104 /* TrashCanKitTests */ = {
 			isa = PBXGroup;
 			children = (
-				236364921BE2301200AA7104 /* RepositoriesTests.swift */,
 				236364931BE2301200AA7104 /* TestHelper.swift */,
+				236364921BE2301200AA7104 /* RepositoriesTests.swift */,
 				236364951BE2301200AA7104 /* UserTests.swift */,
 				236364A11BE2313200AA7104 /* Fixtures */,
 				236364811BE22F1000AA7104 /* Info.plist */,
@@ -144,6 +143,15 @@
 				236364A41BE2313B00AA7104 /* User.json */,
 			);
 			name = Fixtures;
+			sourceTree = "<group>";
+		};
+		236364A81BE2319200AA7104 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2363649C1BE230F900AA7104 /* Nocilla.framework */,
+				2363649A1BE230B500AA7104 /* RequestKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
