@@ -1,0 +1,105 @@
+import Foundation
+import RequestKit
+
+// MARK: model
+
+@objc public class BitbucketRepository: NSObject {
+    public let id: String
+    public let owner: User
+    public var name: String?
+    public var fullName: String?
+    public var isPrivate: Bool
+    public var repositoryDescription: String?
+    public var gitURL: String?
+    public var sshURL: String?
+    public var cloneURL: String?
+    public var size: Int
+
+    public init(json: [String: AnyObject]) {
+        owner = User(json["owner"] as? [String: AnyObject] ?? [:])
+        if let id = json["uuid"] as? String {
+            self.id = id
+            name = json["name"] as? String
+            fullName = json["full_name"] as? String
+            isPrivate = json["is_private"] as? Bool ?? false
+            repositoryDescription = json["description"] as? String
+            if let linksDict = json["links"] as? [String: AnyObject],
+                cloneArray = linksDict["clone"] as? [[String: String]] {
+                for urlDict in cloneArray {
+                    if urlDict["name"] == "https" {
+                        let prefix = "https://\(owner.login ?? "")@"
+                        gitURL = urlDict["href"]?.stringByReplacingOccurrencesOfString(prefix, withString: "git://")
+                        cloneURL = urlDict["href"]?.stringByReplacingOccurrencesOfString(prefix, withString: "https://")
+                    }
+                    if urlDict["name"] == "ssh" {
+                        sshURL = urlDict["href"]?.stringByReplacingOccurrencesOfString("ssh://", withString: "")
+                    }
+                }
+            }
+            size = json["size"] as? Int ?? 0
+        } else {
+            id = "-1"
+            isPrivate = false
+            size = 0
+        }
+    }
+}
+
+// MARK: request
+
+public extension TrashCanKit {
+    public func repositories(userName: String, completion: (response: Response<[BitbucketRepository]>) -> Void) {
+        let router = RepositoryRouter.ReadRepositories(configuration, userName)
+        router.loadJSON([String: AnyObject].self) { json, error in
+            if let error = error {
+                completion(response: Response.Failure(error))
+            }
+
+            if let json = json, values = json["values"] as? [[String: AnyObject]] {
+                let repos = values.map { BitbucketRepository(json: $0) }
+                completion(response: Response.Success(repos))
+            }
+        }
+    }
+}
+
+// MARK: Router
+
+public enum RepositoryRouter: Router {
+    case ReadRepositories(Configuration, String)
+
+    public var configuration: Configuration {
+        switch self {
+        case .ReadRepositories(let config, _): return config
+        }
+    }
+
+    public var method: HTTPMethod {
+        return .GET
+    }
+
+    public var encoding: HTTPEncoding {
+        return .URL
+    }
+
+    public var params: [String: String] {
+        switch self {
+        case .ReadRepositories(_):
+            return [:]
+        }
+    }
+
+    public var path: String {
+        switch self {
+        case .ReadRepositories(_, let userName):
+            return "/repositories/\(userName)"
+        }
+    }
+
+    public var URLRequest: NSURLRequest? {
+        switch self {
+        case .ReadRepositories(_, _):
+            return request()
+        }
+    }
+}

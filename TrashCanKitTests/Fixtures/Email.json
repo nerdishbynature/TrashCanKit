@@ -1,0 +1,11 @@
+{
+    "is_primary": true,
+    "is_confirmed": true,
+    "type": "email",
+    "email": "me@supercooldomain.io",
+    "links": {
+        "self": {
+            "href": "https://bitbucket.org/!api/2.0/user/emails/piet@nerdishbynature.com"
+        }
+    }
+}

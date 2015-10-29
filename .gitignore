@@ -1,0 +1,15 @@
+*.pbxuser
+*.mode1v3
+*.perspectivev3
+.DS_Store
+.LSOverride
+.idea/
+xcuserdata/
+*.xccheckout
+*.xcscmblueprint
+*.gcno
+Pods/
+report/
+Carthage/
+Build/
+Licenses.plist

@@ -1,0 +1,35 @@
+{
+    "username": "pietbrauer",
+    "website": null,
+    "display_name": "Piet Brauer",
+    "uuid": "{e9f0168c-cdf8-404a-95bb-3943dd2a65b6}",
+    "links": {
+        "hooks": {
+            "href": "https://bitbucket.org/!api/internal/users/pietbrauer/hooks"
+        },
+        "self": {
+            "href": "https://bitbucket.org/!api/2.0/users/pietbrauer"
+        },
+        "repositories": {
+            "href": "https://bitbucket.org/!api/2.0/repositories/pietbrauer"
+        },
+        "html": {
+            "href": "https://bitbucket.org/pietbrauer/"
+        },
+        "followers": {
+            "href": "https://bitbucket.org/!api/2.0/users/pietbrauer/followers"
+        },
+        "avatar": {
+            "href": "https://bitbucket.org/account/pietbrauer/avatar/32/"
+        },
+        "following": {
+            "href": "https://bitbucket.org/!api/2.0/users/pietbrauer/following"
+        },
+        "snippets": {
+            "href": "https://bitbucket.org/!api/2.0/snippets/pietbrauer"
+        }
+    },
+    "created_on": "2014-09-04T12:49:46.396809+00:00",
+    "location": null,
+    "type": "user"
+}

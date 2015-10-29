@@ -1,0 +1,72 @@
+{
+    "scm": "git",
+    "has_wiki": false,
+    "name": "octokit.swift",
+    "links": {
+        "watchers": {
+            "href": "https://bitbucket.org/!api/2.0/repositories/pietbrauer/octokit.swift/watchers"
+        },
+        "hooks": {
+            "href": "https://bitbucket.org/!api/2.0/repositories/pietbrauer/octokit.swift/hooks"
+        },
+        "clone": [
+                  {
+                  "href": "https://pietbrauer@bitbucket.org/pietbrauer/octokit.swift.git",
+                  "name": "https"
+                  },
+                  {
+                  "href": "ssh://git@bitbucket.org/pietbrauer/octokit.swift.git",
+                  "name": "ssh"
+                  }
+                  ],
+        "self": {
+            "href": "https://bitbucket.org/!api/2.0/repositories/pietbrauer/octokit.swift"
+        },
+        "html": {
+            "href": "https://bitbucket.org/pietbrauer/octokit.swift"
+        },
+        "avatar": {
+            "href": "https://bitbucket.org/pietbrauer/octokit.swift/avatar/32/"
+        },
+        "commits": {
+            "href": "https://bitbucket.org/!api/2.0/repositories/pietbrauer/octokit.swift/commits"
+        },
+        "forks": {
+            "href": "https://bitbucket.org/!api/2.0/repositories/pietbrauer/octokit.swift/forks"
+        },
+        "downloads": {
+            "href": "https://bitbucket.org/!api/2.0/repositories/pietbrauer/octokit.swift/downloads"
+        },
+        "pullrequests": {
+            "href": "https://bitbucket.org/!api/2.0/repositories/pietbrauer/octokit.swift/pullrequests"
+        }
+    },
+    "fork_policy": "allow_forks",
+    "uuid": "{cb706a3e-1e13-41fb-ac9d-e53e8adc2bd7}",
+    "language": "",
+    "created_on": "2015-10-27T06:11:31.611823+00:00",
+    "full_name": "pietbrauer/octokit.swift",
+    "has_issues": false,
+    "owner": {
+        "username": "pietbrauer",
+        "display_name": "Piet Brauer",
+        "type": "user",
+        "uuid": "{e9f0168c-cdf8-404a-95bb-3943dd2a65b6}",
+        "links": {
+            "self": {
+                "href": "https://bitbucket.org/!api/2.0/users/pietbrauer"
+            },
+            "html": {
+                "href": "https://bitbucket.org/pietbrauer/"
+            },
+            "avatar": {
+                "href": "https://bitbucket.org/account/pietbrauer/avatar/32/"
+            }
+        }
+    },
+    "updated_on": "2015-10-27T06:12:31.160918+00:00",
+    "size": 156382,
+    "type": "repository",
+    "is_private": true,
+    "description": "Dummy Description"
+}
