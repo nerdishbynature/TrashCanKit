@@ -12,3 +12,9 @@ public struct TrashCanKit {
         configuration = config
     }
 }
+
+internal extension Router {
+    internal var URLRequest: NSURLRequest? {
+        return request()
+    }
+}

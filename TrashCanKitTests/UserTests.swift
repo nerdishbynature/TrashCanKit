@@ -29,6 +29,14 @@ class UserTests: XCTestCase {
         XCTAssertEqual(subject.type, "email")
     }
 
+    func testConstructEmailFromEmptyJSON() {
+        let subject = Email(json: [:])
+        XCTAssertEqual(subject.isPrimary, false)
+        XCTAssertEqual(subject.isConfirmed, false)
+        XCTAssertEqual(subject.email, nil)
+        XCTAssertEqual(subject.type, nil)
+    }
+
     func testMe() {
         let tokenConfig = TokenConfiguration("123456", refreshToken: "7890")
         stubRequest("GET", "https://bitbucket.org/api/2.0/user?access_token=123456").andReturn(200).withBody(TestHelper.loadJSONString("Me"))

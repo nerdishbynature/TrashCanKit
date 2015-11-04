@@ -71,13 +71,11 @@ public extension TrashCanKit {
 
 public enum UserRouter: Router {
     case ReadAuthenticatedUser(Configuration)
-    case ReadUser(String, Configuration)
     case ReadEmails(Configuration)
 
     public var configuration: Configuration {
         switch self {
         case .ReadAuthenticatedUser(let config): return config
-        case .ReadUser(_, let config): return config
         case .ReadEmails(let config): return config
         }
     }
@@ -94,8 +92,6 @@ public enum UserRouter: Router {
         switch self {
         case .ReadAuthenticatedUser:
             return "user"
-        case .ReadUser(let username, _):
-            return "users/\(username)"
         case .ReadEmails:
             return "user/emails"
         }
@@ -103,9 +99,5 @@ public enum UserRouter: Router {
 
     public var params: [String: String] {
         return [:]
-    }
-
-    public var URLRequest: NSURLRequest? {
-        return request()
     }
 }
