@@ -57,16 +57,11 @@ public struct OAuthConfiguration: Configuration {
         guard let data = data else { return nil }
         do {
             guard let json = try NSJSONSerialization.JSONObjectWithData(data, options: .AllowFragments) as? [String: AnyObject] else { return nil }
-            let accessToken = json["access_token"] as? String
-            let refreshToken = json["refresh_token"] as? String
-            if let accessToken = accessToken, refreshToken = refreshToken {
-                let config = TokenConfiguration(accessToken, refreshToken: refreshToken)
-                return config
-            }
+            let config = TokenConfiguration(json: json)
+            return config
         } catch {
             return nil
         }
-        return nil
     }
 
     public func handleOpenURL(url: NSURL, completion: (config: TokenConfiguration) -> Void) {
