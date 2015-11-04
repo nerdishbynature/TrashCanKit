@@ -95,11 +95,4 @@ public enum RepositoryRouter: Router {
             return "/repositories/\(userName)"
         }
     }
-
-    public var URLRequest: NSURLRequest? {
-        switch self {
-        case .ReadRepositories(_, _):
-            return request()
-        }
-    }
 }

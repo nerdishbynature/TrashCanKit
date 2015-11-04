@@ -1,0 +1,18 @@
+{
+    "page": 1,
+    "pagelen": 10,
+    "size": 1,
+    "values": [
+               {
+               "email": "tutorials@bitbucket.org",
+               "is_confirmed": true,
+               "is_primary": true,
+               "links": {
+               "self": {
+               "href": "https://api.bitbucket.org/2.0/user/emails/tutorials@bitbucket.org"
+               }
+               },
+               "type": "email"
+               }
+               ]
+}

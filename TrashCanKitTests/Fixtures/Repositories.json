@@ -1,0 +1,71 @@
+{
+    "page": 1,
+    "pagelen": 10,
+    "size": 1,
+    "values": [
+    {
+    "created_on": "2014-08-13T19:05:22.148829+00:00",
+    "description": "This repo ",
+    "fork_policy": "allow_forks",
+    "full_name": "dans9190/new-repository",
+    "has_issues": false,
+    "has_wiki": false,
+    "is_private": false,
+    "language": "",
+    "links": {
+    "avatar": {
+    "href": "https://d3oaxc4q5k2d6q.cloudfront.net/m/57a3af3749c5/img/language-avatars/default_16.png"
+    },
+    "clone": [
+    {
+    "href": "https://bitbucket.org/dans9190/new-repository.git",
+    "name": "https"
+    },
+    {
+    "href": "ssh://git@bitbucket.org/dans9190/new-repository.git",
+    "name": "ssh"
+    }
+    ],
+    "commits": {
+    "href": "https://api.bitbucket.org/2.0/repositories/dans9190/new-repository/commits"
+    },
+    "forks": {
+    "href": "https://api.bitbucket.org/2.0/repositories/dans9190/new-repository/forks"
+    },
+    "html": {
+    "href": "https://bitbucket.org/dans9190/new-repository"
+    },
+    "pullrequests": {
+    "href": "https://api.bitbucket.org/2.0/repositories/dans9190/new-repository/pullrequests"
+    },
+    "self": {
+    "href": "https://api.bitbucket.org/2.0/repositories/dans9190/new-repository"
+    },
+    "watchers": {
+    "href": "https://api.bitbucket.org/2.0/repositories/dans9190/new-repository/watchers"
+    }
+    },
+    "name": "New repository",
+    "owner": {
+    "display_name": "Daniel  Stevens",
+    "links": {
+    "avatar": {
+    "href": "https://bitbucket-assetroot.s3.amazonaws.com/c/photos/2014/Jan/29/dans9190-avatar-2647033047-1_avatar.png"
+    },
+    "html": {
+    "href": "https://bitbucket.org/dans9190"
+    },
+    "self": {
+    "href": "https://api.bitbucket.org/2.0/users/dans9190"
+    }
+    },
+    "username": "dans9190",
+    "uuid": "{1cd06601-cd0e-4fce-be03-e9ac226978b7}"
+    },
+    "scm": "git",
+    "size": 33348,
+    "updated_on": "2014-08-13T19:05:22.168083+00:00",
+    "uuid": "{9bdd6b69-3dc4-406b-a8dd-ff5119aefc61}"
+    }
+    ]
+}

@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		231B684E1BE99852007AE2A6 /* OAuthConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231B684D1BE99852007AE2A6 /* OAuthConfiguration.swift */; };
+		231B68501BE99886007AE2A6 /* NSURL+URLParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231B684F1BE99886007AE2A6 /* NSURL+URLParameters.swift */; };
+		231B68521BE9989C007AE2A6 /* TokenConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231B68511BE9989C007AE2A6 /* TokenConfiguration.swift */; };
+		231B68541BE998C7007AE2A6 /* OAuthRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231B68531BE998C7007AE2A6 /* OAuthRouter.swift */; };
+		231B68561BE9997C007AE2A6 /* ConfigurationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231B68551BE9997C007AE2A6 /* ConfigurationTests.swift */; };
+		231B68581BE9A13C007AE2A6 /* authorize.json in Resources */ = {isa = PBXBuildFile; fileRef = 231B68571BE9A13C007AE2A6 /* authorize.json */; };
+		231B685A1BE9A3DD007AE2A6 /* TokenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231B68591BE9A3DD007AE2A6 /* TokenTests.swift */; };
+		231B685C1BE9A699007AE2A6 /* refresh_token_error.json in Resources */ = {isa = PBXBuildFile; fileRef = 231B685B1BE9A699007AE2A6 /* refresh_token_error.json */; };
+		231B685F1BE9AAC6007AE2A6 /* Repositories.json in Resources */ = {isa = PBXBuildFile; fileRef = 231B685D1BE9AA66007AE2A6 /* Repositories.json */; };
+		231B68611BE9AD30007AE2A6 /* Me.json in Resources */ = {isa = PBXBuildFile; fileRef = 231B68601BE9AD30007AE2A6 /* Me.json */; };
+		231B68631BE9AD8D007AE2A6 /* Emails.json in Resources */ = {isa = PBXBuildFile; fileRef = 231B68621BE9AD8D007AE2A6 /* Emails.json */; };
 		236364741BE22F1000AA7104 /* TrashCanKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 236364731BE22F1000AA7104 /* TrashCanKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2363647B1BE22F1000AA7104 /* TrashCanKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 236364701BE22F1000AA7104 /* TrashCanKit.framework */; };
 		2363648E1BE22FCC00AA7104 /* TrashCanKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2363648A1BE22FCC00AA7104 /* TrashCanKit.swift */; };
@@ -51,6 +62,17 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		231B684D1BE99852007AE2A6 /* OAuthConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthConfiguration.swift; sourceTree = "<group>"; };
+		231B684F1BE99886007AE2A6 /* NSURL+URLParameters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSURL+URLParameters.swift"; sourceTree = "<group>"; };
+		231B68511BE9989C007AE2A6 /* TokenConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenConfiguration.swift; sourceTree = "<group>"; };
+		231B68531BE998C7007AE2A6 /* OAuthRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthRouter.swift; sourceTree = "<group>"; };
+		231B68551BE9997C007AE2A6 /* ConfigurationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurationTests.swift; sourceTree = "<group>"; };
+		231B68571BE9A13C007AE2A6 /* authorize.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = authorize.json; sourceTree = "<group>"; };
+		231B68591BE9A3DD007AE2A6 /* TokenTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenTests.swift; sourceTree = "<group>"; };
+		231B685B1BE9A699007AE2A6 /* refresh_token_error.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = refresh_token_error.json; sourceTree = "<group>"; };
+		231B685D1BE9AA66007AE2A6 /* Repositories.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Repositories.json; path = Fixtures/Repositories.json; sourceTree = "<group>"; };
+		231B68601BE9AD30007AE2A6 /* Me.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Me.json; sourceTree = "<group>"; };
+		231B68621BE9AD8D007AE2A6 /* Emails.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Emails.json; path = Fixtures/Emails.json; sourceTree = "<group>"; };
 		236364701BE22F1000AA7104 /* TrashCanKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TrashCanKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		236364731BE22F1000AA7104 /* TrashCanKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrashCanKit.h; sourceTree = "<group>"; };
 		236364751BE22F1000AA7104 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -115,6 +137,10 @@
 			children = (
 				236364731BE22F1000AA7104 /* TrashCanKit.h */,
 				2363648A1BE22FCC00AA7104 /* TrashCanKit.swift */,
+				231B684F1BE99886007AE2A6 /* NSURL+URLParameters.swift */,
+				231B684D1BE99852007AE2A6 /* OAuthConfiguration.swift */,
+				231B68531BE998C7007AE2A6 /* OAuthRouter.swift */,
+				231B68511BE9989C007AE2A6 /* TokenConfiguration.swift */,
 				2363648B1BE22FCC00AA7104 /* Repositories.swift */,
 				2363648C1BE22FCC00AA7104 /* Token.swift */,
 				2363648D1BE22FCC00AA7104 /* User.swift */,
@@ -129,6 +155,8 @@
 				236364931BE2301200AA7104 /* TestHelper.swift */,
 				236364921BE2301200AA7104 /* RepositoriesTests.swift */,
 				236364951BE2301200AA7104 /* UserTests.swift */,
+				231B68551BE9997C007AE2A6 /* ConfigurationTests.swift */,
+				231B68591BE9A3DD007AE2A6 /* TokenTests.swift */,
 				236364A11BE2313200AA7104 /* Fixtures */,
 				236364811BE22F1000AA7104 /* Info.plist */,
 			);
@@ -141,6 +169,11 @@
 				236364A21BE2313B00AA7104 /* Email.json */,
 				236364A31BE2313B00AA7104 /* Repository.json */,
 				236364A41BE2313B00AA7104 /* User.json */,
+				231B68571BE9A13C007AE2A6 /* authorize.json */,
+				231B685B1BE9A699007AE2A6 /* refresh_token_error.json */,
+				231B685D1BE9AA66007AE2A6 /* Repositories.json */,
+				231B68601BE9AD30007AE2A6 /* Me.json */,
+				231B68621BE9AD8D007AE2A6 /* Emails.json */,
 			);
 			name = Fixtures;
 			sourceTree = "<group>";
@@ -253,8 +286,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				231B68611BE9AD30007AE2A6 /* Me.json in Resources */,
+				231B685F1BE9AAC6007AE2A6 /* Repositories.json in Resources */,
+				231B68581BE9A13C007AE2A6 /* authorize.json in Resources */,
+				231B685C1BE9A699007AE2A6 /* refresh_token_error.json in Resources */,
 				236364A51BE2313B00AA7104 /* Email.json in Resources */,
 				236364A71BE2313B00AA7104 /* User.json in Resources */,
+				231B68631BE9AD8D007AE2A6 /* Emails.json in Resources */,
 				236364A61BE2313B00AA7104 /* Repository.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -266,9 +304,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				231B68521BE9989C007AE2A6 /* TokenConfiguration.swift in Sources */,
+				231B684E1BE99852007AE2A6 /* OAuthConfiguration.swift in Sources */,
 				236364911BE22FCC00AA7104 /* User.swift in Sources */,
+				231B68501BE99886007AE2A6 /* NSURL+URLParameters.swift in Sources */,
 				236364901BE22FCC00AA7104 /* Token.swift in Sources */,
 				2363648E1BE22FCC00AA7104 /* TrashCanKit.swift in Sources */,
+				231B68541BE998C7007AE2A6 /* OAuthRouter.swift in Sources */,
 				2363648F1BE22FCC00AA7104 /* Repositories.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -278,7 +320,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				236364991BE2301200AA7104 /* UserTests.swift in Sources */,
+				231B685A1BE9A3DD007AE2A6 /* TokenTests.swift in Sources */,
 				236364961BE2301200AA7104 /* RepositoriesTests.swift in Sources */,
+				231B68561BE9997C007AE2A6 /* ConfigurationTests.swift in Sources */,
 				236364971BE2301200AA7104 /* TestHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
