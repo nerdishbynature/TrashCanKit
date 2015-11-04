@@ -16,6 +16,8 @@
 		231B685A1BE9A3DD007AE2A6 /* TokenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231B68591BE9A3DD007AE2A6 /* TokenTests.swift */; };
 		231B685C1BE9A699007AE2A6 /* refresh_token_error.json in Resources */ = {isa = PBXBuildFile; fileRef = 231B685B1BE9A699007AE2A6 /* refresh_token_error.json */; };
 		231B685F1BE9AAC6007AE2A6 /* Repositories.json in Resources */ = {isa = PBXBuildFile; fileRef = 231B685D1BE9AA66007AE2A6 /* Repositories.json */; };
+		231B68611BE9AD30007AE2A6 /* Me.json in Resources */ = {isa = PBXBuildFile; fileRef = 231B68601BE9AD30007AE2A6 /* Me.json */; };
+		231B68631BE9AD8D007AE2A6 /* Emails.json in Resources */ = {isa = PBXBuildFile; fileRef = 231B68621BE9AD8D007AE2A6 /* Emails.json */; };
 		236364741BE22F1000AA7104 /* TrashCanKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 236364731BE22F1000AA7104 /* TrashCanKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2363647B1BE22F1000AA7104 /* TrashCanKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 236364701BE22F1000AA7104 /* TrashCanKit.framework */; };
 		2363648E1BE22FCC00AA7104 /* TrashCanKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2363648A1BE22FCC00AA7104 /* TrashCanKit.swift */; };
@@ -69,6 +71,8 @@
 		231B68591BE9A3DD007AE2A6 /* TokenTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenTests.swift; sourceTree = "<group>"; };
 		231B685B1BE9A699007AE2A6 /* refresh_token_error.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = refresh_token_error.json; sourceTree = "<group>"; };
 		231B685D1BE9AA66007AE2A6 /* Repositories.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Repositories.json; path = Fixtures/Repositories.json; sourceTree = "<group>"; };
+		231B68601BE9AD30007AE2A6 /* Me.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Me.json; sourceTree = "<group>"; };
+		231B68621BE9AD8D007AE2A6 /* Emails.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Emails.json; path = Fixtures/Emails.json; sourceTree = "<group>"; };
 		236364701BE22F1000AA7104 /* TrashCanKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TrashCanKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		236364731BE22F1000AA7104 /* TrashCanKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrashCanKit.h; sourceTree = "<group>"; };
 		236364751BE22F1000AA7104 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -168,6 +172,8 @@
 				231B68571BE9A13C007AE2A6 /* authorize.json */,
 				231B685B1BE9A699007AE2A6 /* refresh_token_error.json */,
 				231B685D1BE9AA66007AE2A6 /* Repositories.json */,
+				231B68601BE9AD30007AE2A6 /* Me.json */,
+				231B68621BE9AD8D007AE2A6 /* Emails.json */,
 			);
 			name = Fixtures;
 			sourceTree = "<group>";
@@ -280,11 +286,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				231B68611BE9AD30007AE2A6 /* Me.json in Resources */,
 				231B685F1BE9AAC6007AE2A6 /* Repositories.json in Resources */,
 				231B68581BE9A13C007AE2A6 /* authorize.json in Resources */,
 				231B685C1BE9A699007AE2A6 /* refresh_token_error.json in Resources */,
 				236364A51BE2313B00AA7104 /* Email.json in Resources */,
 				236364A71BE2313B00AA7104 /* User.json in Resources */,
+				231B68631BE9AD8D007AE2A6 /* Emails.json in Resources */,
 				236364A61BE2313B00AA7104 /* Repository.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
