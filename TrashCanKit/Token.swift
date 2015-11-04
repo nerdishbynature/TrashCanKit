@@ -4,7 +4,7 @@ import RequestKit
 // MARK: request
 
 public extension TrashCanKit {
-    public func refreshToken(oauthConfig: OAuthConfiguration, refreshToken: String, completion: (response: Response<String>) -> Void) {
+    public func refreshToken(oauthConfig: OAuthConfiguration, refreshToken: String, completion: (response: Response<TokenConfiguration>) -> Void) {
         let request = TokenRouter.RefreshToken(oauthConfig, refreshToken).URLRequest
         if let request = request {
             let task = oauthConfig.basicAuthSession().dataTaskWithRequest(request) { data, response, err in
@@ -18,8 +18,8 @@ public extension TrashCanKit {
                             let error = NSError(domain: BitbucketErrorDomain, code: response.statusCode, userInfo: [NSLocalizedDescriptionKey: errorDescription])
                             completion(response: Response.Failure(error))
                         } else {
-                            let accessToken = responseJSON["access_token"] as? String
-                            completion(response: Response.Success(accessToken ?? ""))
+                            let tokenConfig = TokenConfiguration(json: responseJSON)
+                            completion(response: Response.Success(tokenConfig))
                         }
                     }
                 }

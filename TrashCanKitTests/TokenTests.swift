@@ -23,7 +23,9 @@ class TokenTests: XCTestCase {
         kit.refreshToken(oauthConfig, refreshToken: tokenConfig.refreshToken!) { response in
             switch response {
             case .Success(let newToken):
-                XCTAssertEqual(newToken, "017ec60f4a182")
+                XCTAssertEqual(newToken.accessToken, "017ec60f4a182")
+                XCTAssertNotNil(newToken.expirationDate)
+                XCTAssertEqual(newToken.refreshToken, "14567")
                 expectation.fulfill()
             case .Failure:
                 XCTAssertFalse(true)
