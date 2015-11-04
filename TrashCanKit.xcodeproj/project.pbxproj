@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		231B684E1BE99852007AE2A6 /* OAuthConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231B684D1BE99852007AE2A6 /* OAuthConfiguration.swift */; };
+		231B68501BE99886007AE2A6 /* NSURL+URLParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231B684F1BE99886007AE2A6 /* NSURL+URLParameters.swift */; };
+		231B68521BE9989C007AE2A6 /* TokenConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231B68511BE9989C007AE2A6 /* TokenConfiguration.swift */; };
+		231B68541BE998C7007AE2A6 /* OAuthRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231B68531BE998C7007AE2A6 /* OAuthRouter.swift */; };
 		236364741BE22F1000AA7104 /* TrashCanKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 236364731BE22F1000AA7104 /* TrashCanKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2363647B1BE22F1000AA7104 /* TrashCanKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 236364701BE22F1000AA7104 /* TrashCanKit.framework */; };
 		2363648E1BE22FCC00AA7104 /* TrashCanKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2363648A1BE22FCC00AA7104 /* TrashCanKit.swift */; };
@@ -51,6 +55,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		231B684D1BE99852007AE2A6 /* OAuthConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthConfiguration.swift; sourceTree = "<group>"; };
+		231B684F1BE99886007AE2A6 /* NSURL+URLParameters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSURL+URLParameters.swift"; sourceTree = "<group>"; };
+		231B68511BE9989C007AE2A6 /* TokenConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenConfiguration.swift; sourceTree = "<group>"; };
+		231B68531BE998C7007AE2A6 /* OAuthRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthRouter.swift; sourceTree = "<group>"; };
 		236364701BE22F1000AA7104 /* TrashCanKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TrashCanKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		236364731BE22F1000AA7104 /* TrashCanKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrashCanKit.h; sourceTree = "<group>"; };
 		236364751BE22F1000AA7104 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -115,6 +123,10 @@
 			children = (
 				236364731BE22F1000AA7104 /* TrashCanKit.h */,
 				2363648A1BE22FCC00AA7104 /* TrashCanKit.swift */,
+				231B684F1BE99886007AE2A6 /* NSURL+URLParameters.swift */,
+				231B684D1BE99852007AE2A6 /* OAuthConfiguration.swift */,
+				231B68531BE998C7007AE2A6 /* OAuthRouter.swift */,
+				231B68511BE9989C007AE2A6 /* TokenConfiguration.swift */,
 				2363648B1BE22FCC00AA7104 /* Repositories.swift */,
 				2363648C1BE22FCC00AA7104 /* Token.swift */,
 				2363648D1BE22FCC00AA7104 /* User.swift */,
@@ -266,9 +278,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				231B68521BE9989C007AE2A6 /* TokenConfiguration.swift in Sources */,
+				231B684E1BE99852007AE2A6 /* OAuthConfiguration.swift in Sources */,
 				236364911BE22FCC00AA7104 /* User.swift in Sources */,
+				231B68501BE99886007AE2A6 /* NSURL+URLParameters.swift in Sources */,
 				236364901BE22FCC00AA7104 /* Token.swift in Sources */,
 				2363648E1BE22FCC00AA7104 /* TrashCanKit.swift in Sources */,
+				231B68541BE998C7007AE2A6 /* OAuthRouter.swift in Sources */,
 				2363648F1BE22FCC00AA7104 /* Repositories.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
