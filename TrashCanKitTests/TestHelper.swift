@@ -14,4 +14,17 @@ class TestHelper {
 
         return Dictionary()
     }
+
+    static func loadJSONString(name: String) -> String {
+        let bundle = NSBundle(forClass: self)
+        let path = bundle.pathForResource(name, ofType: "json")
+        if let path = path, data = NSData(contentsOfFile: path) {
+            let jsonString = String(data: data, encoding: NSUTF8StringEncoding)
+            if let json = jsonString {
+                return json
+            }
+        }
+
+        return ""
+    }
 }

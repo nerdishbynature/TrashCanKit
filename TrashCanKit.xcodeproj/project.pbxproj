@@ -11,6 +11,8 @@
 		231B68501BE99886007AE2A6 /* NSURL+URLParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231B684F1BE99886007AE2A6 /* NSURL+URLParameters.swift */; };
 		231B68521BE9989C007AE2A6 /* TokenConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231B68511BE9989C007AE2A6 /* TokenConfiguration.swift */; };
 		231B68541BE998C7007AE2A6 /* OAuthRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231B68531BE998C7007AE2A6 /* OAuthRouter.swift */; };
+		231B68561BE9997C007AE2A6 /* ConfigurationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231B68551BE9997C007AE2A6 /* ConfigurationTests.swift */; };
+		231B68581BE9A13C007AE2A6 /* authorize.json in Resources */ = {isa = PBXBuildFile; fileRef = 231B68571BE9A13C007AE2A6 /* authorize.json */; };
 		236364741BE22F1000AA7104 /* TrashCanKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 236364731BE22F1000AA7104 /* TrashCanKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2363647B1BE22F1000AA7104 /* TrashCanKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 236364701BE22F1000AA7104 /* TrashCanKit.framework */; };
 		2363648E1BE22FCC00AA7104 /* TrashCanKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2363648A1BE22FCC00AA7104 /* TrashCanKit.swift */; };
@@ -59,6 +61,8 @@
 		231B684F1BE99886007AE2A6 /* NSURL+URLParameters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSURL+URLParameters.swift"; sourceTree = "<group>"; };
 		231B68511BE9989C007AE2A6 /* TokenConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenConfiguration.swift; sourceTree = "<group>"; };
 		231B68531BE998C7007AE2A6 /* OAuthRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthRouter.swift; sourceTree = "<group>"; };
+		231B68551BE9997C007AE2A6 /* ConfigurationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurationTests.swift; sourceTree = "<group>"; };
+		231B68571BE9A13C007AE2A6 /* authorize.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = authorize.json; sourceTree = "<group>"; };
 		236364701BE22F1000AA7104 /* TrashCanKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TrashCanKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		236364731BE22F1000AA7104 /* TrashCanKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrashCanKit.h; sourceTree = "<group>"; };
 		236364751BE22F1000AA7104 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -141,6 +145,7 @@
 				236364931BE2301200AA7104 /* TestHelper.swift */,
 				236364921BE2301200AA7104 /* RepositoriesTests.swift */,
 				236364951BE2301200AA7104 /* UserTests.swift */,
+				231B68551BE9997C007AE2A6 /* ConfigurationTests.swift */,
 				236364A11BE2313200AA7104 /* Fixtures */,
 				236364811BE22F1000AA7104 /* Info.plist */,
 			);
@@ -153,6 +158,7 @@
 				236364A21BE2313B00AA7104 /* Email.json */,
 				236364A31BE2313B00AA7104 /* Repository.json */,
 				236364A41BE2313B00AA7104 /* User.json */,
+				231B68571BE9A13C007AE2A6 /* authorize.json */,
 			);
 			name = Fixtures;
 			sourceTree = "<group>";
@@ -265,6 +271,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				231B68581BE9A13C007AE2A6 /* authorize.json in Resources */,
 				236364A51BE2313B00AA7104 /* Email.json in Resources */,
 				236364A71BE2313B00AA7104 /* User.json in Resources */,
 				236364A61BE2313B00AA7104 /* Repository.json in Resources */,
@@ -295,6 +302,7 @@
 			files = (
 				236364991BE2301200AA7104 /* UserTests.swift in Sources */,
 				236364961BE2301200AA7104 /* RepositoriesTests.swift in Sources */,
+				231B68561BE9997C007AE2A6 /* ConfigurationTests.swift in Sources */,
 				236364971BE2301200AA7104 /* TestHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
