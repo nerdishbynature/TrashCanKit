@@ -48,8 +48,8 @@ import RequestKit
 // MARK: request
 
 public extension TrashCanKit {
-    public func repositories(userName: String, completion: (response: Response<[BitbucketRepository]>) -> Void) {
-        let router = RepositoryRouter.ReadRepositories(configuration, userName)
+    public func repositories(userName: String, page: String = "1", completion: (response: Response<[BitbucketRepository]>) -> Void) {
+        let router = RepositoryRouter.ReadRepositories(configuration, userName, page)
         router.loadJSON([String: AnyObject].self) { json, error in
             if let error = error {
                 completion(response: Response.Failure(error))
@@ -66,11 +66,11 @@ public extension TrashCanKit {
 // MARK: Router
 
 public enum RepositoryRouter: Router {
-    case ReadRepositories(Configuration, String)
+    case ReadRepositories(Configuration, String, String)
 
     public var configuration: Configuration {
         switch self {
-        case .ReadRepositories(let config, _): return config
+        case .ReadRepositories(let config, _, _): return config
         }
     }
 
@@ -84,14 +84,14 @@ public enum RepositoryRouter: Router {
 
     public var params: [String: String] {
         switch self {
-        case .ReadRepositories(_):
-            return [:]
+        case .ReadRepositories(_, _, let page):
+            return ["page": page]
         }
     }
 
     public var path: String {
         switch self {
-        case .ReadRepositories(_, let userName):
+        case .ReadRepositories(_, let userName, _):
             return "/repositories/\(userName)"
         }
     }
