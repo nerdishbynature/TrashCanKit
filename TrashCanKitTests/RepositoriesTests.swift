@@ -37,7 +37,7 @@ class RepositoriesTests: XCTestCase {
 
     func testGetRepositories() {
         let tokenConfig = TokenConfiguration("123456", refreshToken: "7890")
-        stubRequest("GET", "https://bitbucket.org/api/2.0/repositories/bitbucketCat?access_token=123456").andReturn(200).withBody(TestHelper.loadJSONString("Repositories"))
+        stubRequest("GET", "https://bitbucket.org/api/2.0/repositories/bitbucketCat?access_token=123456&page=1").andReturn(200).withBody(TestHelper.loadJSONString("Repositories"))
         let expectation = expectationWithDescription("get_repos")
         TrashCanKit(tokenConfig).repositories("bitbucketCat") { response in
             switch response {
@@ -54,9 +54,28 @@ class RepositoriesTests: XCTestCase {
         }
     }
 
+    func testGetSecondPageRepositories() {
+        let tokenConfig = TokenConfiguration("123456", refreshToken: "7890")
+        stubRequest("GET", "https://bitbucket.org/api/2.0/repositories/bitbucketCat?access_token=123456&page=2").andReturn(200).withBody(TestHelper.loadJSONString("Repositories"))
+        let expectation = expectationWithDescription("get_repos")
+        TrashCanKit(tokenConfig).repositories("bitbucketCat", page: "2") { response in
+            switch response {
+            case .Success(let repos):
+                XCTAssertEqual(repos.count, 1)
+                expectation.fulfill()
+            case .Failure:
+                XCTAssertFalse(true)
+                expectation.fulfill()
+            }
+        }
+        waitForExpectationsWithTimeout(1) { error in
+            XCTAssertNil(error)
+        }
+    }
+
     func testFailToGetRepositories() {
         let tokenConfig = TokenConfiguration("123456", refreshToken: "7890")
-        stubRequest("GET", "https://bitbucket.org/api/2.0/repositories/bitbucketCat?access_token=123456").andReturn(401).withBody(TestHelper.loadJSONString("refresh_token_error"))
+        stubRequest("GET", "https://bitbucket.org/api/2.0/repositories/bitbucketCat?access_token=123456&page=1").andReturn(401).withBody(TestHelper.loadJSONString("refresh_token_error"))
         let expectation = expectationWithDescription("get_repos")
         TrashCanKit(tokenConfig).repositories("bitbucketCat") { response in
             switch response {
