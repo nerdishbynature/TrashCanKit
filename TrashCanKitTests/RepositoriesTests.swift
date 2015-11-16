@@ -92,4 +92,43 @@ class RepositoriesTests: XCTestCase {
             XCTAssertNil(error)
         }
     }
+
+    func testGetRepository() {
+        let tokenConfig = TokenConfiguration("123456", refreshToken: "7890")
+        stubRequest("GET", "https://bitbucket.org/api/2.0/repositories/pietbrauer/octokit.swift?access_token=123456").andReturn(200).withBody(TestHelper.loadJSONString("Repository"))
+        let expectation = expectationWithDescription("get_repo")
+        TrashCanKit(tokenConfig).repository("pietbrauer", name: "octokit.swift") { response in
+            switch response {
+            case .Success(let repo):
+                XCTAssertEqual(repo.name, "octokit.swift")
+                expectation.fulfill()
+            case .Failure:
+                XCTAssertFalse(true)
+                expectation.fulfill()
+            }
+        }
+        waitForExpectationsWithTimeout(1) { error in
+            XCTAssertNil(error)
+        }
+    }
+
+    func testFailToGetRepository() {
+        let tokenConfig = TokenConfiguration("123456", refreshToken: "7890")
+        stubRequest("GET", "https://bitbucket.org/api/2.0/repositories/pietbrauer/octokit.swift?access_token=123456").andReturn(401).withBody(TestHelper.loadJSONString("refresh_token_error"))
+        let expectation = expectationWithDescription("get_repos")
+        TrashCanKit(tokenConfig).repository("pietbrauer", name: "octokit.swift") { response in
+            switch response {
+            case .Success:
+                XCTAssertTrue(false)
+                expectation.fulfill()
+            case .Failure(let error):
+                XCTAssertEqual((error as NSError).code, 401)
+                XCTAssertEqual((error as NSError).domain, "com.octokit.swift")
+                expectation.fulfill()
+            }
+        }
+        waitForExpectationsWithTimeout(1) { error in
+            XCTAssertNil(error)
+        }
+    }
 }

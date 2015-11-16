@@ -143,6 +143,19 @@ TrashCanKit().me() { response in
 ```swift
 TrashCanKit().repositories() { response in
   switch response {
+    case .Success(let repositories):
+      // do something
+    case .Failure(let error):
+      // handle any errors
+  }
+}
+```
+
+### Get repository
+
+```swift
+TrashCanKit().repository("nerdishbynature", name: "octokit.swift") { response in
+  switch response {
     case .Success(let repository):
       // do something
     case .Failure(let error):
