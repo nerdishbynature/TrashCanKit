@@ -61,16 +61,32 @@ public extension TrashCanKit {
             }
         }
     }
+
+    public func repository(owner: String, name: String, completion: (response: Response<BitbucketRepository>) -> Void) {
+        let router = RepositoryRouter.ReadRepository(configuration, owner, name)
+        router.loadJSON([String: AnyObject].self) { json, error in
+            if let error = error {
+                completion(response: Response.Failure(error))
+            }
+
+            if let json = json {
+                let repo =  BitbucketRepository(json: json)
+                completion(response: Response.Success(repo))
+            }
+        }
+    }
 }
 
 // MARK: Router
 
 public enum RepositoryRouter: Router {
     case ReadRepositories(Configuration, String, String)
+    case ReadRepository(Configuration, String, String)
 
     public var configuration: Configuration {
         switch self {
         case .ReadRepositories(let config, _, _): return config
+        case .ReadRepository(let config, _, _): return config
         }
     }
 
@@ -86,6 +102,8 @@ public enum RepositoryRouter: Router {
         switch self {
         case .ReadRepositories(_, _, let page):
             return ["page": page]
+        case .ReadRepository:
+            return [:]
         }
     }
 
@@ -93,6 +111,8 @@ public enum RepositoryRouter: Router {
         switch self {
         case .ReadRepositories(_, let userName, _):
             return "/repositories/\(userName)"
+        case .ReadRepository(_, let owner, let name):
+            return "/repositories/\(owner)/\(name)"
         }
     }
 }
