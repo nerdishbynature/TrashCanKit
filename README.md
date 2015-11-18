@@ -1,6 +1,6 @@
 # TrashCanKit
 
-[![Circle CI](https://circleci.com/gh/nerdishbynature/TrashCanKit/tree/master.svg?style=svg)](https://circleci.com/gh/nerdishbynature/TrashCanKit/tree/master)
+[![Build Status](https://travis-ci.org/nerdishbynature/TrashCanKit.svg?branch=master)](https://travis-ci.org/nerdishbynature/TrashCanKit)
 
 A Swift 2.0 API Client for Bitbuckets 2.0 API.
 
