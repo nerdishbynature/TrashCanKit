@@ -47,17 +47,26 @@ import RequestKit
 
 // MARK: request
 
+public enum PaginatedResponse<T> {
+    case Success(values: T, nextParameters: [String: String])
+    case Failure(ErrorType)
+}
+
 public extension TrashCanKit {
-    public func repositories(userName: String, page: String = "1", completion: (response: Response<[BitbucketRepository]>) -> Void) {
-        let router = RepositoryRouter.ReadRepositories(configuration, userName, page)
+    public func repositories(userName: String? = nil, nextParameters: [String: String] = [:], completion: (response: PaginatedResponse<[BitbucketRepository]>) -> Void) {
+        let router = RepositoryRouter.ReadRepositories(configuration, userName, nextParameters)
         router.loadJSON([String: AnyObject].self) { json, error in
             if let error = error {
-                completion(response: Response.Failure(error))
+                completion(response: PaginatedResponse.Failure(error))
             }
 
             if let json = json, values = json["values"] as? [[String: AnyObject]] {
                 let repos = values.map { BitbucketRepository(json: $0) }
-                completion(response: Response.Success(repos))
+                if let nextURL = json["next"] as? String, parameterString = nextURL.componentsSeparatedByString("?").last {
+                    completion(response: PaginatedResponse.Success(values: repos, nextParameters: parameterString.tkk_queryParameters))
+                } else {
+                    completion(response: PaginatedResponse.Success(values: repos, nextParameters: [String: String]()))
+                }
             }
         }
     }
@@ -80,7 +89,7 @@ public extension TrashCanKit {
 // MARK: Router
 
 public enum RepositoryRouter: Router {
-    case ReadRepositories(Configuration, String, String)
+    case ReadRepositories(Configuration, String?, [String: String])
     case ReadRepository(Configuration, String, String)
 
     public var configuration: Configuration {
@@ -100,8 +109,13 @@ public enum RepositoryRouter: Router {
 
     public var params: [String: String] {
         switch self {
-        case .ReadRepositories(_, _, let page):
-            return ["page": page]
+        case .ReadRepositories(_, let userName, var nextParameters):
+            if let _ = userName {
+                return nextParameters
+            } else {
+                nextParameters += ["role": "member"]
+                return nextParameters
+            }
         case .ReadRepository:
             return [:]
         }
@@ -110,7 +124,11 @@ public enum RepositoryRouter: Router {
     public var path: String {
         switch self {
         case .ReadRepositories(_, let userName, _):
-            return "/repositories/\(userName)"
+            if let userName = userName {
+                return "/repositories/\(userName)"
+            } else {
+                return "/repositories"
+            }
         case .ReadRepository(_, let owner, let name):
             return "/repositories/\(owner)/\(name)"
         }

@@ -1,5 +1,5 @@
 install:
-	brew update
+	brew update || brew update # temporary workaround https://github.com/Homebrew/homebrew/issues/45616#issuecomment-153104335
 	brew install python
 	brew install carthage
 	pip install codecov

@@ -37,12 +37,35 @@ class RepositoriesTests: XCTestCase {
 
     func testGetRepositories() {
         let tokenConfig = TokenConfiguration("123456", refreshToken: "7890")
-        stubRequest("GET", "https://bitbucket.org/api/2.0/repositories/bitbucketCat?access_token=123456&page=1").andReturn(200).withBody(TestHelper.loadJSONString("Repositories"))
+        stubRequest("GET", "https://bitbucket.org/api/2.0/repositories?access_token=123456&role=member").andReturn(200).withBody(TestHelper.loadJSONString("Repositories"))
+        let expectation = expectationWithDescription("get_repos")
+        TrashCanKit(tokenConfig).repositories() { response in
+            switch response {
+            case .Success(let repos, let nextParameters):
+                XCTAssertEqual(nextParameters["access_token"], "123456==")
+                XCTAssertEqual(nextParameters["after"], "2015-11-06T03:45:07.833168+00:00")
+                XCTAssertEqual(nextParameters["role"], "member")
+                XCTAssertEqual(nextParameters["page"], "2")
+                XCTAssertEqual(repos.count, 10)
+                expectation.fulfill()
+            case .Failure:
+                XCTAssertFalse(true)
+                expectation.fulfill()
+            }
+        }
+        waitForExpectationsWithTimeout(1) { error in
+            XCTAssertNil(error)
+        }
+    }
+
+    func testGetUserRepositories() {
+        let tokenConfig = TokenConfiguration("123456", refreshToken: "7890")
+        stubRequest("GET", "https://bitbucket.org/api/2.0/repositories/bitbucketCat?access_token=123456").andReturn(200).withBody(TestHelper.loadJSONString("Repositories"))
         let expectation = expectationWithDescription("get_repos")
         TrashCanKit(tokenConfig).repositories("bitbucketCat") { response in
             switch response {
-            case .Success(let repos):
-                XCTAssertEqual(repos.count, 1)
+            case .Success(let repos, _):
+                XCTAssertEqual(repos.count, 10)
                 expectation.fulfill()
             case .Failure:
                 XCTAssertFalse(true)
@@ -56,12 +79,13 @@ class RepositoriesTests: XCTestCase {
 
     func testGetSecondPageRepositories() {
         let tokenConfig = TokenConfiguration("123456", refreshToken: "7890")
-        stubRequest("GET", "https://bitbucket.org/api/2.0/repositories/bitbucketCat?access_token=123456&page=2").andReturn(200).withBody(TestHelper.loadJSONString("Repositories"))
+        stubRequest("GET", "https://bitbucket.org/api/2.0/repositories?access_token=123456&after=2015-11-06T03%3A45%3A07.833168+00%3A00&page=2&role=member").andReturn(200).withBody(TestHelper.loadJSONString("Repositories"))
         let expectation = expectationWithDescription("get_repos")
-        TrashCanKit(tokenConfig).repositories("bitbucketCat", page: "2") { response in
+        let nextParameters = ["access_token": "123456==", "after": "2015-11-06T03:45:07.833168+00:00", "role": "member", "page": "2"]
+        TrashCanKit(tokenConfig).repositories(nextParameters: nextParameters) { response in
             switch response {
-            case .Success(let repos):
-                XCTAssertEqual(repos.count, 1)
+            case .Success(let repos, _):
+                XCTAssertEqual(repos.count, 10)
                 expectation.fulfill()
             case .Failure:
                 XCTAssertFalse(true)
@@ -75,7 +99,7 @@ class RepositoriesTests: XCTestCase {
 
     func testFailToGetRepositories() {
         let tokenConfig = TokenConfiguration("123456", refreshToken: "7890")
-        stubRequest("GET", "https://bitbucket.org/api/2.0/repositories/bitbucketCat?access_token=123456&page=1").andReturn(401).withBody(TestHelper.loadJSONString("refresh_token_error"))
+        stubRequest("GET", "https://bitbucket.org/api/2.0/repositories/bitbucketCat?access_token=123456").andReturn(401).withBody(TestHelper.loadJSONString("refresh_token_error"))
         let expectation = expectationWithDescription("get_repos")
         TrashCanKit(tokenConfig).repositories("bitbucketCat") { response in
             switch response {
