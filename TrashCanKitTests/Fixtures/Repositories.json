@@ -1,71 +1,727 @@
 {
+    "next": "https://api.bitbucket.org/2.0/repositories?access_token=123456%3D%3D&after=2015-11-06T03%3A45%3A07.833168%2B00%3A00&role=member&page=2",
     "page": 1,
     "pagelen": 10,
-    "size": 1,
     "values": [
-    {
-    "created_on": "2014-08-13T19:05:22.148829+00:00",
-    "description": "This repo ",
-    "fork_policy": "allow_forks",
-    "full_name": "dans9190/new-repository",
-    "has_issues": false,
-    "has_wiki": false,
-    "is_private": false,
-    "language": "",
-    "links": {
-    "avatar": {
-    "href": "https://d3oaxc4q5k2d6q.cloudfront.net/m/57a3af3749c5/img/language-avatars/default_16.png"
-    },
-    "clone": [
-    {
-    "href": "https://bitbucket.org/dans9190/new-repository.git",
-    "name": "https"
-    },
-    {
-    "href": "ssh://git@bitbucket.org/dans9190/new-repository.git",
-    "name": "ssh"
-    }
-    ],
-    "commits": {
-    "href": "https://api.bitbucket.org/2.0/repositories/dans9190/new-repository/commits"
-    },
-    "forks": {
-    "href": "https://api.bitbucket.org/2.0/repositories/dans9190/new-repository/forks"
-    },
-    "html": {
-    "href": "https://bitbucket.org/dans9190/new-repository"
-    },
-    "pullrequests": {
-    "href": "https://api.bitbucket.org/2.0/repositories/dans9190/new-repository/pullrequests"
-    },
-    "self": {
-    "href": "https://api.bitbucket.org/2.0/repositories/dans9190/new-repository"
-    },
-    "watchers": {
-    "href": "https://api.bitbucket.org/2.0/repositories/dans9190/new-repository/watchers"
-    }
-    },
-    "name": "New repository",
-    "owner": {
-    "display_name": "Daniel  Stevens",
-    "links": {
-    "avatar": {
-    "href": "https://bitbucket-assetroot.s3.amazonaws.com/c/photos/2014/Jan/29/dans9190-avatar-2647033047-1_avatar.png"
-    },
-    "html": {
-    "href": "https://bitbucket.org/dans9190"
-    },
-    "self": {
-    "href": "https://api.bitbucket.org/2.0/users/dans9190"
-    }
-    },
-    "username": "dans9190",
-    "uuid": "{1cd06601-cd0e-4fce-be03-e9ac226978b7}"
-    },
-    "scm": "git",
-    "size": 33348,
-    "updated_on": "2014-08-13T19:05:22.168083+00:00",
-    "uuid": "{9bdd6b69-3dc4-406b-a8dd-ff5119aefc61}"
-    }
+        {
+            "created_on": "2015-10-27T06:11:31.611823+00:00",
+            "description": "",
+            "fork_policy": "allow_forks",
+            "full_name": "pietbrauer/octokit.swift",
+            "has_issues": false,
+            "has_wiki": false,
+            "is_private": false,
+            "language": "",
+            "links": {
+                "avatar": {
+                    "href": "https://bitbucket.org/pietbrauer/octokit.swift/avatar/32/"
+                },
+                "clone": [
+                    {
+                        "href": "https://pietbrauer@bitbucket.org/pietbrauer/octokit.swift.git",
+                        "name": "https"
+                    },
+                    {
+                        "href": "ssh://git@bitbucket.org/pietbrauer/octokit.swift.git",
+                        "name": "ssh"
+                    }
+                ],
+                "commits": {
+                    "href": "https://api.bitbucket.org/2.0/repositories/pietbrauer/octokit.swift/commits"
+                },
+                "downloads": {
+                    "href": "https://api.bitbucket.org/2.0/repositories/pietbrauer/octokit.swift/downloads"
+                },
+                "forks": {
+                    "href": "https://api.bitbucket.org/2.0/repositories/pietbrauer/octokit.swift/forks"
+                },
+                "hooks": {
+                    "href": "https://api.bitbucket.org/2.0/repositories/pietbrauer/octokit.swift/hooks"
+                },
+                "html": {
+                    "href": "https://bitbucket.org/pietbrauer/octokit.swift"
+                },
+                "pullrequests": {
+                    "href": "https://api.bitbucket.org/2.0/repositories/pietbrauer/octokit.swift/pullrequests"
+                },
+                "self": {
+                    "href": "https://api.bitbucket.org/2.0/repositories/pietbrauer/octokit.swift"
+                },
+                "watchers": {
+                    "href": "https://api.bitbucket.org/2.0/repositories/pietbrauer/octokit.swift/watchers"
+                }
+            },
+            "name": "octokit.swift",
+            "owner": {
+                "display_name": "Piet Brauer",
+                "links": {
+                    "avatar": {
+                        "href": "https://bitbucket.org/account/pietbrauer/avatar/32/"
+                    },
+                    "html": {
+                        "href": "https://bitbucket.org/pietbrauer/"
+                    },
+                    "self": {
+                        "href": "https://api.bitbucket.org/2.0/users/pietbrauer"
+                    }
+                },
+                "type": "user",
+                "username": "pietbrauer",
+                "uuid": "{e9f0168c-cdf8-404a-95bb-3943dd2a65b6}"
+            },
+            "scm": "git",
+            "size": 163892,
+            "type": "repository",
+            "updated_on": "2015-11-16T04:18:54.576351+00:00",
+            "uuid": "{cb706a3e-1e13-41fb-ac9d-e53e8adc2bd7}"
+        },
+        {
+            "created_on": "2015-10-29T14:25:42.896852+00:00",
+            "description": "",
+            "fork_policy": "allow_forks",
+            "full_name": "pietbrauer/git2go-test-repo",
+            "has_issues": false,
+            "has_wiki": false,
+            "is_private": true,
+            "language": "",
+            "links": {
+                "avatar": {
+                    "href": "https://bitbucket.org/pietbrauer/git2go-test-repo/avatar/32/"
+                },
+                "clone": [
+                    {
+                        "href": "https://pietbrauer@bitbucket.org/pietbrauer/git2go-test-repo.git",
+                        "name": "https"
+                    },
+                    {
+                        "href": "ssh://git@bitbucket.org/pietbrauer/git2go-test-repo.git",
+                        "name": "ssh"
+                    }
+                ],
+                "commits": {
+                    "href": "https://api.bitbucket.org/2.0/repositories/pietbrauer/git2go-test-repo/commits"
+                },
+                "downloads": {
+                    "href": "https://api.bitbucket.org/2.0/repositories/pietbrauer/git2go-test-repo/downloads"
+                },
+                "forks": {
+                    "href": "https://api.bitbucket.org/2.0/repositories/pietbrauer/git2go-test-repo/forks"
+                },
+                "hooks": {
+                    "href": "https://api.bitbucket.org/2.0/repositories/pietbrauer/git2go-test-repo/hooks"
+                },
+                "html": {
+                    "href": "https://bitbucket.org/pietbrauer/git2go-test-repo"
+                },
+                "pullrequests": {
+                    "href": "https://api.bitbucket.org/2.0/repositories/pietbrauer/git2go-test-repo/pullrequests"
+                },
+                "self": {
+                    "href": "https://api.bitbucket.org/2.0/repositories/pietbrauer/git2go-test-repo"
+                },
+                "watchers": {
+                    "href": "https://api.bitbucket.org/2.0/repositories/pietbrauer/git2go-test-repo/watchers"
+                }
+            },
+            "name": "git2go-test-repo",
+            "owner": {
+                "display_name": "Piet Brauer",
+                "links": {
+                    "avatar": {
+                        "href": "https://bitbucket.org/account/pietbrauer/avatar/32/"
+                    },
+                    "html": {
+                        "href": "https://bitbucket.org/pietbrauer/"
+                    },
+                    "self": {
+                        "href": "https://api.bitbucket.org/2.0/users/pietbrauer"
+                    }
+                },
+                "type": "user",
+                "username": "pietbrauer",
+                "uuid": "{e9f0168c-cdf8-404a-95bb-3943dd2a65b6}"
+            },
+            "scm": "git",
+            "size": 126378,
+            "type": "repository",
+            "updated_on": "2015-11-11T18:47:13.943751+00:00",
+            "uuid": "{21133e9a-a538-43bc-a35a-94c0e294bbf6}"
+        },
+        {
+            "created_on": "2015-11-06T03:44:20.647748+00:00",
+            "description": "",
+            "fork_policy": "no_public_forks",
+            "full_name": "pietbrauer/test1",
+            "has_issues": false,
+            "has_wiki": false,
+            "is_private": true,
+            "language": "",
+            "links": {
+                "avatar": {
+                    "href": "https://bitbucket.org/pietbrauer/test1/avatar/32/"
+                },
+                "clone": [
+                    {
+                        "href": "https://pietbrauer@bitbucket.org/pietbrauer/test1.git",
+                        "name": "https"
+                    },
+                    {
+                        "href": "ssh://git@bitbucket.org/pietbrauer/test1.git",
+                        "name": "ssh"
+                    }
+                ],
+                "commits": {
+                    "href": "https://api.bitbucket.org/2.0/repositories/pietbrauer/test1/commits"
+                },
+                "downloads": {
+                    "href": "https://api.bitbucket.org/2.0/repositories/pietbrauer/test1/downloads"
+                },
+                "forks": {
+                    "href": "https://api.bitbucket.org/2.0/repositories/pietbrauer/test1/forks"
+                },
+                "hooks": {
+                    "href": "https://api.bitbucket.org/2.0/repositories/pietbrauer/test1/hooks"
+                },
+                "html": {
+                    "href": "https://bitbucket.org/pietbrauer/test1"
+                },
+                "pullrequests": {
+                    "href": "https://api.bitbucket.org/2.0/repositories/pietbrauer/test1/pullrequests"
+                },
+                "self": {
+                    "href": "https://api.bitbucket.org/2.0/repositories/pietbrauer/test1"
+                },
+                "watchers": {
+                    "href": "https://api.bitbucket.org/2.0/repositories/pietbrauer/test1/watchers"
+                }
+            },
+            "name": "test1",
+            "owner": {
+                "display_name": "Piet Brauer",
+                "links": {
+                    "avatar": {
+                        "href": "https://bitbucket.org/account/pietbrauer/avatar/32/"
+                    },
+                    "html": {
+                        "href": "https://bitbucket.org/pietbrauer/"
+                    },
+                    "self": {
+                        "href": "https://api.bitbucket.org/2.0/users/pietbrauer"
+                    }
+                },
+                "type": "user",
+                "username": "pietbrauer",
+                "uuid": "{e9f0168c-cdf8-404a-95bb-3943dd2a65b6}"
+            },
+            "scm": "git",
+            "size": 33348,
+            "type": "repository",
+            "updated_on": "2015-11-06T03:44:20.665234+00:00",
+            "uuid": "{d08277c5-4f46-459a-b9e5-2e85bba01cd1}"
+        },
+        {
+            "created_on": "2015-11-06T03:44:27.859020+00:00",
+            "description": "",
+            "fork_policy": "no_public_forks",
+            "full_name": "pietbrauer/test2",
+            "has_issues": false,
+            "has_wiki": false,
+            "is_private": true,
+            "language": "",
+            "links": {
+                "avatar": {
+                    "href": "https://bitbucket.org/pietbrauer/test2/avatar/32/"
+                },
+                "clone": [
+                    {
+                        "href": "https://pietbrauer@bitbucket.org/pietbrauer/test2.git",
+                        "name": "https"
+                    },
+                    {
+                        "href": "ssh://git@bitbucket.org/pietbrauer/test2.git",
+                        "name": "ssh"
+                    }
+                ],
+                "commits": {
+                    "href": "https://api.bitbucket.org/2.0/repositories/pietbrauer/test2/commits"
+                },
+                "downloads": {
+                    "href": "https://api.bitbucket.org/2.0/repositories/pietbrauer/test2/downloads"
+                },
+                "forks": {
+                    "href": "https://api.bitbucket.org/2.0/repositories/pietbrauer/test2/forks"
+                },
+                "hooks": {
+                    "href": "https://api.bitbucket.org/2.0/repositories/pietbrauer/test2/hooks"
+                },
+                "html": {
+                    "href": "https://bitbucket.org/pietbrauer/test2"
+                },
+                "pullrequests": {
+                    "href": "https://api.bitbucket.org/2.0/repositories/pietbrauer/test2/pullrequests"
+                },
+                "self": {
+                    "href": "https://api.bitbucket.org/2.0/repositories/pietbrauer/test2"
+                },
+                "watchers": {
+                    "href": "https://api.bitbucket.org/2.0/repositories/pietbrauer/test2/watchers"
+                }
+            },
+            "name": "test2",
+            "owner": {
+                "display_name": "Piet Brauer",
+                "links": {
+                    "avatar": {
+                        "href": "https://bitbucket.org/account/pietbrauer/avatar/32/"
+                    },
+                    "html": {
+                        "href": "https://bitbucket.org/pietbrauer/"
+                    },
+                    "self": {
+                        "href": "https://api.bitbucket.org/2.0/users/pietbrauer"
+                    }
+                },
+                "type": "user",
+                "username": "pietbrauer",
+                "uuid": "{e9f0168c-cdf8-404a-95bb-3943dd2a65b6}"
+            },
+            "scm": "git",
+            "size": 33348,
+            "type": "repository",
+            "updated_on": "2015-11-06T03:44:27.879182+00:00",
+            "uuid": "{c41ff971-988c-4224-9211-8a12437801b9}"
+        },
+        {
+            "created_on": "2015-11-06T03:44:33.373046+00:00",
+            "description": "",
+            "fork_policy": "no_public_forks",
+            "full_name": "pietbrauer/test3",
+            "has_issues": false,
+            "has_wiki": false,
+            "is_private": true,
+            "language": "",
+            "links": {
+                "avatar": {
+                    "href": "https://bitbucket.org/pietbrauer/test3/avatar/32/"
+                },
+                "clone": [
+                    {
+                        "href": "https://pietbrauer@bitbucket.org/pietbrauer/test3.git",
+                        "name": "https"
+                    },
+                    {
+                        "href": "ssh://git@bitbucket.org/pietbrauer/test3.git",
+                        "name": "ssh"
+                    }
+                ],
+                "commits": {
+                    "href": "https://api.bitbucket.org/2.0/repositories/pietbrauer/test3/commits"
+                },
+                "downloads": {
+                    "href": "https://api.bitbucket.org/2.0/repositories/pietbrauer/test3/downloads"
+                },
+                "forks": {
+                    "href": "https://api.bitbucket.org/2.0/repositories/pietbrauer/test3/forks"
+                },
+                "hooks": {
+                    "href": "https://api.bitbucket.org/2.0/repositories/pietbrauer/test3/hooks"
+                },
+                "html": {
+                    "href": "https://bitbucket.org/pietbrauer/test3"
+                },
+                "pullrequests": {
+                    "href": "https://api.bitbucket.org/2.0/repositories/pietbrauer/test3/pullrequests"
+                },
+                "self": {
+                    "href": "https://api.bitbucket.org/2.0/repositories/pietbrauer/test3"
+                },
+                "watchers": {
+                    "href": "https://api.bitbucket.org/2.0/repositories/pietbrauer/test3/watchers"
+                }
+            },
+            "name": "test3",
+            "owner": {
+                "display_name": "Piet Brauer",
+                "links": {
+                    "avatar": {
+                        "href": "https://bitbucket.org/account/pietbrauer/avatar/32/"
+                    },
+                    "html": {
+                        "href": "https://bitbucket.org/pietbrauer/"
+                    },
+                    "self": {
+                        "href": "https://api.bitbucket.org/2.0/users/pietbrauer"
+                    }
+                },
+                "type": "user",
+                "username": "pietbrauer",
+                "uuid": "{e9f0168c-cdf8-404a-95bb-3943dd2a65b6}"
+            },
+            "scm": "git",
+            "size": 33348,
+            "type": "repository",
+            "updated_on": "2015-11-06T03:44:33.391666+00:00",
+            "uuid": "{8f6f5447-4cb4-4a6d-9b91-15489596b39f}"
+        },
+        {
+            "created_on": "2015-11-06T03:44:40.051998+00:00",
+            "description": "",
+            "fork_policy": "no_public_forks",
+            "full_name": "pietbrauer/test4",
+            "has_issues": false,
+            "has_wiki": false,
+            "is_private": true,
+            "language": "",
+            "links": {
+                "avatar": {
+                    "href": "https://bitbucket.org/pietbrauer/test4/avatar/32/"
+                },
+                "clone": [
+                    {
+                        "href": "https://pietbrauer@bitbucket.org/pietbrauer/test4.git",
+                        "name": "https"
+                    },
+                    {
+                        "href": "ssh://git@bitbucket.org/pietbrauer/test4.git",
+                        "name": "ssh"
+                    }
+                ],
+                "commits": {
+                    "href": "https://api.bitbucket.org/2.0/repositories/pietbrauer/test4/commits"
+                },
+                "downloads": {
+                    "href": "https://api.bitbucket.org/2.0/repositories/pietbrauer/test4/downloads"
+                },
+                "forks": {
+                    "href": "https://api.bitbucket.org/2.0/repositories/pietbrauer/test4/forks"
+                },
+                "hooks": {
+                    "href": "https://api.bitbucket.org/2.0/repositories/pietbrauer/test4/hooks"
+                },
+                "html": {
+                    "href": "https://bitbucket.org/pietbrauer/test4"
+                },
+                "pullrequests": {
+                    "href": "https://api.bitbucket.org/2.0/repositories/pietbrauer/test4/pullrequests"
+                },
+                "self": {
+                    "href": "https://api.bitbucket.org/2.0/repositories/pietbrauer/test4"
+                },
+                "watchers": {
+                    "href": "https://api.bitbucket.org/2.0/repositories/pietbrauer/test4/watchers"
+                }
+            },
+            "name": "test4",
+            "owner": {
+                "display_name": "Piet Brauer",
+                "links": {
+                    "avatar": {
+                        "href": "https://bitbucket.org/account/pietbrauer/avatar/32/"
+                    },
+                    "html": {
+                        "href": "https://bitbucket.org/pietbrauer/"
+                    },
+                    "self": {
+                        "href": "https://api.bitbucket.org/2.0/users/pietbrauer"
+                    }
+                },
+                "type": "user",
+                "username": "pietbrauer",
+                "uuid": "{e9f0168c-cdf8-404a-95bb-3943dd2a65b6}"
+            },
+            "scm": "git",
+            "size": 33348,
+            "type": "repository",
+            "updated_on": "2015-11-06T03:44:40.070129+00:00",
+            "uuid": "{53a1cc22-0d3c-4534-816b-e431c098ddf9}"
+        },
+        {
+            "created_on": "2015-11-06T03:44:45.500360+00:00",
+            "description": "",
+            "fork_policy": "no_public_forks",
+            "full_name": "pietbrauer/test5",
+            "has_issues": false,
+            "has_wiki": false,
+            "is_private": true,
+            "language": "",
+            "links": {
+                "avatar": {
+                    "href": "https://bitbucket.org/pietbrauer/test5/avatar/32/"
+                },
+                "clone": [
+                    {
+                        "href": "https://pietbrauer@bitbucket.org/pietbrauer/test5.git",
+                        "name": "https"
+                    },
+                    {
+                        "href": "ssh://git@bitbucket.org/pietbrauer/test5.git",
+                        "name": "ssh"
+                    }
+                ],
+                "commits": {
+                    "href": "https://api.bitbucket.org/2.0/repositories/pietbrauer/test5/commits"
+                },
+                "downloads": {
+                    "href": "https://api.bitbucket.org/2.0/repositories/pietbrauer/test5/downloads"
+                },
+                "forks": {
+                    "href": "https://api.bitbucket.org/2.0/repositories/pietbrauer/test5/forks"
+                },
+                "hooks": {
+                    "href": "https://api.bitbucket.org/2.0/repositories/pietbrauer/test5/hooks"
+                },
+                "html": {
+                    "href": "https://bitbucket.org/pietbrauer/test5"
+                },
+                "pullrequests": {
+                    "href": "https://api.bitbucket.org/2.0/repositories/pietbrauer/test5/pullrequests"
+                },
+                "self": {
+                    "href": "https://api.bitbucket.org/2.0/repositories/pietbrauer/test5"
+                },
+                "watchers": {
+                    "href": "https://api.bitbucket.org/2.0/repositories/pietbrauer/test5/watchers"
+                }
+            },
+            "name": "test5",
+            "owner": {
+                "display_name": "Piet Brauer",
+                "links": {
+                    "avatar": {
+                        "href": "https://bitbucket.org/account/pietbrauer/avatar/32/"
+                    },
+                    "html": {
+                        "href": "https://bitbucket.org/pietbrauer/"
+                    },
+                    "self": {
+                        "href": "https://api.bitbucket.org/2.0/users/pietbrauer"
+                    }
+                },
+                "type": "user",
+                "username": "pietbrauer",
+                "uuid": "{e9f0168c-cdf8-404a-95bb-3943dd2a65b6}"
+            },
+            "scm": "git",
+            "size": 33348,
+            "type": "repository",
+            "updated_on": "2015-11-06T03:44:45.522458+00:00",
+            "uuid": "{938a6598-bdc0-4e6d-9d80-27f12cc2c493}"
+        },
+        {
+            "created_on": "2015-11-06T03:44:51.266699+00:00",
+            "description": "",
+            "fork_policy": "no_public_forks",
+            "full_name": "pietbrauer/test6",
+            "has_issues": false,
+            "has_wiki": false,
+            "is_private": true,
+            "language": "",
+            "links": {
+                "avatar": {
+                    "href": "https://bitbucket.org/pietbrauer/test6/avatar/32/"
+                },
+                "clone": [
+                    {
+                        "href": "https://pietbrauer@bitbucket.org/pietbrauer/test6.git",
+                        "name": "https"
+                    },
+                    {
+                        "href": "ssh://git@bitbucket.org/pietbrauer/test6.git",
+                        "name": "ssh"
+                    }
+                ],
+                "commits": {
+                    "href": "https://api.bitbucket.org/2.0/repositories/pietbrauer/test6/commits"
+                },
+                "downloads": {
+                    "href": "https://api.bitbucket.org/2.0/repositories/pietbrauer/test6/downloads"
+                },
+                "forks": {
+                    "href": "https://api.bitbucket.org/2.0/repositories/pietbrauer/test6/forks"
+                },
+                "hooks": {
+                    "href": "https://api.bitbucket.org/2.0/repositories/pietbrauer/test6/hooks"
+                },
+                "html": {
+                    "href": "https://bitbucket.org/pietbrauer/test6"
+                },
+                "pullrequests": {
+                    "href": "https://api.bitbucket.org/2.0/repositories/pietbrauer/test6/pullrequests"
+                },
+                "self": {
+                    "href": "https://api.bitbucket.org/2.0/repositories/pietbrauer/test6"
+                },
+                "watchers": {
+                    "href": "https://api.bitbucket.org/2.0/repositories/pietbrauer/test6/watchers"
+                }
+            },
+            "name": "test6",
+            "owner": {
+                "display_name": "Piet Brauer",
+                "links": {
+                    "avatar": {
+                        "href": "https://bitbucket.org/account/pietbrauer/avatar/32/"
+                    },
+                    "html": {
+                        "href": "https://bitbucket.org/pietbrauer/"
+                    },
+                    "self": {
+                        "href": "https://api.bitbucket.org/2.0/users/pietbrauer"
+                    }
+                },
+                "type": "user",
+                "username": "pietbrauer",
+                "uuid": "{e9f0168c-cdf8-404a-95bb-3943dd2a65b6}"
+            },
+            "scm": "git",
+            "size": 33348,
+            "type": "repository",
+            "updated_on": "2015-11-06T03:44:51.285527+00:00",
+            "uuid": "{ebf4b8e7-4bfa-40fd-877d-034b6e9d5931}"
+        },
+        {
+            "created_on": "2015-11-06T03:44:56.464053+00:00",
+            "description": "",
+            "fork_policy": "no_public_forks",
+            "full_name": "pietbrauer/test7",
+            "has_issues": false,
+            "has_wiki": false,
+            "is_private": true,
+            "language": "",
+            "links": {
+                "avatar": {
+                    "href": "https://bitbucket.org/pietbrauer/test7/avatar/32/"
+                },
+                "clone": [
+                    {
+                        "href": "https://pietbrauer@bitbucket.org/pietbrauer/test7.git",
+                        "name": "https"
+                    },
+                    {
+                        "href": "ssh://git@bitbucket.org/pietbrauer/test7.git",
+                        "name": "ssh"
+                    }
+                ],
+                "commits": {
+                    "href": "https://api.bitbucket.org/2.0/repositories/pietbrauer/test7/commits"
+                },
+                "downloads": {
+                    "href": "https://api.bitbucket.org/2.0/repositories/pietbrauer/test7/downloads"
+                },
+                "forks": {
+                    "href": "https://api.bitbucket.org/2.0/repositories/pietbrauer/test7/forks"
+                },
+                "hooks": {
+                    "href": "https://api.bitbucket.org/2.0/repositories/pietbrauer/test7/hooks"
+                },
+                "html": {
+                    "href": "https://bitbucket.org/pietbrauer/test7"
+                },
+                "pullrequests": {
+                    "href": "https://api.bitbucket.org/2.0/repositories/pietbrauer/test7/pullrequests"
+                },
+                "self": {
+                    "href": "https://api.bitbucket.org/2.0/repositories/pietbrauer/test7"
+                },
+                "watchers": {
+                    "href": "https://api.bitbucket.org/2.0/repositories/pietbrauer/test7/watchers"
+                }
+            },
+            "name": "test7",
+            "owner": {
+                "display_name": "Piet Brauer",
+                "links": {
+                    "avatar": {
+                        "href": "https://bitbucket.org/account/pietbrauer/avatar/32/"
+                    },
+                    "html": {
+                        "href": "https://bitbucket.org/pietbrauer/"
+                    },
+                    "self": {
+                        "href": "https://api.bitbucket.org/2.0/users/pietbrauer"
+                    }
+                },
+                "type": "user",
+                "username": "pietbrauer",
+                "uuid": "{e9f0168c-cdf8-404a-95bb-3943dd2a65b6}"
+            },
+            "scm": "git",
+            "size": 33348,
+            "type": "repository",
+            "updated_on": "2015-11-06T03:44:56.481230+00:00",
+            "uuid": "{b9df8881-1dfd-4679-b1d5-1c3326bfebf4}"
+        },
+        {
+            "created_on": "2015-11-06T03:45:02.231202+00:00",
+            "description": "",
+            "fork_policy": "no_public_forks",
+            "full_name": "pietbrauer/test8",
+            "has_issues": false,
+            "has_wiki": false,
+            "is_private": true,
+            "language": "",
+            "links": {
+                "avatar": {
+                    "href": "https://bitbucket.org/pietbrauer/test8/avatar/32/"
+                },
+                "clone": [
+                    {
+                        "href": "https://pietbrauer@bitbucket.org/pietbrauer/test8.git",
+                        "name": "https"
+                    },
+                    {
+                        "href": "ssh://git@bitbucket.org/pietbrauer/test8.git",
+                        "name": "ssh"
+                    }
+                ],
+                "commits": {
+                    "href": "https://api.bitbucket.org/2.0/repositories/pietbrauer/test8/commits"
+                },
+                "downloads": {
+                    "href": "https://api.bitbucket.org/2.0/repositories/pietbrauer/test8/downloads"
+                },
+                "forks": {
+                    "href": "https://api.bitbucket.org/2.0/repositories/pietbrauer/test8/forks"
+                },
+                "hooks": {
+                    "href": "https://api.bitbucket.org/2.0/repositories/pietbrauer/test8/hooks"
+                },
+                "html": {
+                    "href": "https://bitbucket.org/pietbrauer/test8"
+                },
+                "pullrequests": {
+                    "href": "https://api.bitbucket.org/2.0/repositories/pietbrauer/test8/pullrequests"
+                },
+                "self": {
+                    "href": "https://api.bitbucket.org/2.0/repositories/pietbrauer/test8"
+                },
+                "watchers": {
+                    "href": "https://api.bitbucket.org/2.0/repositories/pietbrauer/test8/watchers"
+                }
+            },
+            "name": "test8",
+            "owner": {
+                "display_name": "Piet Brauer",
+                "links": {
+                    "avatar": {
+                        "href": "https://bitbucket.org/account/pietbrauer/avatar/32/"
+                    },
+                    "html": {
+                        "href": "https://bitbucket.org/pietbrauer/"
+                    },
+                    "self": {
+                        "href": "https://api.bitbucket.org/2.0/users/pietbrauer"
+                    }
+                },
+                "type": "user",
+                "username": "pietbrauer",
+                "uuid": "{e9f0168c-cdf8-404a-95bb-3943dd2a65b6}"
+            },
+            "scm": "git",
+            "size": 33348,
+            "type": "repository",
+            "updated_on": "2015-11-06T03:45:02.247397+00:00",
+            "uuid": "{0aed65df-ebeb-4b33-8856-32461d137e4b}"
+        }
     ]
 }
