@@ -3,7 +3,7 @@ import RequestKit
 
 // MARK: model
 
-@objc public class BitbucketRepository: NSObject {
+@objc public class Repository: NSObject {
     public let id: String
     public let owner: User
     public var name: String?
@@ -53,7 +53,7 @@ public enum PaginatedResponse<T> {
 }
 
 public extension TrashCanKit {
-    public func repositories(userName: String? = nil, nextParameters: [String: String] = [:], completion: (response: PaginatedResponse<[BitbucketRepository]>) -> Void) {
+    public func repositories(userName: String? = nil, nextParameters: [String: String] = [:], completion: (response: PaginatedResponse<[Repository]>) -> Void) {
         let router = RepositoryRouter.ReadRepositories(configuration, userName, nextParameters)
         router.loadJSON([String: AnyObject].self) { json, error in
             if let error = error {
@@ -61,7 +61,7 @@ public extension TrashCanKit {
             }
 
             if let json = json, values = json["values"] as? [[String: AnyObject]] {
-                let repos = values.map { BitbucketRepository(json: $0) }
+                let repos = values.map { Repository(json: $0) }
                 if let nextURL = json["next"] as? String, parameterString = nextURL.componentsSeparatedByString("?").last {
                     completion(response: PaginatedResponse.Success(values: repos, nextParameters: parameterString.tkk_queryParameters))
                 } else {
@@ -71,7 +71,7 @@ public extension TrashCanKit {
         }
     }
 
-    public func repository(owner: String, name: String, completion: (response: Response<BitbucketRepository>) -> Void) {
+    public func repository(owner: String, name: String, completion: (response: Response<Repository>) -> Void) {
         let router = RepositoryRouter.ReadRepository(configuration, owner, name)
         router.loadJSON([String: AnyObject].self) { json, error in
             if let error = error {
@@ -79,7 +79,7 @@ public extension TrashCanKit {
             }
 
             if let json = json {
-                let repo =  BitbucketRepository(json: json)
+                let repo =  Repository(json: json)
                 completion(response: Response.Success(repo))
             }
         }

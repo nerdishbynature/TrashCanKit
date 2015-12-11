@@ -15,7 +15,7 @@ class RepositoriesTests: XCTestCase {
     }
 
     func testConstructFromJSON() {
-        let repository = BitbucketRepository(json: TestHelper.loadJSON("Repository"))
+        let repository = Repository(json: TestHelper.loadJSON("Repository"))
         XCTAssertEqual(repository.id, "{cb706a3e-1e13-41fb-ac9d-e53e8adc2bd7}")
         XCTAssertEqual(repository.owner.login, "pietbrauer")
         XCTAssertEqual(repository.name, "octokit.swift")
@@ -29,7 +29,7 @@ class RepositoriesTests: XCTestCase {
     }
 
     func testFailToConstructFromJSON() {
-        let repository = BitbucketRepository(json: [:])
+        let repository = Repository(json: [:])
         XCTAssertEqual(repository.id, "-1")
         XCTAssertEqual(repository.isPrivate, false)
         XCTAssertEqual(repository.size, 0)
