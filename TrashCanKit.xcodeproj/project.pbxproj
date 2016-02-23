@@ -36,6 +36,76 @@
 		236364A51BE2313B00AA7104 /* Email.json in Resources */ = {isa = PBXBuildFile; fileRef = 236364A21BE2313B00AA7104 /* Email.json */; };
 		236364A61BE2313B00AA7104 /* Repository.json in Resources */ = {isa = PBXBuildFile; fileRef = 236364A31BE2313B00AA7104 /* Repository.json */; };
 		236364A71BE2313B00AA7104 /* User.json in Resources */ = {isa = PBXBuildFile; fileRef = 236364A41BE2313B00AA7104 /* User.json */; };
+		238EB1C11C7C660800289C37 /* TrashCanKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 238EB1B71C7C660800289C37 /* TrashCanKit.framework */; };
+		238EB1DD1C7C662100289C37 /* TrashCanKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 238EB1D31C7C662100289C37 /* TrashCanKit.framework */; };
+		238EB1EA1C7C669400289C37 /* TrashCanKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2363648A1BE22FCC00AA7104 /* TrashCanKit.swift */; };
+		238EB1EB1C7C669400289C37 /* NSURL+URLParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231B684F1BE99886007AE2A6 /* NSURL+URLParameters.swift */; };
+		238EB1EC1C7C669400289C37 /* OAuthConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231B684D1BE99852007AE2A6 /* OAuthConfiguration.swift */; };
+		238EB1ED1C7C669400289C37 /* OAuthRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231B68531BE998C7007AE2A6 /* OAuthRouter.swift */; };
+		238EB1EE1C7C669400289C37 /* TokenConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231B68511BE9989C007AE2A6 /* TokenConfiguration.swift */; };
+		238EB1EF1C7C669400289C37 /* Repositories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2363648B1BE22FCC00AA7104 /* Repositories.swift */; };
+		238EB1F01C7C669400289C37 /* String+QueryParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231069D21C06BE3400101BCC /* String+QueryParameters.swift */; };
+		238EB1F11C7C669400289C37 /* Dictionary+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231069D41C06BE6D00101BCC /* Dictionary+Additions.swift */; };
+		238EB1F21C7C669400289C37 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2363648C1BE22FCC00AA7104 /* Token.swift */; };
+		238EB1F31C7C669400289C37 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2363648D1BE22FCC00AA7104 /* User.swift */; };
+		238EB1F41C7C669A00289C37 /* TrashCanKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 236364731BE22F1000AA7104 /* TrashCanKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		238EB1F51C7C66A500289C37 /* TrashCanKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2363648A1BE22FCC00AA7104 /* TrashCanKit.swift */; };
+		238EB1F61C7C66A500289C37 /* NSURL+URLParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231B684F1BE99886007AE2A6 /* NSURL+URLParameters.swift */; };
+		238EB1F71C7C66A500289C37 /* OAuthConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231B684D1BE99852007AE2A6 /* OAuthConfiguration.swift */; };
+		238EB1F81C7C66A500289C37 /* OAuthRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231B68531BE998C7007AE2A6 /* OAuthRouter.swift */; };
+		238EB1F91C7C66A500289C37 /* TokenConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231B68511BE9989C007AE2A6 /* TokenConfiguration.swift */; };
+		238EB1FA1C7C66A500289C37 /* Repositories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2363648B1BE22FCC00AA7104 /* Repositories.swift */; };
+		238EB1FB1C7C66A500289C37 /* String+QueryParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231069D21C06BE3400101BCC /* String+QueryParameters.swift */; };
+		238EB1FC1C7C66A500289C37 /* Dictionary+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231069D41C06BE6D00101BCC /* Dictionary+Additions.swift */; };
+		238EB1FD1C7C66A500289C37 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2363648C1BE22FCC00AA7104 /* Token.swift */; };
+		238EB1FE1C7C66A500289C37 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2363648D1BE22FCC00AA7104 /* User.swift */; };
+		238EB1FF1C7C66A900289C37 /* TrashCanKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 236364731BE22F1000AA7104 /* TrashCanKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		238EB2001C7C66B100289C37 /* TestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236364931BE2301200AA7104 /* TestHelper.swift */; };
+		238EB2011C7C66B100289C37 /* RepositoriesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236364921BE2301200AA7104 /* RepositoriesTests.swift */; };
+		238EB2021C7C66B100289C37 /* UserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236364951BE2301200AA7104 /* UserTests.swift */; };
+		238EB2031C7C66B100289C37 /* ConfigurationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231B68551BE9997C007AE2A6 /* ConfigurationTests.swift */; };
+		238EB2041C7C66B100289C37 /* TokenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231B68591BE9A3DD007AE2A6 /* TokenTests.swift */; };
+		238EB2051C7C66B700289C37 /* Email.json in Resources */ = {isa = PBXBuildFile; fileRef = 236364A21BE2313B00AA7104 /* Email.json */; };
+		238EB2061C7C66B700289C37 /* Repository.json in Resources */ = {isa = PBXBuildFile; fileRef = 236364A31BE2313B00AA7104 /* Repository.json */; };
+		238EB2071C7C66B700289C37 /* User.json in Resources */ = {isa = PBXBuildFile; fileRef = 236364A41BE2313B00AA7104 /* User.json */; };
+		238EB2081C7C66B700289C37 /* authorize.json in Resources */ = {isa = PBXBuildFile; fileRef = 231B68571BE9A13C007AE2A6 /* authorize.json */; };
+		238EB2091C7C66B700289C37 /* refresh_token_error.json in Resources */ = {isa = PBXBuildFile; fileRef = 231B685B1BE9A699007AE2A6 /* refresh_token_error.json */; };
+		238EB20A1C7C66B700289C37 /* Repositories.json in Resources */ = {isa = PBXBuildFile; fileRef = 231B685D1BE9AA66007AE2A6 /* Repositories.json */; };
+		238EB20B1C7C66B700289C37 /* Me.json in Resources */ = {isa = PBXBuildFile; fileRef = 231B68601BE9AD30007AE2A6 /* Me.json */; };
+		238EB20C1C7C66B700289C37 /* Emails.json in Resources */ = {isa = PBXBuildFile; fileRef = 231B68621BE9AD8D007AE2A6 /* Emails.json */; };
+		238EB20D1C7C66BD00289C37 /* Email.json in Resources */ = {isa = PBXBuildFile; fileRef = 236364A21BE2313B00AA7104 /* Email.json */; };
+		238EB20E1C7C66BD00289C37 /* Repository.json in Resources */ = {isa = PBXBuildFile; fileRef = 236364A31BE2313B00AA7104 /* Repository.json */; };
+		238EB20F1C7C66BD00289C37 /* User.json in Resources */ = {isa = PBXBuildFile; fileRef = 236364A41BE2313B00AA7104 /* User.json */; };
+		238EB2101C7C66BD00289C37 /* authorize.json in Resources */ = {isa = PBXBuildFile; fileRef = 231B68571BE9A13C007AE2A6 /* authorize.json */; };
+		238EB2111C7C66BD00289C37 /* refresh_token_error.json in Resources */ = {isa = PBXBuildFile; fileRef = 231B685B1BE9A699007AE2A6 /* refresh_token_error.json */; };
+		238EB2121C7C66BD00289C37 /* Repositories.json in Resources */ = {isa = PBXBuildFile; fileRef = 231B685D1BE9AA66007AE2A6 /* Repositories.json */; };
+		238EB2131C7C66BD00289C37 /* Me.json in Resources */ = {isa = PBXBuildFile; fileRef = 231B68601BE9AD30007AE2A6 /* Me.json */; };
+		238EB2141C7C66BD00289C37 /* Emails.json in Resources */ = {isa = PBXBuildFile; fileRef = 231B68621BE9AD8D007AE2A6 /* Emails.json */; };
+		238EB2151C7C66C200289C37 /* TestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236364931BE2301200AA7104 /* TestHelper.swift */; };
+		238EB2161C7C66C200289C37 /* RepositoriesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236364921BE2301200AA7104 /* RepositoriesTests.swift */; };
+		238EB2171C7C66C200289C37 /* UserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236364951BE2301200AA7104 /* UserTests.swift */; };
+		238EB2181C7C66C200289C37 /* ConfigurationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231B68551BE9997C007AE2A6 /* ConfigurationTests.swift */; };
+		238EB2191C7C66C200289C37 /* TokenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231B68591BE9A3DD007AE2A6 /* TokenTests.swift */; };
+		238EB21A1C7C66C800289C37 /* TrashCanKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2363648A1BE22FCC00AA7104 /* TrashCanKit.swift */; };
+		238EB21B1C7C66C800289C37 /* NSURL+URLParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231B684F1BE99886007AE2A6 /* NSURL+URLParameters.swift */; };
+		238EB21C1C7C66C800289C37 /* OAuthConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231B684D1BE99852007AE2A6 /* OAuthConfiguration.swift */; };
+		238EB21D1C7C66C800289C37 /* OAuthRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231B68531BE998C7007AE2A6 /* OAuthRouter.swift */; };
+		238EB21E1C7C66C800289C37 /* TokenConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231B68511BE9989C007AE2A6 /* TokenConfiguration.swift */; };
+		238EB21F1C7C66C800289C37 /* Repositories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2363648B1BE22FCC00AA7104 /* Repositories.swift */; };
+		238EB2201C7C66C800289C37 /* String+QueryParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231069D21C06BE3400101BCC /* String+QueryParameters.swift */; };
+		238EB2211C7C66C800289C37 /* Dictionary+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231069D41C06BE6D00101BCC /* Dictionary+Additions.swift */; };
+		238EB2221C7C66C800289C37 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2363648C1BE22FCC00AA7104 /* Token.swift */; };
+		238EB2231C7C66C800289C37 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2363648D1BE22FCC00AA7104 /* User.swift */; };
+		238EB2241C7C66CC00289C37 /* TrashCanKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 236364731BE22F1000AA7104 /* TrashCanKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		238EB2261C7C675A00289C37 /* RequestKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 238EB2251C7C675A00289C37 /* RequestKit.framework */; };
+		238EB2281C7C676900289C37 /* RequestKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 238EB2271C7C676900289C37 /* RequestKit.framework */; };
+		238EB22A1C7C677400289C37 /* Nocilla.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 238EB2291C7C677400289C37 /* Nocilla.framework */; };
+		238EB22C1C7C678300289C37 /* RequestKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 238EB22B1C7C678300289C37 /* RequestKit.framework */; };
+		238EB22F1C7C679A00289C37 /* Nocilla.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 238EB22E1C7C679A00289C37 /* Nocilla.framework */; };
+		238EB2311C7C67E000289C37 /* RequestKit.framework in Carthage embed */ = {isa = PBXBuildFile; fileRef = 238EB2271C7C676900289C37 /* RequestKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		238EB2321C7C67E800289C37 /* Nocilla.framework in Carthage embed */ = {isa = PBXBuildFile; fileRef = 238EB2291C7C677400289C37 /* Nocilla.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		238EB2341C7C67FB00289C37 /* Nocilla.framework in Carthage embed */ = {isa = PBXBuildFile; fileRef = 238EB22E1C7C679A00289C37 /* Nocilla.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		238EB2351C7C67FF00289C37 /* RequestKit.framework in Carthage embed */ = {isa = PBXBuildFile; fileRef = 238EB22B1C7C678300289C37 /* RequestKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +115,20 @@
 			proxyType = 1;
 			remoteGlobalIDString = 2363646F1BE22F1000AA7104;
 			remoteInfo = TrashCanKit;
+		};
+		238EB1C21C7C660800289C37 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 236364671BE22F1000AA7104 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 238EB1B61C7C660800289C37;
+			remoteInfo = "TrashCanKit tvOS";
+		};
+		238EB1DE1C7C662100289C37 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 236364671BE22F1000AA7104 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 238EB1D21C7C662100289C37;
+			remoteInfo = "TrashCanKit Mac";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -57,6 +141,30 @@
 			files = (
 				2363649F1BE2310D00AA7104 /* Nocilla.framework in Carthage embed */,
 				236364A01BE2310D00AA7104 /* RequestKit.framework in Carthage embed */,
+			);
+			name = "Carthage embed";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		238EB2301C7C67C700289C37 /* Carthage embed */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				238EB2311C7C67E000289C37 /* RequestKit.framework in Carthage embed */,
+				238EB2321C7C67E800289C37 /* Nocilla.framework in Carthage embed */,
+			);
+			name = "Carthage embed";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		238EB2331C7C67EC00289C37 /* Carthage embed */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				238EB2341C7C67FB00289C37 /* Nocilla.framework in Carthage embed */,
+				238EB2351C7C67FF00289C37 /* RequestKit.framework in Carthage embed */,
 			);
 			name = "Carthage embed";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -94,6 +202,16 @@
 		236364A21BE2313B00AA7104 /* Email.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Email.json; path = Fixtures/Email.json; sourceTree = "<group>"; };
 		236364A31BE2313B00AA7104 /* Repository.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Repository.json; path = Fixtures/Repository.json; sourceTree = "<group>"; };
 		236364A41BE2313B00AA7104 /* User.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = User.json; path = Fixtures/User.json; sourceTree = "<group>"; };
+		238EB1AA1C7C65CA00289C37 /* TrashCanKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TrashCanKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		238EB1B71C7C660800289C37 /* TrashCanKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TrashCanKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		238EB1C01C7C660800289C37 /* TrashCanKit tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TrashCanKit tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		238EB1D31C7C662100289C37 /* TrashCanKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TrashCanKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		238EB1DC1C7C662100289C37 /* TrashCanKit MacTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TrashCanKit MacTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		238EB2251C7C675A00289C37 /* RequestKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RequestKit.framework; path = Carthage/Build/watchOS/RequestKit.framework; sourceTree = "<group>"; };
+		238EB2271C7C676900289C37 /* RequestKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RequestKit.framework; path = Carthage/Build/tvOS/RequestKit.framework; sourceTree = "<group>"; };
+		238EB2291C7C677400289C37 /* Nocilla.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nocilla.framework; path = Carthage/Build/tvOS/Nocilla.framework; sourceTree = "<group>"; };
+		238EB22B1C7C678300289C37 /* RequestKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RequestKit.framework; path = Carthage/Build/Mac/RequestKit.framework; sourceTree = "<group>"; };
+		238EB22E1C7C679A00289C37 /* Nocilla.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nocilla.framework; path = Carthage/Build/Mac/Nocilla.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +229,48 @@
 			files = (
 				2363649D1BE230F900AA7104 /* Nocilla.framework in Frameworks */,
 				2363647B1BE22F1000AA7104 /* TrashCanKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		238EB1A61C7C65CA00289C37 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				238EB2261C7C675A00289C37 /* RequestKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		238EB1B31C7C660800289C37 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				238EB2281C7C676900289C37 /* RequestKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		238EB1BD1C7C660800289C37 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				238EB22A1C7C677400289C37 /* Nocilla.framework in Frameworks */,
+				238EB1C11C7C660800289C37 /* TrashCanKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		238EB1CF1C7C662100289C37 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				238EB22C1C7C678300289C37 /* RequestKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		238EB1D91C7C662100289C37 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				238EB22F1C7C679A00289C37 /* Nocilla.framework in Frameworks */,
+				238EB1DD1C7C662100289C37 /* TrashCanKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,6 +292,11 @@
 			children = (
 				236364701BE22F1000AA7104 /* TrashCanKit.framework */,
 				2363647A1BE22F1000AA7104 /* TrashCanKitTests.xctest */,
+				238EB1AA1C7C65CA00289C37 /* TrashCanKit.framework */,
+				238EB1B71C7C660800289C37 /* TrashCanKit.framework */,
+				238EB1C01C7C660800289C37 /* TrashCanKit tvOSTests.xctest */,
+				238EB1D31C7C662100289C37 /* TrashCanKit.framework */,
+				238EB1DC1C7C662100289C37 /* TrashCanKit MacTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -187,6 +352,11 @@
 		236364A81BE2319200AA7104 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				238EB22E1C7C679A00289C37 /* Nocilla.framework */,
+				238EB22B1C7C678300289C37 /* RequestKit.framework */,
+				238EB2291C7C677400289C37 /* Nocilla.framework */,
+				238EB2271C7C676900289C37 /* RequestKit.framework */,
+				238EB2251C7C675A00289C37 /* RequestKit.framework */,
 				2363649C1BE230F900AA7104 /* Nocilla.framework */,
 				2363649A1BE230B500AA7104 /* RequestKit.framework */,
 			);
@@ -201,6 +371,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				236364741BE22F1000AA7104 /* TrashCanKit.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		238EB1A71C7C65CA00289C37 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				238EB1F41C7C669A00289C37 /* TrashCanKit.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		238EB1B41C7C660800289C37 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				238EB1FF1C7C66A900289C37 /* TrashCanKit.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		238EB1D01C7C662100289C37 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				238EB2241C7C66CC00289C37 /* TrashCanKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,13 +438,105 @@
 			productReference = 2363647A1BE22F1000AA7104 /* TrashCanKitTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		238EB1A91C7C65CA00289C37 /* TrashCanKit watchOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 238EB1B11C7C65CA00289C37 /* Build configuration list for PBXNativeTarget "TrashCanKit watchOS" */;
+			buildPhases = (
+				238EB1A51C7C65CA00289C37 /* Sources */,
+				238EB1A61C7C65CA00289C37 /* Frameworks */,
+				238EB1A71C7C65CA00289C37 /* Headers */,
+				238EB1A81C7C65CA00289C37 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "TrashCanKit watchOS";
+			productName = "TrashCanKit watchOS";
+			productReference = 238EB1AA1C7C65CA00289C37 /* TrashCanKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		238EB1B61C7C660800289C37 /* TrashCanKit tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 238EB1C81C7C660800289C37 /* Build configuration list for PBXNativeTarget "TrashCanKit tvOS" */;
+			buildPhases = (
+				238EB1B21C7C660800289C37 /* Sources */,
+				238EB1B31C7C660800289C37 /* Frameworks */,
+				238EB1B41C7C660800289C37 /* Headers */,
+				238EB1B51C7C660800289C37 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "TrashCanKit tvOS";
+			productName = "TrashCanKit tvOS";
+			productReference = 238EB1B71C7C660800289C37 /* TrashCanKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		238EB1BF1C7C660800289C37 /* TrashCanKit tvOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 238EB1CB1C7C660800289C37 /* Build configuration list for PBXNativeTarget "TrashCanKit tvOSTests" */;
+			buildPhases = (
+				238EB1BC1C7C660800289C37 /* Sources */,
+				238EB1BD1C7C660800289C37 /* Frameworks */,
+				238EB1BE1C7C660800289C37 /* Resources */,
+				238EB2301C7C67C700289C37 /* Carthage embed */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				238EB1C31C7C660800289C37 /* PBXTargetDependency */,
+			);
+			name = "TrashCanKit tvOSTests";
+			productName = "TrashCanKit tvOSTests";
+			productReference = 238EB1C01C7C660800289C37 /* TrashCanKit tvOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		238EB1D21C7C662100289C37 /* TrashCanKit Mac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 238EB1E41C7C662100289C37 /* Build configuration list for PBXNativeTarget "TrashCanKit Mac" */;
+			buildPhases = (
+				238EB1CE1C7C662100289C37 /* Sources */,
+				238EB1CF1C7C662100289C37 /* Frameworks */,
+				238EB1D01C7C662100289C37 /* Headers */,
+				238EB1D11C7C662100289C37 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "TrashCanKit Mac";
+			productName = "TrashCanKit Mac";
+			productReference = 238EB1D31C7C662100289C37 /* TrashCanKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		238EB1DB1C7C662100289C37 /* TrashCanKit MacTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 238EB1E71C7C662100289C37 /* Build configuration list for PBXNativeTarget "TrashCanKit MacTests" */;
+			buildPhases = (
+				238EB1D81C7C662100289C37 /* Sources */,
+				238EB1D91C7C662100289C37 /* Frameworks */,
+				238EB1DA1C7C662100289C37 /* Resources */,
+				238EB2331C7C67EC00289C37 /* Carthage embed */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				238EB1DF1C7C662100289C37 /* PBXTargetDependency */,
+			);
+			name = "TrashCanKit MacTests";
+			productName = "TrashCanKit MacTests";
+			productReference = 238EB1DC1C7C662100289C37 /* TrashCanKit MacTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		236364671BE22F1000AA7104 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0710;
+				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = nerdishbynature;
 				TargetAttributes = {
@@ -259,6 +545,21 @@
 					};
 					236364791BE22F1000AA7104 = {
 						CreatedOnToolsVersion = 7.1;
+					};
+					238EB1A91C7C65CA00289C37 = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+					238EB1B61C7C660800289C37 = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+					238EB1BF1C7C660800289C37 = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+					238EB1D21C7C662100289C37 = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+					238EB1DB1C7C662100289C37 = {
+						CreatedOnToolsVersion = 7.2.1;
 					};
 				};
 			};
@@ -276,6 +577,11 @@
 			targets = (
 				2363646F1BE22F1000AA7104 /* TrashCanKit */,
 				236364791BE22F1000AA7104 /* TrashCanKitTests */,
+				238EB1A91C7C65CA00289C37 /* TrashCanKit watchOS */,
+				238EB1B61C7C660800289C37 /* TrashCanKit tvOS */,
+				238EB1BF1C7C660800289C37 /* TrashCanKit tvOSTests */,
+				238EB1D21C7C662100289C37 /* TrashCanKit Mac */,
+				238EB1DB1C7C662100289C37 /* TrashCanKit MacTests */,
 			);
 		};
 /* End PBXProject section */
@@ -300,6 +606,57 @@
 				236364A71BE2313B00AA7104 /* User.json in Resources */,
 				231B68631BE9AD8D007AE2A6 /* Emails.json in Resources */,
 				236364A61BE2313B00AA7104 /* Repository.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		238EB1A81C7C65CA00289C37 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		238EB1B51C7C660800289C37 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		238EB1BE1C7C660800289C37 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				238EB2051C7C66B700289C37 /* Email.json in Resources */,
+				238EB2061C7C66B700289C37 /* Repository.json in Resources */,
+				238EB2071C7C66B700289C37 /* User.json in Resources */,
+				238EB2081C7C66B700289C37 /* authorize.json in Resources */,
+				238EB2091C7C66B700289C37 /* refresh_token_error.json in Resources */,
+				238EB20A1C7C66B700289C37 /* Repositories.json in Resources */,
+				238EB20B1C7C66B700289C37 /* Me.json in Resources */,
+				238EB20C1C7C66B700289C37 /* Emails.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		238EB1D11C7C662100289C37 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		238EB1DA1C7C662100289C37 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				238EB20D1C7C66BD00289C37 /* Email.json in Resources */,
+				238EB20E1C7C66BD00289C37 /* Repository.json in Resources */,
+				238EB20F1C7C66BD00289C37 /* User.json in Resources */,
+				238EB2101C7C66BD00289C37 /* authorize.json in Resources */,
+				238EB2111C7C66BD00289C37 /* refresh_token_error.json in Resources */,
+				238EB2121C7C66BD00289C37 /* Repositories.json in Resources */,
+				238EB2131C7C66BD00289C37 /* Me.json in Resources */,
+				238EB2141C7C66BD00289C37 /* Emails.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,6 +692,81 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		238EB1A51C7C65CA00289C37 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				238EB1EA1C7C669400289C37 /* TrashCanKit.swift in Sources */,
+				238EB1EB1C7C669400289C37 /* NSURL+URLParameters.swift in Sources */,
+				238EB1EC1C7C669400289C37 /* OAuthConfiguration.swift in Sources */,
+				238EB1ED1C7C669400289C37 /* OAuthRouter.swift in Sources */,
+				238EB1EE1C7C669400289C37 /* TokenConfiguration.swift in Sources */,
+				238EB1EF1C7C669400289C37 /* Repositories.swift in Sources */,
+				238EB1F01C7C669400289C37 /* String+QueryParameters.swift in Sources */,
+				238EB1F11C7C669400289C37 /* Dictionary+Additions.swift in Sources */,
+				238EB1F21C7C669400289C37 /* Token.swift in Sources */,
+				238EB1F31C7C669400289C37 /* User.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		238EB1B21C7C660800289C37 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				238EB1F51C7C66A500289C37 /* TrashCanKit.swift in Sources */,
+				238EB1F61C7C66A500289C37 /* NSURL+URLParameters.swift in Sources */,
+				238EB1F71C7C66A500289C37 /* OAuthConfiguration.swift in Sources */,
+				238EB1F81C7C66A500289C37 /* OAuthRouter.swift in Sources */,
+				238EB1F91C7C66A500289C37 /* TokenConfiguration.swift in Sources */,
+				238EB1FA1C7C66A500289C37 /* Repositories.swift in Sources */,
+				238EB1FB1C7C66A500289C37 /* String+QueryParameters.swift in Sources */,
+				238EB1FC1C7C66A500289C37 /* Dictionary+Additions.swift in Sources */,
+				238EB1FD1C7C66A500289C37 /* Token.swift in Sources */,
+				238EB1FE1C7C66A500289C37 /* User.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		238EB1BC1C7C660800289C37 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				238EB2001C7C66B100289C37 /* TestHelper.swift in Sources */,
+				238EB2011C7C66B100289C37 /* RepositoriesTests.swift in Sources */,
+				238EB2021C7C66B100289C37 /* UserTests.swift in Sources */,
+				238EB2031C7C66B100289C37 /* ConfigurationTests.swift in Sources */,
+				238EB2041C7C66B100289C37 /* TokenTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		238EB1CE1C7C662100289C37 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				238EB21A1C7C66C800289C37 /* TrashCanKit.swift in Sources */,
+				238EB21B1C7C66C800289C37 /* NSURL+URLParameters.swift in Sources */,
+				238EB21C1C7C66C800289C37 /* OAuthConfiguration.swift in Sources */,
+				238EB21D1C7C66C800289C37 /* OAuthRouter.swift in Sources */,
+				238EB21E1C7C66C800289C37 /* TokenConfiguration.swift in Sources */,
+				238EB21F1C7C66C800289C37 /* Repositories.swift in Sources */,
+				238EB2201C7C66C800289C37 /* String+QueryParameters.swift in Sources */,
+				238EB2211C7C66C800289C37 /* Dictionary+Additions.swift in Sources */,
+				238EB2221C7C66C800289C37 /* Token.swift in Sources */,
+				238EB2231C7C66C800289C37 /* User.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		238EB1D81C7C662100289C37 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				238EB2151C7C66C200289C37 /* TestHelper.swift in Sources */,
+				238EB2161C7C66C200289C37 /* RepositoriesTests.swift in Sources */,
+				238EB2171C7C66C200289C37 /* UserTests.swift in Sources */,
+				238EB2181C7C66C200289C37 /* ConfigurationTests.swift in Sources */,
+				238EB2191C7C66C200289C37 /* TokenTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -342,6 +774,16 @@
 			isa = PBXTargetDependency;
 			target = 2363646F1BE22F1000AA7104 /* TrashCanKit */;
 			targetProxy = 2363647C1BE22F1000AA7104 /* PBXContainerItemProxy */;
+		};
+		238EB1C31C7C660800289C37 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 238EB1B61C7C660800289C37 /* TrashCanKit tvOS */;
+			targetProxy = 238EB1C21C7C660800289C37 /* PBXContainerItemProxy */;
+		};
+		238EB1DF1C7C662100289C37 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 238EB1D21C7C662100289C37 /* TrashCanKit Mac */;
+			targetProxy = 238EB1DE1C7C662100289C37 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -386,6 +828,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nerdishbynature.TrashCanKit;
+				PRODUCT_NAME = TrashCanKit;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -427,6 +871,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nerdishbynature.TrashCanKit;
+				PRODUCT_NAME = TrashCanKit;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -450,8 +896,6 @@
 				INFOPLIST_FILE = TrashCanKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.nerdishbynature.TrashCanKit;
-				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -472,8 +916,6 @@
 				INFOPLIST_FILE = TrashCanKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.nerdishbynature.TrashCanKit;
-				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -509,6 +951,204 @@
 			};
 			name = Release;
 		};
+		238EB1AF1C7C65CA00289C37 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/watchOS",
+				);
+				INFOPLIST_FILE = TrashCanKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.1;
+			};
+			name = Debug;
+		};
+		238EB1B01C7C65CA00289C37 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/watchOS",
+				);
+				INFOPLIST_FILE = TrashCanKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.1;
+			};
+			name = Release;
+		};
+		238EB1C91C7C660800289C37 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+				);
+				INFOPLIST_FILE = TrashCanKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.1;
+			};
+			name = Debug;
+		};
+		238EB1CA1C7C660800289C37 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+				);
+				INFOPLIST_FILE = TrashCanKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.1;
+			};
+			name = Release;
+		};
+		238EB1CC1C7C660800289C37 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+				);
+				INFOPLIST_FILE = TrashCanKitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nerdishbynature.TrashCanKit-tvOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				TVOS_DEPLOYMENT_TARGET = 9.1;
+			};
+			name = Debug;
+		};
+		238EB1CD1C7C660800289C37 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+				);
+				INFOPLIST_FILE = TrashCanKitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nerdishbynature.TrashCanKit-tvOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				TVOS_DEPLOYMENT_TARGET = 9.1;
+			};
+			name = Release;
+		};
+		238EB1E51C7C662100289C37 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = TrashCanKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		238EB1E61C7C662100289C37 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = TrashCanKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		238EB1E81C7C662100289C37 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				INFOPLIST_FILE = TrashCanKitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_NAME = "TrashCanKit MacTests";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		238EB1E91C7C662100289C37 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				INFOPLIST_FILE = TrashCanKitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_NAME = "TrashCanKit MacTests";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -538,6 +1178,46 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		238EB1B11C7C65CA00289C37 /* Build configuration list for PBXNativeTarget "TrashCanKit watchOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				238EB1AF1C7C65CA00289C37 /* Debug */,
+				238EB1B01C7C65CA00289C37 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		238EB1C81C7C660800289C37 /* Build configuration list for PBXNativeTarget "TrashCanKit tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				238EB1C91C7C660800289C37 /* Debug */,
+				238EB1CA1C7C660800289C37 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		238EB1CB1C7C660800289C37 /* Build configuration list for PBXNativeTarget "TrashCanKit tvOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				238EB1CC1C7C660800289C37 /* Debug */,
+				238EB1CD1C7C660800289C37 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		238EB1E41C7C662100289C37 /* Build configuration list for PBXNativeTarget "TrashCanKit Mac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				238EB1E51C7C662100289C37 /* Debug */,
+				238EB1E61C7C662100289C37 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		238EB1E71C7C662100289C37 /* Build configuration list for PBXNativeTarget "TrashCanKit MacTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				238EB1E81C7C662100289C37 /* Debug */,
+				238EB1E91C7C662100289C37 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
