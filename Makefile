@@ -1,13 +1,14 @@
+SHA=$(shell git rev-parse HEAD)
+BRANCH=$(shell git name-rev --name-only HEAD)
+
 install:
-	brew update || brew update # temporary workaround https://github.com/Homebrew/homebrew/issues/45616#issuecomment-153104335
-	brew install python
 	brew install carthage
-	pip install codecov
 	carthage bootstrap
 
 test:
-	set -o pipefail && xcodebuild clean test -scheme TrashCanKit -sdk iphonesimulator -destination name="iPhone 6" ONLY_ACTIVE_ARCHS=YES -enableCodeCoverage YES | xcpretty -c
+	bundle exec fastlane code_coverage configuration:Debug --env default
 
 post_coverage:
 	bundle exec slather coverage --input-format profdata -x --ignore "../**/*/Xcode*" --ignore "Carthage/**" --output-directory slather-report --scheme TrashCanKit TrashCanKit.xcodeproj
-	codecov -f slather-report/cobertura.xml
+	curl -X POST -d @slather-report/cobertura.xml "https://codecov.io/upload/v2?token="$(CODECOV_TOKEN)"&commit="$(SHA)"&branch="$(BRANCH)"&job="$(TRAVIS_BUILD_NUMBER)
+
