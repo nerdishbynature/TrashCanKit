@@ -1012,7 +1012,7 @@
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 9.1;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Debug;
 		};
@@ -1033,7 +1033,7 @@
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 9.1;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Release;
 		};
@@ -1086,7 +1086,7 @@
 				INFOPLIST_FILE = TrashCanKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 			};
@@ -1109,7 +1109,7 @@
 				INFOPLIST_FILE = TrashCanKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 			};
@@ -1186,6 +1186,7 @@
 				238EB1B01C7C65CA00289C37 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		238EB1C81C7C660800289C37 /* Build configuration list for PBXNativeTarget "TrashCanKit tvOS" */ = {
 			isa = XCConfigurationList;
@@ -1194,6 +1195,7 @@
 				238EB1CA1C7C660800289C37 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		238EB1CB1C7C660800289C37 /* Build configuration list for PBXNativeTarget "TrashCanKit tvOSTests" */ = {
 			isa = XCConfigurationList;
@@ -1202,6 +1204,7 @@
 				238EB1CD1C7C660800289C37 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		238EB1E41C7C662100289C37 /* Build configuration list for PBXNativeTarget "TrashCanKit Mac" */ = {
 			isa = XCConfigurationList;
@@ -1210,6 +1213,7 @@
 				238EB1E61C7C662100289C37 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		238EB1E71C7C662100289C37 /* Build configuration list for PBXNativeTarget "TrashCanKit MacTests" */ = {
 			isa = XCConfigurationList;
@@ -1218,6 +1222,7 @@
 				238EB1E91C7C662100289C37 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
