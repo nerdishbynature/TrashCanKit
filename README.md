@@ -164,3 +164,16 @@ TrashCanKit().repository("nerdishbynature", name: "octokit.swift") { response in
   }
 }
 ```
+
+### Get pull requests for a repository
+
+```swift
+TrashCanKit().pullRequests("nerdishbynature", repoSlug: "octokit.swift") { response in
+  switch response {
+    case .Success(let pullRequests, _):
+      // do something
+    case .Failure(let error):
+      // handle any errors
+  }
+}
+```
