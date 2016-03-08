@@ -14,11 +14,8 @@
 		231B68521BE9989C007AE2A6 /* TokenConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231B68511BE9989C007AE2A6 /* TokenConfiguration.swift */; };
 		231B68541BE998C7007AE2A6 /* OAuthRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231B68531BE998C7007AE2A6 /* OAuthRouter.swift */; };
 		231B68561BE9997C007AE2A6 /* ConfigurationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231B68551BE9997C007AE2A6 /* ConfigurationTests.swift */; };
-		231B68581BE9A13C007AE2A6 /* authorize.json in Resources */ = {isa = PBXBuildFile; fileRef = 231B68571BE9A13C007AE2A6 /* authorize.json */; };
 		231B685A1BE9A3DD007AE2A6 /* TokenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231B68591BE9A3DD007AE2A6 /* TokenTests.swift */; };
-		231B685C1BE9A699007AE2A6 /* refresh_token_error.json in Resources */ = {isa = PBXBuildFile; fileRef = 231B685B1BE9A699007AE2A6 /* refresh_token_error.json */; };
 		231B685F1BE9AAC6007AE2A6 /* Repositories.json in Resources */ = {isa = PBXBuildFile; fileRef = 231B685D1BE9AA66007AE2A6 /* Repositories.json */; };
-		231B68611BE9AD30007AE2A6 /* Me.json in Resources */ = {isa = PBXBuildFile; fileRef = 231B68601BE9AD30007AE2A6 /* Me.json */; };
 		231B68631BE9AD8D007AE2A6 /* Emails.json in Resources */ = {isa = PBXBuildFile; fileRef = 231B68621BE9AD8D007AE2A6 /* Emails.json */; };
 		236364741BE22F1000AA7104 /* TrashCanKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 236364731BE22F1000AA7104 /* TrashCanKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2363647B1BE22F1000AA7104 /* TrashCanKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 236364701BE22F1000AA7104 /* TrashCanKit.framework */; };
@@ -68,18 +65,12 @@
 		238EB2051C7C66B700289C37 /* Email.json in Resources */ = {isa = PBXBuildFile; fileRef = 236364A21BE2313B00AA7104 /* Email.json */; };
 		238EB2061C7C66B700289C37 /* Repository.json in Resources */ = {isa = PBXBuildFile; fileRef = 236364A31BE2313B00AA7104 /* Repository.json */; };
 		238EB2071C7C66B700289C37 /* User.json in Resources */ = {isa = PBXBuildFile; fileRef = 236364A41BE2313B00AA7104 /* User.json */; };
-		238EB2081C7C66B700289C37 /* authorize.json in Resources */ = {isa = PBXBuildFile; fileRef = 231B68571BE9A13C007AE2A6 /* authorize.json */; };
-		238EB2091C7C66B700289C37 /* refresh_token_error.json in Resources */ = {isa = PBXBuildFile; fileRef = 231B685B1BE9A699007AE2A6 /* refresh_token_error.json */; };
 		238EB20A1C7C66B700289C37 /* Repositories.json in Resources */ = {isa = PBXBuildFile; fileRef = 231B685D1BE9AA66007AE2A6 /* Repositories.json */; };
-		238EB20B1C7C66B700289C37 /* Me.json in Resources */ = {isa = PBXBuildFile; fileRef = 231B68601BE9AD30007AE2A6 /* Me.json */; };
 		238EB20C1C7C66B700289C37 /* Emails.json in Resources */ = {isa = PBXBuildFile; fileRef = 231B68621BE9AD8D007AE2A6 /* Emails.json */; };
 		238EB20D1C7C66BD00289C37 /* Email.json in Resources */ = {isa = PBXBuildFile; fileRef = 236364A21BE2313B00AA7104 /* Email.json */; };
 		238EB20E1C7C66BD00289C37 /* Repository.json in Resources */ = {isa = PBXBuildFile; fileRef = 236364A31BE2313B00AA7104 /* Repository.json */; };
 		238EB20F1C7C66BD00289C37 /* User.json in Resources */ = {isa = PBXBuildFile; fileRef = 236364A41BE2313B00AA7104 /* User.json */; };
-		238EB2101C7C66BD00289C37 /* authorize.json in Resources */ = {isa = PBXBuildFile; fileRef = 231B68571BE9A13C007AE2A6 /* authorize.json */; };
-		238EB2111C7C66BD00289C37 /* refresh_token_error.json in Resources */ = {isa = PBXBuildFile; fileRef = 231B685B1BE9A699007AE2A6 /* refresh_token_error.json */; };
 		238EB2121C7C66BD00289C37 /* Repositories.json in Resources */ = {isa = PBXBuildFile; fileRef = 231B685D1BE9AA66007AE2A6 /* Repositories.json */; };
-		238EB2131C7C66BD00289C37 /* Me.json in Resources */ = {isa = PBXBuildFile; fileRef = 231B68601BE9AD30007AE2A6 /* Me.json */; };
 		238EB2141C7C66BD00289C37 /* Emails.json in Resources */ = {isa = PBXBuildFile; fileRef = 231B68621BE9AD8D007AE2A6 /* Emails.json */; };
 		238EB2151C7C66C200289C37 /* TestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236364931BE2301200AA7104 /* TestHelper.swift */; };
 		238EB2161C7C66C200289C37 /* RepositoriesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236364921BE2301200AA7104 /* RepositoriesTests.swift */; };
@@ -106,6 +97,28 @@
 		238EB2321C7C67E800289C37 /* Nocilla.framework in Carthage embed */ = {isa = PBXBuildFile; fileRef = 238EB2291C7C677400289C37 /* Nocilla.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		238EB2341C7C67FB00289C37 /* Nocilla.framework in Carthage embed */ = {isa = PBXBuildFile; fileRef = 238EB22E1C7C679A00289C37 /* Nocilla.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		238EB2351C7C67FF00289C37 /* RequestKit.framework in Carthage embed */ = {isa = PBXBuildFile; fileRef = 238EB22B1C7C678300289C37 /* RequestKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		23B38D141C8D2E7A0084450B /* PullRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B38D131C8D2E7A0084450B /* PullRequests.swift */; };
+		23B38D151C8D2E7A0084450B /* PullRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B38D131C8D2E7A0084450B /* PullRequests.swift */; };
+		23B38D161C8D2E7A0084450B /* PullRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B38D131C8D2E7A0084450B /* PullRequests.swift */; };
+		23B38D171C8D2E7A0084450B /* PullRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B38D131C8D2E7A0084450B /* PullRequests.swift */; };
+		23B38D1D1C8D31970084450B /* PullRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B38D1C1C8D31970084450B /* PullRequestTests.swift */; };
+		23B38D1E1C8D31970084450B /* PullRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B38D1C1C8D31970084450B /* PullRequestTests.swift */; };
+		23B38D1F1C8D31970084450B /* PullRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B38D1C1C8D31970084450B /* PullRequestTests.swift */; };
+		23B38D251C8D31FC0084450B /* PullRequest.json in Resources */ = {isa = PBXBuildFile; fileRef = 23B38D241C8D31FC0084450B /* PullRequest.json */; };
+		23B38D261C8D31FC0084450B /* PullRequest.json in Resources */ = {isa = PBXBuildFile; fileRef = 23B38D241C8D31FC0084450B /* PullRequest.json */; };
+		23B38D271C8D31FC0084450B /* PullRequest.json in Resources */ = {isa = PBXBuildFile; fileRef = 23B38D241C8D31FC0084450B /* PullRequest.json */; };
+		23B38D2C1C8D433B0084450B /* authorize.json in Resources */ = {isa = PBXBuildFile; fileRef = 23B38D281C8D433B0084450B /* authorize.json */; };
+		23B38D2D1C8D433B0084450B /* authorize.json in Resources */ = {isa = PBXBuildFile; fileRef = 23B38D281C8D433B0084450B /* authorize.json */; };
+		23B38D2E1C8D433B0084450B /* authorize.json in Resources */ = {isa = PBXBuildFile; fileRef = 23B38D281C8D433B0084450B /* authorize.json */; };
+		23B38D2F1C8D433B0084450B /* Me.json in Resources */ = {isa = PBXBuildFile; fileRef = 23B38D291C8D433B0084450B /* Me.json */; };
+		23B38D301C8D433B0084450B /* Me.json in Resources */ = {isa = PBXBuildFile; fileRef = 23B38D291C8D433B0084450B /* Me.json */; };
+		23B38D311C8D433B0084450B /* Me.json in Resources */ = {isa = PBXBuildFile; fileRef = 23B38D291C8D433B0084450B /* Me.json */; };
+		23B38D321C8D433B0084450B /* PullRequests.json in Resources */ = {isa = PBXBuildFile; fileRef = 23B38D2A1C8D433B0084450B /* PullRequests.json */; };
+		23B38D331C8D433B0084450B /* PullRequests.json in Resources */ = {isa = PBXBuildFile; fileRef = 23B38D2A1C8D433B0084450B /* PullRequests.json */; };
+		23B38D341C8D433B0084450B /* PullRequests.json in Resources */ = {isa = PBXBuildFile; fileRef = 23B38D2A1C8D433B0084450B /* PullRequests.json */; };
+		23B38D351C8D433B0084450B /* refresh_token_error.json in Resources */ = {isa = PBXBuildFile; fileRef = 23B38D2B1C8D433B0084450B /* refresh_token_error.json */; };
+		23B38D361C8D433B0084450B /* refresh_token_error.json in Resources */ = {isa = PBXBuildFile; fileRef = 23B38D2B1C8D433B0084450B /* refresh_token_error.json */; };
+		23B38D371C8D433B0084450B /* refresh_token_error.json in Resources */ = {isa = PBXBuildFile; fileRef = 23B38D2B1C8D433B0084450B /* refresh_token_error.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -179,11 +192,8 @@
 		231B68511BE9989C007AE2A6 /* TokenConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenConfiguration.swift; sourceTree = "<group>"; };
 		231B68531BE998C7007AE2A6 /* OAuthRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthRouter.swift; sourceTree = "<group>"; };
 		231B68551BE9997C007AE2A6 /* ConfigurationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurationTests.swift; sourceTree = "<group>"; };
-		231B68571BE9A13C007AE2A6 /* authorize.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = authorize.json; sourceTree = "<group>"; };
 		231B68591BE9A3DD007AE2A6 /* TokenTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenTests.swift; sourceTree = "<group>"; };
-		231B685B1BE9A699007AE2A6 /* refresh_token_error.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = refresh_token_error.json; sourceTree = "<group>"; };
 		231B685D1BE9AA66007AE2A6 /* Repositories.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Repositories.json; path = Fixtures/Repositories.json; sourceTree = "<group>"; };
-		231B68601BE9AD30007AE2A6 /* Me.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Me.json; sourceTree = "<group>"; };
 		231B68621BE9AD8D007AE2A6 /* Emails.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Emails.json; path = Fixtures/Emails.json; sourceTree = "<group>"; };
 		236364701BE22F1000AA7104 /* TrashCanKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TrashCanKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		236364731BE22F1000AA7104 /* TrashCanKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrashCanKit.h; sourceTree = "<group>"; };
@@ -212,6 +222,13 @@
 		238EB2291C7C677400289C37 /* Nocilla.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nocilla.framework; path = Carthage/Build/tvOS/Nocilla.framework; sourceTree = "<group>"; };
 		238EB22B1C7C678300289C37 /* RequestKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RequestKit.framework; path = Carthage/Build/Mac/RequestKit.framework; sourceTree = "<group>"; };
 		238EB22E1C7C679A00289C37 /* Nocilla.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nocilla.framework; path = Carthage/Build/Mac/Nocilla.framework; sourceTree = "<group>"; };
+		23B38D131C8D2E7A0084450B /* PullRequests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PullRequests.swift; sourceTree = "<group>"; };
+		23B38D1C1C8D31970084450B /* PullRequestTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PullRequestTests.swift; sourceTree = "<group>"; };
+		23B38D241C8D31FC0084450B /* PullRequest.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = PullRequest.json; path = Fixtures/PullRequest.json; sourceTree = "<group>"; };
+		23B38D281C8D433B0084450B /* authorize.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = authorize.json; path = Fixtures/authorize.json; sourceTree = "<group>"; };
+		23B38D291C8D433B0084450B /* Me.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Me.json; path = Fixtures/Me.json; sourceTree = "<group>"; };
+		23B38D2A1C8D433B0084450B /* PullRequests.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = PullRequests.json; path = Fixtures/PullRequests.json; sourceTree = "<group>"; };
+		23B38D2B1C8D433B0084450B /* refresh_token_error.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = refresh_token_error.json; path = Fixtures/refresh_token_error.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -314,6 +331,7 @@
 				231069D21C06BE3400101BCC /* String+QueryParameters.swift */,
 				231069D41C06BE6D00101BCC /* Dictionary+Additions.swift */,
 				2363648C1BE22FCC00AA7104 /* Token.swift */,
+				23B38D131C8D2E7A0084450B /* PullRequests.swift */,
 				2363648D1BE22FCC00AA7104 /* User.swift */,
 				236364751BE22F1000AA7104 /* Info.plist */,
 			);
@@ -328,6 +346,7 @@
 				236364951BE2301200AA7104 /* UserTests.swift */,
 				231B68551BE9997C007AE2A6 /* ConfigurationTests.swift */,
 				231B68591BE9A3DD007AE2A6 /* TokenTests.swift */,
+				23B38D1C1C8D31970084450B /* PullRequestTests.swift */,
 				236364A11BE2313200AA7104 /* Fixtures */,
 				236364811BE22F1000AA7104 /* Info.plist */,
 			);
@@ -340,11 +359,13 @@
 				236364A21BE2313B00AA7104 /* Email.json */,
 				236364A31BE2313B00AA7104 /* Repository.json */,
 				236364A41BE2313B00AA7104 /* User.json */,
-				231B68571BE9A13C007AE2A6 /* authorize.json */,
-				231B685B1BE9A699007AE2A6 /* refresh_token_error.json */,
 				231B685D1BE9AA66007AE2A6 /* Repositories.json */,
-				231B68601BE9AD30007AE2A6 /* Me.json */,
 				231B68621BE9AD8D007AE2A6 /* Emails.json */,
+				23B38D241C8D31FC0084450B /* PullRequest.json */,
+				23B38D281C8D433B0084450B /* authorize.json */,
+				23B38D291C8D433B0084450B /* Me.json */,
+				23B38D2A1C8D433B0084450B /* PullRequests.json */,
+				23B38D2B1C8D433B0084450B /* refresh_token_error.json */,
 			);
 			name = Fixtures;
 			sourceTree = "<group>";
@@ -598,13 +619,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				231B68611BE9AD30007AE2A6 /* Me.json in Resources */,
+				23B38D321C8D433B0084450B /* PullRequests.json in Resources */,
 				231B685F1BE9AAC6007AE2A6 /* Repositories.json in Resources */,
-				231B68581BE9A13C007AE2A6 /* authorize.json in Resources */,
-				231B685C1BE9A699007AE2A6 /* refresh_token_error.json in Resources */,
+				23B38D2F1C8D433B0084450B /* Me.json in Resources */,
 				236364A51BE2313B00AA7104 /* Email.json in Resources */,
 				236364A71BE2313B00AA7104 /* User.json in Resources */,
 				231B68631BE9AD8D007AE2A6 /* Emails.json in Resources */,
+				23B38D351C8D433B0084450B /* refresh_token_error.json in Resources */,
+				23B38D2C1C8D433B0084450B /* authorize.json in Resources */,
+				23B38D251C8D31FC0084450B /* PullRequest.json in Resources */,
 				236364A61BE2313B00AA7104 /* Repository.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -627,13 +650,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23B38D331C8D433B0084450B /* PullRequests.json in Resources */,
 				238EB2051C7C66B700289C37 /* Email.json in Resources */,
+				23B38D301C8D433B0084450B /* Me.json in Resources */,
 				238EB2061C7C66B700289C37 /* Repository.json in Resources */,
 				238EB2071C7C66B700289C37 /* User.json in Resources */,
-				238EB2081C7C66B700289C37 /* authorize.json in Resources */,
-				238EB2091C7C66B700289C37 /* refresh_token_error.json in Resources */,
 				238EB20A1C7C66B700289C37 /* Repositories.json in Resources */,
-				238EB20B1C7C66B700289C37 /* Me.json in Resources */,
+				23B38D361C8D433B0084450B /* refresh_token_error.json in Resources */,
+				23B38D2D1C8D433B0084450B /* authorize.json in Resources */,
+				23B38D261C8D31FC0084450B /* PullRequest.json in Resources */,
 				238EB20C1C7C66B700289C37 /* Emails.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -649,13 +674,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23B38D341C8D433B0084450B /* PullRequests.json in Resources */,
 				238EB20D1C7C66BD00289C37 /* Email.json in Resources */,
+				23B38D311C8D433B0084450B /* Me.json in Resources */,
 				238EB20E1C7C66BD00289C37 /* Repository.json in Resources */,
 				238EB20F1C7C66BD00289C37 /* User.json in Resources */,
-				238EB2101C7C66BD00289C37 /* authorize.json in Resources */,
-				238EB2111C7C66BD00289C37 /* refresh_token_error.json in Resources */,
 				238EB2121C7C66BD00289C37 /* Repositories.json in Resources */,
-				238EB2131C7C66BD00289C37 /* Me.json in Resources */,
+				23B38D371C8D433B0084450B /* refresh_token_error.json in Resources */,
+				23B38D2E1C8D433B0084450B /* authorize.json in Resources */,
+				23B38D271C8D31FC0084450B /* PullRequest.json in Resources */,
 				238EB2141C7C66BD00289C37 /* Emails.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -677,6 +704,7 @@
 				231B68541BE998C7007AE2A6 /* OAuthRouter.swift in Sources */,
 				2363648F1BE22FCC00AA7104 /* Repositories.swift in Sources */,
 				231069D51C06BE6D00101BCC /* Dictionary+Additions.swift in Sources */,
+				23B38D141C8D2E7A0084450B /* PullRequests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -688,6 +716,7 @@
 				231B685A1BE9A3DD007AE2A6 /* TokenTests.swift in Sources */,
 				236364961BE2301200AA7104 /* RepositoriesTests.swift in Sources */,
 				231B68561BE9997C007AE2A6 /* ConfigurationTests.swift in Sources */,
+				23B38D1D1C8D31970084450B /* PullRequestTests.swift in Sources */,
 				236364971BE2301200AA7104 /* TestHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -706,6 +735,7 @@
 				238EB1F11C7C669400289C37 /* Dictionary+Additions.swift in Sources */,
 				238EB1F21C7C669400289C37 /* Token.swift in Sources */,
 				238EB1F31C7C669400289C37 /* User.swift in Sources */,
+				23B38D151C8D2E7A0084450B /* PullRequests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -723,6 +753,7 @@
 				238EB1FC1C7C66A500289C37 /* Dictionary+Additions.swift in Sources */,
 				238EB1FD1C7C66A500289C37 /* Token.swift in Sources */,
 				238EB1FE1C7C66A500289C37 /* User.swift in Sources */,
+				23B38D161C8D2E7A0084450B /* PullRequests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -734,6 +765,7 @@
 				238EB2011C7C66B100289C37 /* RepositoriesTests.swift in Sources */,
 				238EB2021C7C66B100289C37 /* UserTests.swift in Sources */,
 				238EB2031C7C66B100289C37 /* ConfigurationTests.swift in Sources */,
+				23B38D1E1C8D31970084450B /* PullRequestTests.swift in Sources */,
 				238EB2041C7C66B100289C37 /* TokenTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -752,6 +784,7 @@
 				238EB2211C7C66C800289C37 /* Dictionary+Additions.swift in Sources */,
 				238EB2221C7C66C800289C37 /* Token.swift in Sources */,
 				238EB2231C7C66C800289C37 /* User.swift in Sources */,
+				23B38D171C8D2E7A0084450B /* PullRequests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -763,6 +796,7 @@
 				238EB2161C7C66C200289C37 /* RepositoriesTests.swift in Sources */,
 				238EB2171C7C66C200289C37 /* UserTests.swift in Sources */,
 				238EB2181C7C66C200289C37 /* ConfigurationTests.swift in Sources */,
+				23B38D1F1C8D31970084450B /* PullRequestTests.swift in Sources */,
 				238EB2191C7C66C200289C37 /* TokenTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

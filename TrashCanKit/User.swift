@@ -2,17 +2,18 @@ import Foundation
 import RequestKit
 
 @objc public class User: NSObject {
-    public let id: String
-    public var login: String?
+    public let id: String?
+    public var login: String
     public var name: String?
 
     public init(_ json: [String: AnyObject]) {
-        if let id = json["uuid"] as? String {
-            self.id = id
-            login = json["username"] as? String
+        if let username = json["username"] as? String {
+            id = json["uuid"] as? String
+            login = username
             name = json["display_name"] as? String
         } else {
             id = "-1"
+            login = ""
         }
     }
 }
