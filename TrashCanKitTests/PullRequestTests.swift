@@ -46,4 +46,23 @@ class PullRequestTests: XCTestCase {
             XCTAssertNil(error)
         }
     }
+
+    func testGetPullRequestsWithError() {
+        let tokenConfig = TokenConfiguration("123456", refreshToken: "7890")
+        stubRequest("GET", "https://bitbucket.org/api/2.0/repositories/nerdishbynature/octokit.swift/pullrequests?access_token=123456").andReturn(404)
+        let expectation = expectationWithDescription("get_pull_requests")
+        TrashCanKit(tokenConfig).pullRequests("nerdishbynature", repoSlug: "octokit.swift") { response in
+            switch response {
+            case .Success:
+                XCTAssertTrue(false)
+                expectation.fulfill()
+            case .Failure(let error):
+                XCTAssertEqual((error as NSError).code, 404)
+                expectation.fulfill()
+            }
+        }
+        waitForExpectationsWithTimeout(1) { error in
+            XCTAssertNil(error)
+        }
+    }
 }
