@@ -13,3 +13,6 @@ report/
 Carthage/
 Build/
 Licenses.plist
+fastlane/README.md
+fastlane/test-output
+fastlane/report.xml
