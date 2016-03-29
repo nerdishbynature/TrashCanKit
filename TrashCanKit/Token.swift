@@ -4,10 +4,10 @@ import RequestKit
 // MARK: request
 
 public extension TrashCanKit {
-    public func refreshToken(oauthConfig: OAuthConfiguration, refreshToken: String, completion: (response: Response<TokenConfiguration>) -> Void) {
+    public func refreshToken(session: RequestKitURLSession, oauthConfig: OAuthConfiguration, refreshToken: String, completion: (response: Response<TokenConfiguration>) -> Void) {
         let request = TokenRouter.RefreshToken(oauthConfig, refreshToken).URLRequest
         if let request = request {
-            let task = oauthConfig.basicAuthSession().dataTaskWithRequest(request) { data, response, err in
+            let task = session.dataTaskWithRequest(request) { data, response, err in
                 guard let response = response as? NSHTTPURLResponse else { return }
                 guard let data = data else { return }
                 do {

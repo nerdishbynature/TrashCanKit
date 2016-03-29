@@ -20,6 +20,9 @@
 		231B685F1BE9AAC6007AE2A6 /* Repositories.json in Resources */ = {isa = PBXBuildFile; fileRef = 231B685D1BE9AA66007AE2A6 /* Repositories.json */; };
 		231B68611BE9AD30007AE2A6 /* Me.json in Resources */ = {isa = PBXBuildFile; fileRef = 231B68601BE9AD30007AE2A6 /* Me.json */; };
 		231B68631BE9AD8D007AE2A6 /* Emails.json in Resources */ = {isa = PBXBuildFile; fileRef = 231B68621BE9AD8D007AE2A6 /* Emails.json */; };
+		233BEC921CAA3278005F9C19 /* TrashCanKitTestURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233BEC911CAA3278005F9C19 /* TrashCanKitTestURLSession.swift */; };
+		233BEC931CAA3278005F9C19 /* TrashCanKitTestURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233BEC911CAA3278005F9C19 /* TrashCanKitTestURLSession.swift */; };
+		233BEC941CAA3278005F9C19 /* TrashCanKitTestURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233BEC911CAA3278005F9C19 /* TrashCanKitTestURLSession.swift */; };
 		236364741BE22F1000AA7104 /* TrashCanKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 236364731BE22F1000AA7104 /* TrashCanKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2363647B1BE22F1000AA7104 /* TrashCanKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 236364701BE22F1000AA7104 /* TrashCanKit.framework */; };
 		2363648E1BE22FCC00AA7104 /* TrashCanKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2363648A1BE22FCC00AA7104 /* TrashCanKit.swift */; };
@@ -30,8 +33,6 @@
 		236364971BE2301200AA7104 /* TestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236364931BE2301200AA7104 /* TestHelper.swift */; };
 		236364991BE2301200AA7104 /* UserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236364951BE2301200AA7104 /* UserTests.swift */; };
 		2363649B1BE230B500AA7104 /* RequestKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2363649A1BE230B500AA7104 /* RequestKit.framework */; };
-		2363649D1BE230F900AA7104 /* Nocilla.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2363649C1BE230F900AA7104 /* Nocilla.framework */; };
-		2363649F1BE2310D00AA7104 /* Nocilla.framework in Carthage embed */ = {isa = PBXBuildFile; fileRef = 2363649C1BE230F900AA7104 /* Nocilla.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		236364A01BE2310D00AA7104 /* RequestKit.framework in Carthage embed */ = {isa = PBXBuildFile; fileRef = 2363649A1BE230B500AA7104 /* RequestKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		236364A51BE2313B00AA7104 /* Email.json in Resources */ = {isa = PBXBuildFile; fileRef = 236364A21BE2313B00AA7104 /* Email.json */; };
 		236364A61BE2313B00AA7104 /* Repository.json in Resources */ = {isa = PBXBuildFile; fileRef = 236364A31BE2313B00AA7104 /* Repository.json */; };
@@ -99,12 +100,8 @@
 		238EB2241C7C66CC00289C37 /* TrashCanKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 236364731BE22F1000AA7104 /* TrashCanKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		238EB2261C7C675A00289C37 /* RequestKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 238EB2251C7C675A00289C37 /* RequestKit.framework */; };
 		238EB2281C7C676900289C37 /* RequestKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 238EB2271C7C676900289C37 /* RequestKit.framework */; };
-		238EB22A1C7C677400289C37 /* Nocilla.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 238EB2291C7C677400289C37 /* Nocilla.framework */; };
 		238EB22C1C7C678300289C37 /* RequestKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 238EB22B1C7C678300289C37 /* RequestKit.framework */; };
-		238EB22F1C7C679A00289C37 /* Nocilla.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 238EB22E1C7C679A00289C37 /* Nocilla.framework */; };
 		238EB2311C7C67E000289C37 /* RequestKit.framework in Carthage embed */ = {isa = PBXBuildFile; fileRef = 238EB2271C7C676900289C37 /* RequestKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		238EB2321C7C67E800289C37 /* Nocilla.framework in Carthage embed */ = {isa = PBXBuildFile; fileRef = 238EB2291C7C677400289C37 /* Nocilla.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		238EB2341C7C67FB00289C37 /* Nocilla.framework in Carthage embed */ = {isa = PBXBuildFile; fileRef = 238EB22E1C7C679A00289C37 /* Nocilla.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		238EB2351C7C67FF00289C37 /* RequestKit.framework in Carthage embed */ = {isa = PBXBuildFile; fileRef = 238EB22B1C7C678300289C37 /* RequestKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
@@ -139,7 +136,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				2363649F1BE2310D00AA7104 /* Nocilla.framework in Carthage embed */,
 				236364A01BE2310D00AA7104 /* RequestKit.framework in Carthage embed */,
 			);
 			name = "Carthage embed";
@@ -152,7 +148,6 @@
 			dstSubfolderSpec = 10;
 			files = (
 				238EB2311C7C67E000289C37 /* RequestKit.framework in Carthage embed */,
-				238EB2321C7C67E800289C37 /* Nocilla.framework in Carthage embed */,
 			);
 			name = "Carthage embed";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -163,7 +158,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				238EB2341C7C67FB00289C37 /* Nocilla.framework in Carthage embed */,
 				238EB2351C7C67FF00289C37 /* RequestKit.framework in Carthage embed */,
 			);
 			name = "Carthage embed";
@@ -185,6 +179,7 @@
 		231B685D1BE9AA66007AE2A6 /* Repositories.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Repositories.json; path = Fixtures/Repositories.json; sourceTree = "<group>"; };
 		231B68601BE9AD30007AE2A6 /* Me.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Me.json; sourceTree = "<group>"; };
 		231B68621BE9AD8D007AE2A6 /* Emails.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Emails.json; path = Fixtures/Emails.json; sourceTree = "<group>"; };
+		233BEC911CAA3278005F9C19 /* TrashCanKitTestURLSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrashCanKitTestURLSession.swift; sourceTree = "<group>"; };
 		236364701BE22F1000AA7104 /* TrashCanKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TrashCanKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		236364731BE22F1000AA7104 /* TrashCanKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrashCanKit.h; sourceTree = "<group>"; };
 		236364751BE22F1000AA7104 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -227,7 +222,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2363649D1BE230F900AA7104 /* Nocilla.framework in Frameworks */,
 				2363647B1BE22F1000AA7104 /* TrashCanKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -252,7 +246,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				238EB22A1C7C677400289C37 /* Nocilla.framework in Frameworks */,
 				238EB1C11C7C660800289C37 /* TrashCanKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -269,7 +262,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				238EB22F1C7C679A00289C37 /* Nocilla.framework in Frameworks */,
 				238EB1DD1C7C662100289C37 /* TrashCanKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -324,6 +316,7 @@
 			isa = PBXGroup;
 			children = (
 				236364931BE2301200AA7104 /* TestHelper.swift */,
+				233BEC911CAA3278005F9C19 /* TrashCanKitTestURLSession.swift */,
 				236364921BE2301200AA7104 /* RepositoriesTests.swift */,
 				236364951BE2301200AA7104 /* UserTests.swift */,
 				231B68551BE9997C007AE2A6 /* ConfigurationTests.swift */,
@@ -685,6 +678,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				236364991BE2301200AA7104 /* UserTests.swift in Sources */,
+				233BEC921CAA3278005F9C19 /* TrashCanKitTestURLSession.swift in Sources */,
 				231B685A1BE9A3DD007AE2A6 /* TokenTests.swift in Sources */,
 				236364961BE2301200AA7104 /* RepositoriesTests.swift in Sources */,
 				231B68561BE9997C007AE2A6 /* ConfigurationTests.swift in Sources */,
@@ -731,6 +725,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				238EB2001C7C66B100289C37 /* TestHelper.swift in Sources */,
+				233BEC931CAA3278005F9C19 /* TrashCanKitTestURLSession.swift in Sources */,
 				238EB2011C7C66B100289C37 /* RepositoriesTests.swift in Sources */,
 				238EB2021C7C66B100289C37 /* UserTests.swift in Sources */,
 				238EB2031C7C66B100289C37 /* ConfigurationTests.swift in Sources */,
@@ -760,6 +755,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				238EB2151C7C66C200289C37 /* TestHelper.swift in Sources */,
+				233BEC941CAA3278005F9C19 /* TrashCanKitTestURLSession.swift in Sources */,
 				238EB2161C7C66C200289C37 /* RepositoriesTests.swift in Sources */,
 				238EB2171C7C66C200289C37 /* UserTests.swift in Sources */,
 				238EB2181C7C66C200289C37 /* ConfigurationTests.swift in Sources */,
