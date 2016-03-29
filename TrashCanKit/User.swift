@@ -38,9 +38,9 @@ import RequestKit
 }
 
 public extension TrashCanKit {
-    public func me(completion: (response: Response<User>) -> Void) {
+    public func me(session: RequestKitURLSession = NSURLSession.sharedSession(), completion: (response: Response<User>) -> Void) {
         let router = UserRouter.ReadAuthenticatedUser(configuration)
-        router.loadJSON([String: AnyObject].self) { json, error in
+        router.loadJSON(session, expectedResultType: [String: AnyObject].self) { json, error in
             if let error = error {
                 completion(response: Response.Failure(error))
             } else {
@@ -52,9 +52,9 @@ public extension TrashCanKit {
         }
     }
 
-    public func emails(completion: (response: Response<[Email]>) -> Void) {
+    public func emails(session: RequestKitURLSession = NSURLSession.sharedSession(), completion: (response: Response<[Email]>) -> Void) {
         let router = UserRouter.ReadEmails(configuration)
-        router.loadJSON([String: AnyObject].self) { json, error in
+        router.loadJSON(session, expectedResultType: [String: AnyObject].self) { json, error in
             if let error = error {
                 completion(response: Response.Failure(error))
             } else {
