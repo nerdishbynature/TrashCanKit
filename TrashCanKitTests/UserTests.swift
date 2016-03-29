@@ -1,19 +1,7 @@
 import XCTest
-import Nocilla
 import TrashCanKit
 
 class UserTests: XCTestCase {
-    override func setUp() {
-        super.setUp()
-        LSNocilla.sharedInstance().start()
-    }
-
-    override func tearDown() {
-        super.tearDown()
-        LSNocilla.sharedInstance().clearStubs()
-        LSNocilla.sharedInstance().stop()
-    }
-
     func testConstructFromJSON() {
         let subject = User(TestHelper.loadJSON("User"))
         XCTAssertEqual(subject.id, "{e9f0168c-cdf8-404a-95bb-3943dd2a65b6}")
@@ -39,39 +27,29 @@ class UserTests: XCTestCase {
 
     func testMe() {
         let tokenConfig = TokenConfiguration("123456", refreshToken: "7890")
-        stubRequest("GET", "https://bitbucket.org/api/2.0/user?access_token=123456").andReturn(200).withBody(TestHelper.loadJSONString("Me"))
-        let expectation = expectationWithDescription("get_me")
-        TrashCanKit(tokenConfig).me() { response in
+        let session = TrashCanKitURLTestSession(expectedURL: "https://bitbucket.org/api/2.0/user?access_token=123456", expectedHTTPMethod: "GET", jsonFile: "Me", statusCode: 200)
+        TrashCanKit(tokenConfig).me(session) { response in
             switch response {
             case .Success(let user):
                 XCTAssertEqual(user.name, "tutorials account")
-                expectation.fulfill()
             case .Failure:
                 XCTAssertFalse(true)
-                expectation.fulfill()
             }
         }
-        waitForExpectationsWithTimeout(1) { error in
-            XCTAssertNil(error)
-        }
+        XCTAssertTrue(session.wasCalled)
     }
 
     func testMyEmail() {
         let tokenConfig = TokenConfiguration("123456", refreshToken: "7890")
-        stubRequest("GET", "https://bitbucket.org/api/2.0/user/emails?access_token=123456").andReturn(200).withBody(TestHelper.loadJSONString("Emails"))
-        let expectation = expectationWithDescription("get_me")
-        TrashCanKit(tokenConfig).emails() { response in
+        let session = TrashCanKitURLTestSession(expectedURL: "https://bitbucket.org/api/2.0/user/emails?access_token=123456", expectedHTTPMethod: "GET", jsonFile: "Emails", statusCode: 200)
+        TrashCanKit(tokenConfig).emails(session) { response in
             switch response {
             case .Success(let emails):
                 XCTAssertEqual(emails.first?.email, "tutorials@bitbucket.org")
-                expectation.fulfill()
             case .Failure:
                 XCTAssertFalse(true)
-                expectation.fulfill()
             }
         }
-        waitForExpectationsWithTimeout(1) { error in
-            XCTAssertNil(error)
-        }
+        XCTAssertTrue(session.wasCalled)
     }
 }
