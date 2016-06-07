@@ -46,7 +46,7 @@ public enum TokenRouter: Router {
         return .FORM
     }
 
-    public var params: [String: String] {
+    public var params: [String: AnyObject] {
         switch self {
         case .RefreshToken(_, let token):
             return ["refresh_token": token, "grant_type": "refresh_token"]
@@ -63,8 +63,9 @@ public enum TokenRouter: Router {
     public var URLRequest: NSURLRequest? {
         switch self {
         case .RefreshToken(let config, _):
-            let URLString = config.webEndpoint.stringByAppendingURLPath(path)
-            return request(URLString, parameters: params)
+            let url = NSURL(string: path, relativeToURL: NSURL(string: config.webEndpoint))
+            let components = NSURLComponents(URL: url!, resolvingAgainstBaseURL: true)
+            return request(components!, parameters: params)
         }
     }
 }

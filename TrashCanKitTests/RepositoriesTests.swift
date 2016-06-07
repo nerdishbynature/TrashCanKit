@@ -57,7 +57,7 @@ class RepositoriesTests: XCTestCase {
 
     func testGetSecondPageRepositories() {
         let tokenConfig = TokenConfiguration("123456", refreshToken: "7890")
-        let session = TrashCanKitURLTestSession(expectedURL: "https://bitbucket.org/api/2.0/repositories?access_token=123456&after=2015-11-06T03%3A45%3A07.833168%2B00%3A00&page=2&role=member", expectedHTTPMethod: "GET", jsonFile: "Repositories", statusCode: 200)
+        let session = TrashCanKitURLTestSession(expectedURL: "https://bitbucket.org/api/2.0/repositories?access_token=123456&after=2015-11-06T03:45:07.833168+00:00&page=2&role=member", expectedHTTPMethod: "GET", jsonFile: "Repositories", statusCode: 200)
         let nextParameters = ["access_token": "123456==", "after": "2015-11-06T03:45:07.833168+00:00", "role": "member", "page": "2"]
         TrashCanKit(tokenConfig).repositories(session, nextParameters: nextParameters) { response in
             switch response {

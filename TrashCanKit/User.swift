@@ -97,7 +97,7 @@ public enum UserRouter: Router {
         }
     }
 
-    public var params: [String: String] {
+    public var params: [String: AnyObject] {
         return [:]
     }
 }

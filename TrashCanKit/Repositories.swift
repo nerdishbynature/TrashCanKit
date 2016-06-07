@@ -107,7 +107,7 @@ public enum RepositoryRouter: Router {
         return .URL
     }
 
-    public var params: [String: String] {
+    public var params: [String: AnyObject] {
         switch self {
         case .ReadRepositories(_, let userName, var nextParameters):
             if let _ = userName {
@@ -125,12 +125,12 @@ public enum RepositoryRouter: Router {
         switch self {
         case .ReadRepositories(_, let userName, _):
             if let userName = userName {
-                return "/repositories/\(userName)"
+                return "repositories/\(userName)"
             } else {
-                return "/repositories"
+                return "repositories"
             }
         case .ReadRepository(_, let owner, let name):
-            return "/repositories/\(owner)/\(name)"
+            return "repositories/\(owner)/\(name)"
         }
     }
 }
