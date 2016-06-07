@@ -79,7 +79,7 @@ class RepositoriesTests: XCTestCase {
                 XCTAssertTrue(false)
             case .Failure(let error):
                 XCTAssertEqual((error as NSError).code, 401)
-                XCTAssertEqual((error as NSError).domain, "com.octokit.swift")
+                XCTAssertEqual((error as NSError).domain, BitbucketErrorDomain)
             }
         }
         XCTAssertTrue(session.wasCalled)
@@ -108,7 +108,7 @@ class RepositoriesTests: XCTestCase {
                 XCTAssertTrue(false)
             case .Failure(let error):
                 XCTAssertEqual((error as NSError).code, 401)
-                XCTAssertEqual((error as NSError).domain, "com.octokit.swift")
+                XCTAssertEqual((error as NSError).domain, BitbucketErrorDomain)
             }
         }
         XCTAssertTrue(session.wasCalled)
