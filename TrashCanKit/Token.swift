@@ -15,7 +15,7 @@ public extension TrashCanKit {
                     if let responseJSON = responseJSON as? [String: AnyObject] {
                         if response.statusCode != 200 {
                             let errorDescription = responseJSON["error_description"] as? String ?? ""
-                            let error = NSError(domain: BitbucketErrorDomain, code: response.statusCode, userInfo: [NSLocalizedDescriptionKey: errorDescription])
+                            let error = NSError(domain: TrashCanKitErrorDomain, code: response.statusCode, userInfo: [NSLocalizedDescriptionKey: errorDescription])
                             completion(response: Response.Failure(error))
                         } else {
                             let tokenConfig = TokenConfiguration(json: responseJSON)

@@ -5,7 +5,7 @@ public struct TokenConfiguration: Configuration {
     public var accessToken: String?
     public var refreshToken: String?
     public var expirationDate: NSDate?
-    public let errorDomain = BitbucketErrorDomain
+    public let errorDomain = TrashCanKitErrorDomain
 
     public init(json: [String: AnyObject], url: String = bitbucketBaseURL) {
         apiEndpoint = url

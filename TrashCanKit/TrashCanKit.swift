@@ -3,7 +3,7 @@ import RequestKit
 
 let bitbucketBaseURL = "https://bitbucket.org/api/2.0/"
 let bitbucketWebURL = "https://bitbucket.org/"
-public let BitbucketErrorDomain = "com.nerdishbynature.bitbucket.error"
+public let TrashCanKitErrorDomain = "com.nerdishbynature.TrashCanKit"
 
 public struct TrashCanKit {
     public let configuration: TokenConfiguration

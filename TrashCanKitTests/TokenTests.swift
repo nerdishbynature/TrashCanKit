@@ -30,7 +30,7 @@ class TokenTests: XCTestCase {
             case .Success:
                 XCTAssertFalse(true)
             case .Failure(let error as NSError):
-                XCTAssertEqual(error.domain, "com.nerdishbynature.bitbucket.error")
+                XCTAssertEqual(error.domain, TrashCanKitErrorDomain)
                 XCTAssertEqual(error.code, 401)
                 XCTAssertEqual(error.localizedDescription, "Oh Oh, another error.")
             case .Failure:
