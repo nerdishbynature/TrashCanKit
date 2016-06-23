@@ -8,7 +8,7 @@ class TokenTests: XCTestCase {
         let tokenConfig = TokenConfiguration("09876", refreshToken: "54321")
         let kit = TrashCanKit(tokenConfig)
         let session = RefreshTokenMockSession()
-        kit.refreshToken(session, oauthConfig: oauthConfig, refreshToken: tokenConfig.refreshToken!) { response in
+        let task = kit.refreshToken(session, oauthConfig: oauthConfig, refreshToken: tokenConfig.refreshToken!) { response in
             switch response {
             case .Success(let newToken):
                 XCTAssertEqual(newToken.accessToken, "017ec60f4a182")
@@ -18,6 +18,7 @@ class TokenTests: XCTestCase {
                 XCTAssertFalse(true)
             }
         }
+        XCTAssertNotNil(task)
         XCTAssertTrue(session.wasCalled)
     }
 
@@ -25,7 +26,7 @@ class TokenTests: XCTestCase {
         let oauthConfig = OAuthConfiguration(token: "12345", secret: "67890", scopes: [])
         let tokenConfig = TokenConfiguration("09876", refreshToken: "54321")
         let session = TrashCanKitURLTestSession(expectedURL: "https://bitbucket.org/site/oauth2/access_token", expectedHTTPMethod: "POST", jsonFile: "refresh_token_error", statusCode: 401)
-        TrashCanKit(tokenConfig).refreshToken(session, oauthConfig: oauthConfig, refreshToken: tokenConfig.refreshToken!) { response in
+        let task = TrashCanKit(tokenConfig).refreshToken(session, oauthConfig: oauthConfig, refreshToken: tokenConfig.refreshToken!) { response in
             switch response {
             case .Success:
                 XCTAssertFalse(true)
@@ -37,6 +38,7 @@ class TokenTests: XCTestCase {
                 XCTAssertFalse(true)
             }
         }
+        XCTAssertNotNil(task)
         XCTAssertTrue(session.wasCalled)
     }
 }
