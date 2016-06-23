@@ -53,9 +53,9 @@ public enum PaginatedResponse<T> {
 }
 
 public extension TrashCanKit {
-    public func repositories(userName: String? = nil, nextParameters: [String: String] = [:], completion: (response: PaginatedResponse<[Repository]>) -> Void) {
+    public func repositories(session: RequestKitURLSession = NSURLSession.sharedSession(), userName: String? = nil, nextParameters: [String: String] = [:], completion: (response: PaginatedResponse<[Repository]>) -> Void) {
         let router = RepositoryRouter.ReadRepositories(configuration, userName, nextParameters)
-        router.loadJSON([String: AnyObject].self) { json, error in
+        router.loadJSON(session, expectedResultType: [String: AnyObject].self) { json, error in
             if let error = error {
                 completion(response: PaginatedResponse.Failure(error))
             }
@@ -71,9 +71,9 @@ public extension TrashCanKit {
         }
     }
 
-    public func repository(owner: String, name: String, completion: (response: Response<Repository>) -> Void) {
+    public func repository(session: RequestKitURLSession = NSURLSession.sharedSession(), owner: String, name: String, completion: (response: Response<Repository>) -> Void) {
         let router = RepositoryRouter.ReadRepository(configuration, owner, name)
-        router.loadJSON([String: AnyObject].self) { json, error in
+        router.loadJSON(session, expectedResultType: [String: AnyObject].self) { json, error in
             if let error = error {
                 completion(response: Response.Failure(error))
             }
@@ -107,7 +107,7 @@ public enum RepositoryRouter: Router {
         return .URL
     }
 
-    public var params: [String: String] {
+    public var params: [String: AnyObject] {
         switch self {
         case .ReadRepositories(_, let userName, var nextParameters):
             if let _ = userName {
@@ -125,12 +125,12 @@ public enum RepositoryRouter: Router {
         switch self {
         case .ReadRepositories(_, let userName, _):
             if let userName = userName {
-                return "/repositories/\(userName)"
+                return "repositories/\(userName)"
             } else {
-                return "/repositories"
+                return "repositories"
             }
         case .ReadRepository(_, let owner, let name):
-            return "/repositories/\(owner)/\(name)"
+            return "repositories/\(owner)/\(name)"
         }
     }
 }

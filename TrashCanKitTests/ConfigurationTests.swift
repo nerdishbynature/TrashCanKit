@@ -1,45 +1,19 @@
 import XCTest
-import Nocilla
+import RequestKit
 import TrashCanKit
 
 class ConfigurationTests: XCTestCase {
-    private let enterpriseURL = "https://enterprise.mybitbucketserver.com"
-
-    override func setUp() {
-        super.setUp()
-        LSNocilla.sharedInstance().start()
-    }
-
-    override func tearDown() {
-        super.tearDown()
-        LSNocilla.sharedInstance().clearStubs()
-        LSNocilla.sharedInstance().stop()
-    }
-
     func testTokenConfiguration() {
         let subject = TokenConfiguration("12345")
         XCTAssertEqual(subject.accessToken, "12345")
-        XCTAssertEqual(subject.apiEndpoint, "https://bitbucket.org/api/2.0")
-    }
-
-    func testEnterpriseTokenConfiguration() {
-        let subject = TokenConfiguration("12345", url: enterpriseURL)
-        XCTAssertEqual(subject.accessToken!, "12345")
-        XCTAssertEqual(subject.apiEndpoint, enterpriseURL)
+        XCTAssertEqual(subject.apiEndpoint, "https://bitbucket.org/api/2.0/")
     }
 
     func testOAuthConfiguration() {
         let subject = OAuthConfiguration(token: "12345", secret: "6789", scopes: [])
         XCTAssertEqual(subject.token, "12345")
         XCTAssertEqual(subject.secret, "6789")
-        XCTAssertEqual(subject.apiEndpoint, "https://bitbucket.org/api/2.0")
-    }
-
-    func testOAuthTokenConfiguration() {
-        let subject = OAuthConfiguration(enterpriseURL, token: "12345", secret: "6789", scopes: [])
-        XCTAssertEqual(subject.token, "12345")
-        XCTAssertEqual(subject.secret, "6789")
-        XCTAssertEqual(subject.apiEndpoint, enterpriseURL)
+        XCTAssertEqual(subject.apiEndpoint, "https://bitbucket.org/api/2.0/")
     }
 
     func testAuthorizeURLRequest() {
@@ -68,18 +42,33 @@ class ConfigurationTests: XCTestCase {
 
     func testHandleOpenURL() {
         let config = OAuthConfiguration(token: "12345", secret: "6789", scopes: [])
-        let json = TestHelper.loadJSONString("authorize")
-        let headers = ["Authorization": "Basic MTIzNDU6Njc4OQ==", "Content-Type": "application/x-www-form-urlencoded" ]
-        stubRequest("POST", "https://bitbucket.org/site/oauth2/access_token").withHeaders(headers).andReturn(200).withBody(json)
-        let expectation = expectationWithDescription("access_token")
+        let session = BasicAuthMockSession()
         let url = NSURL(string: "urlscheme://authorize?code=dhfjgh23493")!
-        config.handleOpenURL(url) { token in
-            XCTAssertEqual(token.refreshToken, "14567")
-            XCTAssertEqual(token.accessToken, "017ec60f4a182")
-            expectation.fulfill()
+        var token: TokenConfiguration?
+        config.handleOpenURL(session, url: url) { inToken in
+            token = inToken
         }
-        waitForExpectationsWithTimeout(1, handler: { error in
-            XCTAssertNil(error, "\(error)")
-        })
+        XCTAssertEqual(token?.refreshToken, "14567")
+        XCTAssertEqual(token?.accessToken, "017ec60f4a182")
+    }
+}
+
+class BasicAuthMockSession: RequestKitURLSession {
+    var wasCalled = false
+
+    func dataTaskWithRequest(request: NSURLRequest, completionHandler: (NSData?, NSURLResponse?, NSError?) -> Void) -> URLSessionDataTaskProtocol {
+        XCTAssertEqual(request.allHTTPHeaderFields?["Content-Type"], "application/x-www-form-urlencoded")
+        XCTAssertEqual(request.URL?.absoluteString, "https://bitbucket.org/site/oauth2/access_token")
+        XCTAssertEqual(request.HTTPMethod, "POST")
+        let data = TestHelper.loadJSONString("authorize").dataUsingEncoding(NSUTF8StringEncoding)
+        let response = NSHTTPURLResponse(URL: request.URL!, statusCode: 200, HTTPVersion: "http/1.1", headerFields: ["Content-Type": "application/json"])
+        completionHandler(data, response, nil)
+        wasCalled = true
+        return MockURLSessionDataTask()
+    }
+
+    func uploadTaskWithRequest(request: NSURLRequest, fromData bodyData: NSData?, completionHandler: (NSData?, NSURLResponse?, NSError?) -> Void) -> URLSessionDataTaskProtocol {
+        XCTFail()
+        return MockURLSessionDataTask()
     }
 }

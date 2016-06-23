@@ -4,10 +4,10 @@ import RequestKit
 // MARK: request
 
 public extension TrashCanKit {
-    public func refreshToken(oauthConfig: OAuthConfiguration, refreshToken: String, completion: (response: Response<TokenConfiguration>) -> Void) {
+    public func refreshToken(session: RequestKitURLSession, oauthConfig: OAuthConfiguration, refreshToken: String, completion: (response: Response<TokenConfiguration>) -> Void) {
         let request = TokenRouter.RefreshToken(oauthConfig, refreshToken).URLRequest
         if let request = request {
-            let task = oauthConfig.basicAuthSession().dataTaskWithRequest(request) { data, response, err in
+            let task = session.dataTaskWithRequest(request) { data, response, err in
                 guard let response = response as? NSHTTPURLResponse else { return }
                 guard let data = data else { return }
                 do {
@@ -15,7 +15,7 @@ public extension TrashCanKit {
                     if let responseJSON = responseJSON as? [String: AnyObject] {
                         if response.statusCode != 200 {
                             let errorDescription = responseJSON["error_description"] as? String ?? ""
-                            let error = NSError(domain: BitbucketErrorDomain, code: response.statusCode, userInfo: [NSLocalizedDescriptionKey: errorDescription])
+                            let error = NSError(domain: TrashCanKitErrorDomain, code: response.statusCode, userInfo: [NSLocalizedDescriptionKey: errorDescription])
                             completion(response: Response.Failure(error))
                         } else {
                             let tokenConfig = TokenConfiguration(json: responseJSON)
@@ -46,7 +46,7 @@ public enum TokenRouter: Router {
         return .FORM
     }
 
-    public var params: [String: String] {
+    public var params: [String: AnyObject] {
         switch self {
         case .RefreshToken(_, let token):
             return ["refresh_token": token, "grant_type": "refresh_token"]
@@ -63,8 +63,9 @@ public enum TokenRouter: Router {
     public var URLRequest: NSURLRequest? {
         switch self {
         case .RefreshToken(let config, _):
-            let URLString = config.webEndpoint.stringByAppendingURLPath(path)
-            return request(URLString, parameters: params)
+            let url = NSURL(string: path, relativeToURL: NSURL(string: config.webEndpoint))
+            let components = NSURLComponents(URL: url!, resolvingAgainstBaseURL: true)
+            return request(components!, parameters: params)
         }
     }
 }

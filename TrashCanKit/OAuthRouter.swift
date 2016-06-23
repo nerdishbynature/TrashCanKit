@@ -38,7 +38,7 @@ public enum OAuthRouter: Router {
         }
     }
 
-    public var params: [String: String] {
+    public var params: [String: AnyObject] {
         switch self {
         case .Authorize(let config):
             return ["client_id": config.token, "response_type": "code"]
@@ -50,11 +50,13 @@ public enum OAuthRouter: Router {
     public var URLRequest: NSURLRequest? {
         switch self {
         case .Authorize(let config):
-            let URLString = config.webEndpoint.stringByAppendingURLPath(path)
-            return request(URLString, parameters: params)
+            let url = NSURL(string: path, relativeToURL: NSURL(string: config.webEndpoint))
+            let components = NSURLComponents(URL: url!, resolvingAgainstBaseURL: true)
+            return request(components!, parameters: params)
         case .AccessToken(let config, _):
-            let URLString = config.webEndpoint.stringByAppendingURLPath(path)
-            return request(URLString, parameters: params)
+            let url = NSURL(string: path, relativeToURL: NSURL(string: config.webEndpoint))
+            let components = NSURLComponents(URL: url!, resolvingAgainstBaseURL: true)
+            return request(components!, parameters: params)
         }
     }
 }
