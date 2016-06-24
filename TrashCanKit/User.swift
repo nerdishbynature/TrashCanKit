@@ -1,10 +1,10 @@
 import Foundation
 import RequestKit
 
-@objc public class User: NSObject {
-    public let id: String
-    public var login: String?
-    public var name: String?
+@objc open class User: NSObject {
+    open let id: String
+    open var login: String?
+    open var name: String?
 
     public init(_ json: [String: AnyObject]) {
         if let id = json["uuid"] as? String {
@@ -17,11 +17,11 @@ import RequestKit
     }
 }
 
-@objc public class Email: NSObject {
-    public let isPrimary: Bool
-    public let isConfirmed: Bool
-    public var type: String?
-    public var email: String?
+@objc open class Email: NSObject {
+    open let isPrimary: Bool
+    open let isConfirmed: Bool
+    open var type: String?
+    open var email: String?
 
     public init(json: [String: AnyObject]) {
         if let _ = json["email"] as? String {
@@ -38,29 +38,29 @@ import RequestKit
 }
 
 public extension TrashCanKit {
-    public func me(session: RequestKitURLSession = NSURLSession.sharedSession(), completion: (response: Response<User>) -> Void) -> URLSessionDataTaskProtocol? {
-        let router = UserRouter.ReadAuthenticatedUser(configuration)
+    public func me(_ session: RequestKitURLSession = URLSession.shared, completion: @escaping (_ response: Response<User>) -> Void) -> URLSessionDataTaskProtocol? {
+        let router = UserRouter.readAuthenticatedUser(configuration)
         return router.loadJSON(session, expectedResultType: [String: AnyObject].self) { json, error in
             if let error = error {
-                completion(response: Response.Failure(error))
+                completion(Response.failure(error))
             } else {
                 if let json = json {
                     let parsedUser = User(json)
-                    completion(response: Response.Success(parsedUser))
+                    completion(Response.success(parsedUser))
                 }
             }
         }
     }
 
-    public func emails(session: RequestKitURLSession = NSURLSession.sharedSession(), completion: (response: Response<[Email]>) -> Void) -> URLSessionDataTaskProtocol? {
-        let router = UserRouter.ReadEmails(configuration)
+    public func emails(_ session: RequestKitURLSession = URLSession.shared, completion: @escaping (_ response: Response<[Email]>) -> Void) -> URLSessionDataTaskProtocol? {
+        let router = UserRouter.readEmails(configuration)
         return router.loadJSON(session, expectedResultType: [String: AnyObject].self) { json, error in
             if let error = error {
-                completion(response: Response.Failure(error))
+                completion(Response.failure(error))
             } else {
-                if let json = json, values = json["values"] as? [[String: AnyObject]] {
+                if let json = json, let values = json["values"] as? [[String: AnyObject]] {
                     let emails = values.map({ Email(json: $0) })
-                    completion(response: Response.Success(emails))
+                    completion(Response.success(emails))
                 }
             }
         }
@@ -70,13 +70,13 @@ public extension TrashCanKit {
 // MARK: Router
 
 public enum UserRouter: Router {
-    case ReadAuthenticatedUser(Configuration)
-    case ReadEmails(Configuration)
+    case readAuthenticatedUser(Configuration)
+    case readEmails(Configuration)
 
     public var configuration: Configuration {
         switch self {
-        case .ReadAuthenticatedUser(let config): return config
-        case .ReadEmails(let config): return config
+        case .readAuthenticatedUser(let config): return config
+        case .readEmails(let config): return config
         }
     }
 
@@ -85,19 +85,19 @@ public enum UserRouter: Router {
     }
 
     public var encoding: HTTPEncoding {
-        return .URL
+        return .url
     }
 
     public var path: String {
         switch self {
-        case .ReadAuthenticatedUser:
+        case .readAuthenticatedUser:
             return "user"
-        case .ReadEmails:
+        case .readEmails:
             return "user/emails"
         }
     }
 
-    public var params: [String: AnyObject] {
+    public var params: [String: Any] {
         return [:]
     }
 }

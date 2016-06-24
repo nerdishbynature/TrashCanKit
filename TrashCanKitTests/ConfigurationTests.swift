@@ -18,18 +18,18 @@ class ConfigurationTests: XCTestCase {
 
     func testAuthorizeURLRequest() {
         let config = OAuthConfiguration(token: "12345", secret: "6789", scopes: [])
-        let request = OAuthRouter.Authorize(config).URLRequest
-        let expected = NSURL(string: "https://bitbucket.org/site/oauth2/authorize?client_id=12345&response_type=code")
-        XCTAssertEqual(request?.URL, expected)
+        let request = OAuthRouter.authorize(config).URLRequest
+        let expected = URL(string: "https://bitbucket.org/site/oauth2/authorize?client_id=12345&response_type=code")
+        XCTAssertEqual(request?.url, expected)
     }
 
     func testAccessTokenURLRequest() {
         let config = OAuthConfiguration(token: "12345", secret: "6789", scopes: [])
-        let request = OAuthRouter.AccessToken(config, "dhfjgh23493").URLRequest
-        let expected = NSURL(string: "https://bitbucket.org/site/oauth2/access_token")
+        let request = OAuthRouter.accessToken(config, "dhfjgh23493").URLRequest
+        let expected = URL(string: "https://bitbucket.org/site/oauth2/access_token")
         let expectedBody = "code=dhfjgh23493&grant_type=authorization_code"
-        XCTAssertEqual(request?.URL, expected)
-        let string = NSString(data: request!.HTTPBody!, encoding: NSUTF8StringEncoding)!
+        XCTAssertEqual(request?.url, expected)
+        let string = NSString(data: request!.httpBody!, encoding: String.Encoding.utf8.rawValue)!
         XCTAssertEqual(string as String, expectedBody)
     }
 
@@ -43,7 +43,7 @@ class ConfigurationTests: XCTestCase {
     func testHandleOpenURL() {
         let config = OAuthConfiguration(token: "12345", secret: "6789", scopes: [])
         let session = BasicAuthMockSession()
-        let url = NSURL(string: "urlscheme://authorize?code=dhfjgh23493")!
+        let url = URL(string: "urlscheme://authorize?code=dhfjgh23493")!
         var token: TokenConfiguration?
         config.handleOpenURL(session, url: url) { inToken in
             token = inToken
@@ -56,18 +56,18 @@ class ConfigurationTests: XCTestCase {
 class BasicAuthMockSession: RequestKitURLSession {
     var wasCalled = false
 
-    func dataTaskWithRequest(request: NSURLRequest, completionHandler: (NSData?, NSURLResponse?, NSError?) -> Void) -> URLSessionDataTaskProtocol {
+    func dataTask(with request: URLRequest, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTaskProtocol {
         XCTAssertEqual(request.allHTTPHeaderFields?["Content-Type"], "application/x-www-form-urlencoded")
-        XCTAssertEqual(request.URL?.absoluteString, "https://bitbucket.org/site/oauth2/access_token")
-        XCTAssertEqual(request.HTTPMethod, "POST")
-        let data = TestHelper.loadJSONString("authorize").dataUsingEncoding(NSUTF8StringEncoding)
-        let response = NSHTTPURLResponse(URL: request.URL!, statusCode: 200, HTTPVersion: "http/1.1", headerFields: ["Content-Type": "application/json"])
+        XCTAssertEqual(request.url?.absoluteString, "https://bitbucket.org/site/oauth2/access_token")
+        XCTAssertEqual(request.httpMethod, "POST")
+        let data = TestHelper.loadJSONString("authorize").data(using: String.Encoding.utf8)
+        let response = HTTPURLResponse(url: request.url!, statusCode: 200, httpVersion: "http/1.1", headerFields: ["Content-Type": "application/json"])
         completionHandler(data, response, nil)
         wasCalled = true
         return MockURLSessionDataTask()
     }
 
-    func uploadTaskWithRequest(request: NSURLRequest, fromData bodyData: NSData?, completionHandler: (NSData?, NSURLResponse?, NSError?) -> Void) -> URLSessionDataTaskProtocol {
+    func uploadTask(with request: URLRequest, fromData bodyData: Data?, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTaskProtocol {
         XCTFail()
         return MockURLSessionDataTask()
     }

@@ -30,9 +30,9 @@ class UserTests: XCTestCase {
         let session = TrashCanKitURLTestSession(expectedURL: "https://bitbucket.org/api/2.0/user?access_token=123456", expectedHTTPMethod: "GET", jsonFile: "Me", statusCode: 200)
         let task = TrashCanKit(tokenConfig).me(session) { response in
             switch response {
-            case .Success(let user):
+            case .success(let user):
                 XCTAssertEqual(user.name, "tutorials account")
-            case .Failure:
+            case .failure:
                 XCTAssertFalse(true)
             }
         }
@@ -45,9 +45,9 @@ class UserTests: XCTestCase {
         let session = TrashCanKitURLTestSession(expectedURL: "https://bitbucket.org/api/2.0/user/emails?access_token=123456", expectedHTTPMethod: "GET", jsonFile: "Emails", statusCode: 200)
         let task = TrashCanKit(tokenConfig).emails(session) { response in
             switch response {
-            case .Success(let emails):
+            case .success(let emails):
                 XCTAssertEqual(emails.first?.email, "tutorials@bitbucket.org")
-            case .Failure:
+            case .failure:
                 XCTAssertFalse(true)
             }
         }

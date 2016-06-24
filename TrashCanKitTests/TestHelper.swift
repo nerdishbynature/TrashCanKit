@@ -1,12 +1,12 @@
 import Foundation
 
 class TestHelper {
-    static func loadJSON(name: String) -> [String: AnyObject] {
-        let bundle = NSBundle(forClass: self)
-        let path = bundle.pathForResource(name, ofType: "json")
-        if let path = path, data = NSData(contentsOfFile: path) {
-            let json: AnyObject? = try? NSJSONSerialization.JSONObjectWithData(data,
-                options: NSJSONReadingOptions.MutableContainers)
+    static func loadJSON(_ name: String) -> [String: AnyObject] {
+        let bundle = Bundle(for: self)
+        let path = bundle.path(forResource: name, ofType: "json")
+        if let path = path, let data = try? Data(contentsOf: URL(fileURLWithPath: path)) {
+            let json: AnyObject? = try! JSONSerialization.jsonObject(with: data,
+                options: JSONSerialization.ReadingOptions.mutableContainers) as AnyObject?
             if let json = json as! [String: AnyObject]? {
                 return json
             }
@@ -15,11 +15,11 @@ class TestHelper {
         return Dictionary()
     }
 
-    static func loadJSONString(name: String) -> String {
-        let bundle = NSBundle(forClass: self)
-        let path = bundle.pathForResource(name, ofType: "json")
-        if let path = path, data = NSData(contentsOfFile: path) {
-            let jsonString = String(data: data, encoding: NSUTF8StringEncoding)
+    static func loadJSONString(_ name: String) -> String {
+        let bundle = Bundle(for: self)
+        let path = bundle.path(forResource: name, ofType: "json")
+        if let path = path, let data = try? Data(contentsOf: URL(fileURLWithPath: path)) {
+            let jsonString = String(data: data, encoding: String.Encoding.utf8)
             if let json = jsonString {
                 return json
             }

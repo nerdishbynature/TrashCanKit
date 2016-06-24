@@ -19,33 +19,33 @@ public struct OAuthConfiguration: Configuration {
             self.scopes = []
     }
 
-    public func authenticate() -> NSURL? {
-        return OAuthRouter.Authorize(self).URLRequest?.URL
+    public func authenticate() -> URL? {
+        return OAuthRouter.authorize(self).URLRequest?.url
     }
 
-    private func basicAuthenticationString() -> String {
-        let clientIDSecretString = [token, secret].joinWithSeparator(":")
-        let clientIDSecretData = clientIDSecretString.dataUsingEncoding(NSUTF8StringEncoding)
-        let base64 = clientIDSecretData?.base64EncodedStringWithOptions(NSDataBase64EncodingOptions(rawValue: 0))
+    fileprivate func basicAuthenticationString() -> String {
+        let clientIDSecretString = [token, secret].joined(separator: ":")
+        let clientIDSecretData = clientIDSecretString.data(using: String.Encoding.utf8)
+        let base64 = clientIDSecretData?.base64EncodedString(options: Data.Base64EncodingOptions(rawValue: 0))
         return "Basic \(base64 ?? "")"
     }
 
-    public func basicAuthConfig() -> NSURLSessionConfiguration {
-        let config = NSURLSessionConfiguration.defaultSessionConfiguration()
-        config.HTTPAdditionalHeaders = ["Authorization" : basicAuthenticationString()]
+    public func basicAuthConfig() -> URLSessionConfiguration {
+        let config = URLSessionConfiguration.default
+        config.httpAdditionalHeaders = ["Authorization" : basicAuthenticationString()]
         return config
     }
 
-    public func authorize(session: RequestKitURLSession, code: String, completion: (config: TokenConfiguration) -> Void) {
-        let request = OAuthRouter.AccessToken(self, code).URLRequest
+    public func authorize(_ session: RequestKitURLSession, code: String, completion: @escaping (_ config: TokenConfiguration) -> Void) {
+        let request = OAuthRouter.accessToken(self, code).URLRequest
         if let request = request {
-            let task = session.dataTaskWithRequest(request) { data, response, err in
-                if let response = response as? NSHTTPURLResponse {
+            let task = session.dataTask(with: request) { data, response, err in
+                if let response = response as? HTTPURLResponse {
                     if response.statusCode != 200 {
                         return
                     } else {
                         if let config = self.configFromData(data) {
-                            completion(config: config)
+                            completion(config)
                         }
                     }
                 }
@@ -54,10 +54,10 @@ public struct OAuthConfiguration: Configuration {
         }
     }
 
-    private func configFromData(data: NSData?) -> TokenConfiguration? {
+    private func configFromData(_ data: Data?) -> TokenConfiguration? {
         guard let data = data else { return nil }
         do {
-            guard let json = try NSJSONSerialization.JSONObjectWithData(data, options: .AllowFragments) as? [String: AnyObject] else { return nil }
+            guard let json = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as? [String: AnyObject] else { return nil }
             let config = TokenConfiguration(json: json)
             return config
         } catch {
@@ -65,19 +65,19 @@ public struct OAuthConfiguration: Configuration {
         }
     }
 
-    public func handleOpenURL(session: RequestKitURLSession = NSURLSession.sharedSession(), url: NSURL, completion: (config: TokenConfiguration) -> Void) {
+    public func handleOpenURL(_ session: RequestKitURLSession = URLSession.shared, url: URL, completion: @escaping (_ config: TokenConfiguration) -> Void) {
         let params = url.URLParameters()
         if let code = params["code"] {
             authorize(session, code: code) { config in
-                completion(config: config)
+                completion(config)
             }
         }
     }
 
-    public func accessTokenFromResponse(response: String) -> String? {
-        let accessTokenParam = response.componentsSeparatedByString("&").first
+    public func accessTokenFromResponse(_ response: String) -> String? {
+        let accessTokenParam = response.components(separatedBy: "&").first
         if let accessTokenParam = accessTokenParam {
-            return accessTokenParam.componentsSeparatedByString("=").last
+            return accessTokenParam.components(separatedBy: "=").last
         }
         return nil
     }
