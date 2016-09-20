@@ -1,15 +1,14 @@
 import Foundation
 
-internal extension NSURL {
+internal extension URL {
     func URLParameters() -> [String: String] {
-        let nbn_absoluteString: String? = absoluteString
-        let stringParams = nbn_absoluteString?.componentsSeparatedByString("?").last
-        let params = stringParams?.componentsSeparatedByString("&")
+        let stringParams = absoluteString.components(separatedBy: "?").last
+        let params = stringParams?.components(separatedBy: "&")
         var returnParams: [String: String] = [:]
         if let params = params {
             for param in params {
-                let keyValue = param.componentsSeparatedByString("=")
-                if let key = keyValue.first, value = keyValue.last {
+                let keyValue = param.components(separatedBy: "=")
+                if let key = keyValue.first, let value = keyValue.last {
                     returnParams[key] = value
                 }
             }

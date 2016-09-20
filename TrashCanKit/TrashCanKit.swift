@@ -14,7 +14,7 @@ public struct TrashCanKit {
 }
 
 internal extension Router {
-    internal var URLRequest: NSURLRequest? {
+    internal var URLRequest: Foundation.URLRequest? {
         return request()
     }
 }
