@@ -14,6 +14,7 @@ class RepositoriesTests: XCTestCase {
         XCTAssertEqual(repository.gitURL, "git://bitbucket.org/pietbrauer/octokit.swift.git")
         XCTAssertEqual(repository.cloneURL, "https://bitbucket.org/pietbrauer/octokit.swift.git")
         XCTAssertEqual(repository.size, 156382)
+        XCTAssertEqual(repository.scm, "git")
     }
 
     func testFailToConstructFromJSON() {
