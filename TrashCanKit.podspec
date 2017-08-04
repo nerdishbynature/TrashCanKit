@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "TrashCanKit"
-  s.version          = "0.6.2"
+  s.version          = "0.6.3"
   s.summary          = "A Swift API Client for Bitbucket.org"
   s.description      = <<-DESC
                         You are looking at the A Swift API Client for GitHub and GitHub Enterprise.
