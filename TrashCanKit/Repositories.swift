@@ -14,6 +14,7 @@ import RequestKit
     open var sshURL: String?
     open var cloneURL: String?
     open var size: Int
+    open var scm: String?
 
     public init(json: [String: AnyObject]) {
         owner = User(json["owner"] as? [String: AnyObject] ?? [:])
@@ -37,6 +38,7 @@ import RequestKit
                 }
             }
             size = json["size"] as? Int ?? 0
+            scm = json["scm"] as? String
         } else {
             id = "-1"
             isPrivate = false
