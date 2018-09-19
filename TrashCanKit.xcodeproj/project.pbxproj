@@ -103,6 +103,7 @@
 		238EB22C1C7C678300289C37 /* RequestKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 238EB22B1C7C678300289C37 /* RequestKit.framework */; };
 		238EB2311C7C67E000289C37 /* RequestKit.framework in Carthage embed */ = {isa = PBXBuildFile; fileRef = 238EB2271C7C676900289C37 /* RequestKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		238EB2351C7C67FF00289C37 /* RequestKit.framework in Carthage embed */ = {isa = PBXBuildFile; fileRef = 238EB22B1C7C678300289C37 /* RequestKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		239F6001215240880060D23D /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B8BFA3214A836500D5841E /* Page.swift */; };
 		23B8BFA4214A836500D5841E /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B8BFA3214A836500D5841E /* Page.swift */; };
 		23B8BFA5214A836500D5841E /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B8BFA3214A836500D5841E /* Page.swift */; };
 		23B8BFA6214A836500D5841E /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B8BFA3214A836500D5841E /* Page.swift */; };
@@ -763,6 +764,7 @@
 				238EB21D1C7C66C800289C37 /* OAuthRouter.swift in Sources */,
 				238EB21E1C7C66C800289C37 /* TokenConfiguration.swift in Sources */,
 				238EB21F1C7C66C800289C37 /* Repositories.swift in Sources */,
+				239F6001215240880060D23D /* Page.swift in Sources */,
 				238EB2201C7C66C800289C37 /* String+QueryParameters.swift in Sources */,
 				238EB2211C7C66C800289C37 /* Dictionary+Additions.swift in Sources */,
 				238EB2221C7C66C800289C37 /* Token.swift in Sources */,
