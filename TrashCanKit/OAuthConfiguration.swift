@@ -10,7 +10,7 @@ public struct OAuthConfiguration: Configuration {
     public let webEndpoint: String
     public let errorDomain = TrashCanKitErrorDomain
 
-    public init(_ url: String = bitbucketBaseURL, webURL: String = bitbucketWebURL,
+    public init(_ url: String = BitbucketBaseURL, webURL: String = BitbucketWebURL,
         token: String, secret: String, scopes: [String]) {
             apiEndpoint = url
             webEndpoint = webURL

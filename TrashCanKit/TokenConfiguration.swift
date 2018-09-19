@@ -7,7 +7,7 @@ public struct TokenConfiguration: Configuration {
     public var expirationDate: Date?
     public let errorDomain = TrashCanKitErrorDomain
 
-    public init(json: [String: AnyObject], url: String = bitbucketBaseURL) {
+    public init(json: [String: AnyObject], url: String = BitbucketBaseURL) {
         apiEndpoint = url
         accessToken = json["access_token"] as? String
         refreshToken = json["refresh_token"] as? String
@@ -16,7 +16,7 @@ public struct TokenConfiguration: Configuration {
         expirationDate = currentDate.addingTimeInterval(TimeInterval(expiresIn ?? 0))
     }
 
-    public init(_ token: String? = nil, refreshToken: String? = nil, expirationDate: Date? = nil, url: String = bitbucketBaseURL) {
+    public init(_ token: String? = nil, refreshToken: String? = nil, expirationDate: Date? = nil, url: String = BitbucketBaseURL) {
         apiEndpoint = url
         accessToken = token
         self.expirationDate = expirationDate

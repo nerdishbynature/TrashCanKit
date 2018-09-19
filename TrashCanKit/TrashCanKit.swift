@@ -1,8 +1,8 @@
 import Foundation
 import RequestKit
 
-let bitbucketBaseURL = "https://bitbucket.org/api/2.0/"
-let bitbucketWebURL = "https://bitbucket.org/"
+public let BitbucketBaseURL = "https://bitbucket.org/api/2.0/"
+public let BitbucketWebURL = "https://bitbucket.org/"
 public let TrashCanKitErrorDomain = "com.nerdishbynature.TrashCanKit"
 
 public struct TrashCanKit {

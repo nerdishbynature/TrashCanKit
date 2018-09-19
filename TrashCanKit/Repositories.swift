@@ -4,8 +4,8 @@ import RequestKit
 // MARK: model
 
 @objc open class Repository: NSObject, Codable {
-    open let id: String
-    open let owner: User
+    open var id: String
+    open var owner: User
     open var name: String?
     open var fullName: String?
     open var isPrivate: Bool = false
