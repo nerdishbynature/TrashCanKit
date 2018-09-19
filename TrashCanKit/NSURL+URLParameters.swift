@@ -9,7 +9,7 @@ internal extension URL {
             for param in params {
                 let keyValue = param.components(separatedBy: "=")
                 if let key = keyValue.first, let value = keyValue.last {
-                    returnParams[key] = value
+                    returnParams[key] = value.removingPercentEncoding
                 }
             }
         }

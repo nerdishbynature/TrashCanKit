@@ -27,4 +27,12 @@ class TestHelper {
 
         return ""
     }
+
+    internal class func codableFromFile<T>(_ name: String, type: T.Type) -> T where T: Codable {
+        let bundle = Bundle(for: self)
+        let url = bundle.url(forResource: name, withExtension: "json")!
+        let data = try! Data(contentsOf: url)
+        let decoder = JSONDecoder()
+        return try! decoder.decode(T.self, from: data)
+    }
 }

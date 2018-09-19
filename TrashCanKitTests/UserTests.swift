@@ -3,26 +3,18 @@ import TrashCanKit
 
 class UserTests: XCTestCase {
     func testConstructFromJSON() {
-        let subject = User(TestHelper.loadJSON("User"))
+        let subject = TestHelper.codableFromFile("User", type: User.self)
         XCTAssertEqual(subject.id, "{e9f0168c-cdf8-404a-95bb-3943dd2a65b6}")
         XCTAssertEqual(subject.login, "pietbrauer")
         XCTAssertEqual(subject.name, "Piet Brauer")
     }
 
     func testConstructEmailFromJSON() {
-        let subject = Email(json: TestHelper.loadJSON("Email"))
+        let subject = TestHelper.codableFromFile("Email", type: Email.self)
         XCTAssertEqual(subject.isPrimary, true)
         XCTAssertEqual(subject.isConfirmed, true)
         XCTAssertEqual(subject.email, "me@supercooldomain.io")
         XCTAssertEqual(subject.type, "email")
-    }
-
-    func testConstructEmailFromEmptyJSON() {
-        let subject = Email(json: [:])
-        XCTAssertEqual(subject.isPrimary, false)
-        XCTAssertEqual(subject.isConfirmed, false)
-        XCTAssertEqual(subject.email, nil)
-        XCTAssertEqual(subject.type, nil)
     }
 
     func testMe() {

@@ -3,48 +3,65 @@ import RequestKit
 
 // MARK: model
 
-@objc open class Repository: NSObject {
+@objc open class Repository: NSObject, Codable {
     open let id: String
     open let owner: User
     open var name: String?
     open var fullName: String?
-    open var isPrivate: Bool
+    open var isPrivate: Bool = false
     open var repositoryDescription: String?
-    open var gitURL: String?
-    open var sshURL: String?
-    open var cloneURL: String?
-    open var size: Int
+    open var links: Links?
+    open var size: Int = 0
     open var scm: String?
 
-    public init(json: [String: AnyObject]) {
-        owner = User(json["owner"] as? [String: AnyObject] ?? [:])
-        if let id = json["uuid"] as? String {
-            self.id = id
-            name = json["name"] as? String
-            fullName = json["full_name"] as? String
-            isPrivate = json["is_private"] as? Bool ?? false
-            repositoryDescription = json["description"] as? String
-            if let linksDict = json["links"] as? [String: AnyObject],
-                let cloneArray = linksDict["clone"] as? [[String: String]] {
-                for urlDict in cloneArray {
-                    if urlDict["name"] == "https" {
-                        let prefix = "https://\(owner.login ?? "")@"
-                        gitURL = urlDict["href"]?.replacingOccurrences(of: prefix, with: "git://")
-                        cloneURL = urlDict["href"]?.replacingOccurrences(of: prefix, with: "https://")
-                    }
-                    if urlDict["name"] == "ssh" {
-                        sshURL = urlDict["href"]?.replacingOccurrences(of: "ssh://", with: "")
-                    }
-                }
-            }
-            size = json["size"] as? Int ?? 0
-            scm = json["scm"] as? String
-        } else {
-            id = "-1"
-            isPrivate = false
-            size = 0
-        }
+    enum CodingKeys: String, CodingKey {
+        case id = "uuid"
+        case owner
+        case name
+        case fullName = "full_name"
+        case isPrivate = "is_private"
+        case repositoryDescription = "description"
+        case links
+        case size
+        case scm
     }
+
+    public override init() {
+        id = "-1"
+        owner = User()
+        super.init()
+    }
+}
+
+@objc open class Links: NSObject, Codable {
+    open var watchers: Link?
+    open var hooks: Link?
+    open var clone: [Link]?
+    open var selfLink: Link?
+    open var html: Link?
+    open var avatar: Link?
+    open var commits: Link?
+    open var forks: Link?
+    open var downloads: Link?
+    open var pullRequests: Link?
+
+    enum CodingKeys: String, CodingKey {
+        case watchers
+        case hooks
+        case clone
+        case selfLink = "self"
+        case html
+        case avatar
+        case commits
+        case forks
+        case downloads
+        case pullRequests = "pullrequests"
+    }
+}
+
+@objc open class Link: NSObject, Codable {
+    open var href: URL?
+    open var name: String?
 }
 
 // MARK: request
@@ -57,17 +74,16 @@ public enum PaginatedResponse<T> {
 public extension TrashCanKit {
     public func repositories(_ session: RequestKitURLSession = URLSession.shared, userName: String? = nil, nextParameters: [String: String] = [:], completion: @escaping (_ response: PaginatedResponse<[Repository]>) -> Void) -> URLSessionDataTaskProtocol? {
         let router = RepositoryRouter.readRepositories(configuration, userName, nextParameters)
-        return router.loadJSON(session, expectedResultType: [String: AnyObject].self) { json, error in
+        return router.load(session, expectedResultType: Page<Repository>.self) { page, error in
             if let error = error {
                 completion(PaginatedResponse.failure(error))
             }
 
-            if let json = json, let values = json["values"] as? [[String: AnyObject]] {
-                let repos = values.map { Repository(json: $0) }
-                if let nextURL = json["next"] as? String, let parameterString = nextURL.components(separatedBy: "?").last {
-                    completion(PaginatedResponse.success(values: repos, nextParameters: parameterString.tkk_queryParameters))
+            if let page = page {
+                if let nextURL = page.next{
+                    completion(PaginatedResponse.success(values: page.values, nextParameters: nextURL.URLParameters()))
                 } else {
-                    completion(PaginatedResponse.success(values: repos, nextParameters: [String: String]()))
+                    completion(PaginatedResponse.success(values: page.values, nextParameters: [String: String]()))
                 }
             }
         }
@@ -75,14 +91,13 @@ public extension TrashCanKit {
 
     public func repository(_ session: RequestKitURLSession = URLSession.shared, owner: String, name: String, completion: @escaping (_ response: Response<Repository>) -> Void) -> URLSessionDataTaskProtocol? {
         let router = RepositoryRouter.readRepository(configuration, owner, name)
-        return router.loadJSON(session, expectedResultType: [String: AnyObject].self) { json, error in
+        return router.load(session, expectedResultType: Repository.self) { repository, error in
             if let error = error {
                 completion(Response.failure(error))
             }
 
-            if let json = json {
-                let repo =  Repository(json: json)
-                completion(Response.success(repo))
+            if let repository = repository {
+                completion(Response.success(repository))
             }
         }
     }

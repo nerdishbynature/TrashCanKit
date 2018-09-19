@@ -103,6 +103,9 @@
 		238EB22C1C7C678300289C37 /* RequestKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 238EB22B1C7C678300289C37 /* RequestKit.framework */; };
 		238EB2311C7C67E000289C37 /* RequestKit.framework in Carthage embed */ = {isa = PBXBuildFile; fileRef = 238EB2271C7C676900289C37 /* RequestKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		238EB2351C7C67FF00289C37 /* RequestKit.framework in Carthage embed */ = {isa = PBXBuildFile; fileRef = 238EB22B1C7C678300289C37 /* RequestKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		23B8BFA4214A836500D5841E /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B8BFA3214A836500D5841E /* Page.swift */; };
+		23B8BFA5214A836500D5841E /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B8BFA3214A836500D5841E /* Page.swift */; };
+		23B8BFA6214A836500D5841E /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B8BFA3214A836500D5841E /* Page.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -207,6 +210,7 @@
 		238EB2291C7C677400289C37 /* Nocilla.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nocilla.framework; path = Carthage/Build/tvOS/Nocilla.framework; sourceTree = "<group>"; };
 		238EB22B1C7C678300289C37 /* RequestKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RequestKit.framework; path = Carthage/Build/Mac/RequestKit.framework; sourceTree = "<group>"; };
 		238EB22E1C7C679A00289C37 /* Nocilla.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nocilla.framework; path = Carthage/Build/Mac/Nocilla.framework; sourceTree = "<group>"; };
+		23B8BFA3214A836500D5841E /* Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -305,6 +309,7 @@
 				2363648B1BE22FCC00AA7104 /* Repositories.swift */,
 				231069D21C06BE3400101BCC /* String+QueryParameters.swift */,
 				231069D41C06BE6D00101BCC /* Dictionary+Additions.swift */,
+				23B8BFA3214A836500D5841E /* Page.swift */,
 				2363648C1BE22FCC00AA7104 /* Token.swift */,
 				2363648D1BE22FCC00AA7104 /* User.swift */,
 				236364751BE22F1000AA7104 /* Info.plist */,
@@ -530,7 +535,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = nerdishbynature;
 				TargetAttributes = {
 					2363646F1BE22F1000AA7104 = {
@@ -678,6 +683,7 @@
 				231B68501BE99886007AE2A6 /* NSURL+URLParameters.swift in Sources */,
 				236364901BE22FCC00AA7104 /* Token.swift in Sources */,
 				231069D31C06BE3400101BCC /* String+QueryParameters.swift in Sources */,
+				23B8BFA4214A836500D5841E /* Page.swift in Sources */,
 				2363648E1BE22FCC00AA7104 /* TrashCanKit.swift in Sources */,
 				231B68541BE998C7007AE2A6 /* OAuthRouter.swift in Sources */,
 				2363648F1BE22FCC00AA7104 /* Repositories.swift in Sources */,
@@ -708,6 +714,7 @@
 				238EB1ED1C7C669400289C37 /* OAuthRouter.swift in Sources */,
 				238EB1EE1C7C669400289C37 /* TokenConfiguration.swift in Sources */,
 				238EB1EF1C7C669400289C37 /* Repositories.swift in Sources */,
+				23B8BFA5214A836500D5841E /* Page.swift in Sources */,
 				238EB1F01C7C669400289C37 /* String+QueryParameters.swift in Sources */,
 				238EB1F11C7C669400289C37 /* Dictionary+Additions.swift in Sources */,
 				238EB1F21C7C669400289C37 /* Token.swift in Sources */,
@@ -725,6 +732,7 @@
 				238EB1F81C7C66A500289C37 /* OAuthRouter.swift in Sources */,
 				238EB1F91C7C66A500289C37 /* TokenConfiguration.swift in Sources */,
 				238EB1FA1C7C66A500289C37 /* Repositories.swift in Sources */,
+				23B8BFA6214A836500D5841E /* Page.swift in Sources */,
 				238EB1FB1C7C66A500289C37 /* String+QueryParameters.swift in Sources */,
 				238EB1FC1C7C66A500289C37 /* Dictionary+Additions.swift in Sources */,
 				238EB1FD1C7C66A500289C37 /* Token.swift in Sources */,
@@ -804,14 +812,22 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -857,14 +873,22 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;

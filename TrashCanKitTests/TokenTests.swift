@@ -34,8 +34,6 @@ class TokenTests: XCTestCase {
                 XCTAssertEqual(error.domain, TrashCanKitErrorDomain)
                 XCTAssertEqual(error.code, 401)
                 XCTAssertEqual(error.localizedDescription, "Oh Oh, another error.")
-            case .failure:
-                XCTAssertFalse(true)
             }
         }
         XCTAssertNotNil(task)

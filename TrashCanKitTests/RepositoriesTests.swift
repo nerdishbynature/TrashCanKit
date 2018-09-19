@@ -3,25 +3,19 @@ import TrashCanKit
 
 class RepositoriesTests: XCTestCase {
     func testConstructFromJSON() {
-        let repository = Repository(json: TestHelper.loadJSON("Repository"))
+        let repository = TestHelper.codableFromFile("Repository", type: Repository.self)
         XCTAssertEqual(repository.id, "{cb706a3e-1e13-41fb-ac9d-e53e8adc2bd7}")
         XCTAssertEqual(repository.owner.login, "pietbrauer")
         XCTAssertEqual(repository.name, "octokit.swift")
         XCTAssertEqual(repository.fullName, "pietbrauer/octokit.swift")
         XCTAssertEqual(repository.isPrivate, true)
         XCTAssertEqual(repository.repositoryDescription, "Dummy Description")
-        XCTAssertEqual(repository.sshURL, "git@bitbucket.org/pietbrauer/octokit.swift.git")
-        XCTAssertEqual(repository.gitURL, "git://bitbucket.org/pietbrauer/octokit.swift.git")
-        XCTAssertEqual(repository.cloneURL, "https://bitbucket.org/pietbrauer/octokit.swift.git")
+        XCTAssertEqual(repository.links?.clone?.first?.href?.absoluteString, "https://pietbrauer@bitbucket.org/pietbrauer/octokit.swift.git")
+        XCTAssertEqual(repository.links?.clone?.first?.name, "https")
+        XCTAssertEqual(repository.links?.clone?.last?.href?.absoluteString, "ssh://git@bitbucket.org/pietbrauer/octokit.swift.git")
+        XCTAssertEqual(repository.links?.clone?.last?.name, "ssh")
         XCTAssertEqual(repository.size, 156382)
         XCTAssertEqual(repository.scm, "git")
-    }
-
-    func testFailToConstructFromJSON() {
-        let repository = Repository(json: [:])
-        XCTAssertEqual(repository.id, "-1")
-        XCTAssertEqual(repository.isPrivate, false)
-        XCTAssertEqual(repository.size, 0)
     }
 
     func testGetRepositories() {
